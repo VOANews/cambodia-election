@@ -31,7 +31,7 @@ layout: default
 		<div class="voa__grid" style="margin: 0 auto 10px auto;">
 			<div class="voa__featured-post">
 				
-				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
+				<a class="post-link" href="{{ post.url | relative_url }}" style=" text-decoration: none;">
 
 			{% if post.image %}
 
@@ -64,7 +64,7 @@ layout: default
 
 		<div class="voa__grid voa__portfolio-grid">
 			<div class="voa__grid__element voa__portfolio-grid__item">
-				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a class="post-link" href="{{ post.url | relative_url }}">
 			{% if post.thumbnail %}
 					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}" style="max-width: none; width: 100%;"/>
 			{% else %}
@@ -78,7 +78,7 @@ layout: default
 		{% else %}
 
 			--><div class="voa__grid__element voa__portfolio-grid__item">
-				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a class="post-link" href="{{ post.url | relative_url }}">
 			{% if post.thumbnail %}
 					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
 			{% else %}

@@ -34,7 +34,7 @@ layout: default
 			<div class="voa__grid__two-thirds border-right">
 				<div class="voa__featured-post">
 					
-					<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
+					<a class="post-link" href="{{ post.url | relative_url }}" style=" text-decoration: none;">
 
 				{% if post.image %}
 
@@ -73,7 +73,7 @@ layout: default
 		{% else %}
 				<div class="voa__grid__full voa__portfolio-grid">
 					<div class="voa__portfolio-grid__item">
-						<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+						<a class="post-link" href="{{ post.url | relative_url }}">
 					{% if post.thumbnail %}
 							<img class="" src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
 					{% elsif page.category == "video"%}
@@ -118,7 +118,7 @@ layout: default
 		<div class="voa__grid" style="margin: 0 auto 10px auto;">
 			<div class="voa__featured-post">
 				
-				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative }}" style=" text-decoration: none;">
+				<a class="post-link" href="{{ post.url | relative }}" style=" text-decoration: none;">
 			{% if post.image %}
 				{% if post.image contains "https://gdb.voanews.com/" %}
 					<img src="{{ post.image | replace: '_w1023', '_w1280_h720' }}" style="max-width: none; width: 100%;" />
@@ -147,7 +147,7 @@ layout: default
 		{% if post.categories.last != "biography" and post.categories.last != "party" and post.categories.last != "quote" %}
 
 		 --><div class="voa__grid__element voa__portfolio-grid__item">
-				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a class="post-link" href="{{ post.url | relative_url }}">
 			{% if post.thumbnail %}
 					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
 			{% else %}
@@ -188,7 +188,7 @@ layout: default
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language %}
 	{% if post.slug == "hun-sen-hometown" %}
-		<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+		<a href="{{ post.url | relative_url }}">
 			<img src="{{ post.image | replace: '_w1023', '_w640'}}" />
 			<h3>{{ post.title }}</h3>
 		</a>
@@ -203,7 +203,7 @@ layout: default
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language %}
 	{% if post.slug == "cambodias-strongman-displays-warm-vital-images-on-facebook" %}
-		<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+		<a href="{{ post.url | relative_url }}">
 			<img src="{{ post.image | replace: '_w1023', '_w640'}}" />
 			<h3>{{ post.title }}</h3>
 		</a>
@@ -216,7 +216,7 @@ layout: default
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language %}
 	{% if post.slug == "hun-sen" %}
-		<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+		<a href="{{ post.url | relative_url }}">
 			<img src="{{ post.image | replace: '_w1023', '_w640_h360'}}" />
 			<h3>{{ post.title }}</h3>
 		</a>
