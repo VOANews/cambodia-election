@@ -25,7 +25,7 @@
 					<nav id="main-nav" role="navigation" class="main-menu-nav">
 						<ul id="main-menu" class="sm sm-clean" data-smartmenus-id="14762810590939192">
 
-							<li id="liveblogNavLink" {% if page.layout == "live-blog" %}class="featured"{% endif %}><a href="#check-back-later">Live blog</a></li>
+							<li id="liveblogNavLink"><a href="{{ site.url_base }}/{{current_language}}/live-blog/">Live blog</a></li>
 
 
 							<li><a href="{{ site.url_base }}/{{current_language}}/{% if current_language=='khmer' %}feature/{% endif %}" class="has-submenu" id="sm-14762810590939192-1" aria-haspopup="true" aria-controls="sm-14762810590939192-2" aria-expanded="false"><span class="sub-arrow">+</span>{{ site_info.dictionary.label_voices }}</a>
