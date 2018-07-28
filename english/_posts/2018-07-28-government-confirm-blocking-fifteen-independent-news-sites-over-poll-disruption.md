@@ -1,6 +1,6 @@
 ---
 title: Government Confirms Blocking 15 Independent News Sites Over Poll “Disruption”
-summary: The Cambodian government has ordered internet service providers (ISPs) to block the websites of 15 news websites of independent outlets including Voice of America for two days before and during the country’s election.
+summary: The Cambodian government has ordered internet service providers (ISPs) to block the websites of 15 independent news outlets including Voice of America for two days before and during the country’s election.
 byline: Sun Narin and Aun Chhengpor
 metrics-byline: Narin, Sun; Chhengpor, Aun
 
