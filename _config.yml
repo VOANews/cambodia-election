@@ -13,15 +13,19 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-# title: Your awesome title
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+title: Cambodia Adrift | Election 2018
+description: >- # this means to ignore newlines until "baseurl:"
+  A VOA Khmer Service team spent six months talking with Cambodians during the run-up to the nation’s sixth national vote for 125 members of the National Assembly on July 29, 2018. The team traveled to six provinces and Phnom Penh, the capital city, and focused on rural residents because they are the majority of Cambodia’s voters. Many spoke of how they feel left behind by their nation’s economic expansion, which is upending their traditional way of life as they are buffeted by national and global forces.
+twitter_username: voakhmer
+github_username:  voanews
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+sass:
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -38,13 +42,13 @@ exclude:
 
 # EDIT FOR DEPLOYING IN A SUB FOLDER
 # (USE THE PATH WHERE IT'LL BE HOSTED)
-# url_base: ""
+url_base: ""
 # url_base: "/cambodia-election"
-url_base: "https://voanews.github.io/cambodia-election"
+# url_base: "https://voanews.github.io/cambodia-election"
 
 
 # ADD A WARNING FLAG AND DISABLE METRICS
-development_mode: true
+development_mode: false
 development_warning: This site is currently under active development.
 
 
