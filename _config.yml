@@ -42,8 +42,8 @@ exclude:
 
 # EDIT FOR DEPLOYING IN A SUB FOLDER
 # (USE THE PATH WHERE IT'LL BE HOSTED)
-url_base: ""
-# url_base: "/cambodia-election"
+# url_base: ""
+url_base: "/cambodia-election"
 # url_base: "https://voanews.github.io/cambodia-election"
 
 
