@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% endif %}
 
 	<link rel="stylesheet" type="text/css" href="{{site.url_base}}/assets/main.css?{{ random }}">
-	<link rel="canonical" href="{{ site.url_base }}{{ page.url | replace:'index.html',''}}">
+	<link rel="canonical" href="{{ site.canonical_url_base }}{{ page.url | replace:'index.html',''}}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{site.url_base}}/feed.xml">
 
 </head>

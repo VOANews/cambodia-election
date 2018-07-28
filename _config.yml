@@ -45,6 +45,7 @@ exclude:
 # url_base: ""
 # url_base: "/cambodia-election"
 url_base: "https://voanews.github.io/cambodia-election"
+canonical_url_base: "https://projects.voanews.com/cambodia-election-2018"
 
 
 # ADD A WARNING FLAG AND DISABLE METRICS
