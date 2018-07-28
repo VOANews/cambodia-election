@@ -1,0 +1,19 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<div class="voa__infobox__container editors-note  voa__clear {{ include.classes }}">
+	<div class="voa__infobox ">
+		<h4 class="voa__infobox__hed">{% if include.link %}<a href="{{ site.url_base }}{{ include.link }}" class="{{ include.link-classes }}"> {% endif %}{{ include.hedline }}{% if include.link %}</a> {% endif %}</h4>
+		<p class="voa__infobox__text">{{ include.text | default: site_info.dictionary.label_about_this_series}}</p>
+	</div>
+</div>

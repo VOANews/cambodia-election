@@ -1,0 +1,9 @@
+/* VOA language CSS */
+@import 'translations/translationFonts';
+@import 'mixins/mixins';
+
+$font__display:      $font__primary--korean;
+$font__primary:      $font__primary--korean;
+$font__secondary:    $font__secondary--korean;
+
+@include language(korean);

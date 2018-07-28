@@ -1,0 +1,61 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<div class="voa__grid__full">
+	<div class="voa__grid">
+
+{% assign sorted-posts = site.posts | where: "categories","party" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language %}
+
+		<div class="voa__wiki__entry {{ post.party | replace: " ", "" }}">
+
+			{% if post.image %}<img src="{{ site.url_base }}/img/parties/{{ post.image }}" style="max-width: 100%; display: block; margin: 0 auto 10px auto;" />{% endif %}
+
+			<h4>{{ post.title | smartify  }}</h4> 
+
+			{{ post.content
+				| replace_first: 'Hun Sen', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">Hun Sen</a>'
+				| replace_first: 'Sam Rainsy', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">Sam Rainsy</a>'
+				| replace_first: 'Norodom Sihanouk', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">Norodom Sihanouk</a>'
+				| replace_first: 'Kem Sokha', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">Kem Sokha</a>'
+				| replace_first: 'Norodom Ranariddh', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">Norodom Ranariddh</a>'
+				| replace_first: 'Pol Pot', '<a href=".../LANGUAGEREPLACE/biography/pol-pot.html" class="voa__wiki__bio-link" title="Bio of Pol Pot">Pol Pot</a>'
+				| replace_first: 'Lon Nol', '<a href=".../LANGUAGEREPLACE/biography/lon-nol.html" class="voa__wiki__bio-link" title="Bio of Lon Nol">Lon Nol</a>'
+
+				| replace_first: 'ហ៊ុន សែន', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">ហ៊ុន សែន</a>'
+				| replace_first: 'សម រង្ស៊ី', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">សម រង្ស៊ី</a>'
+				| replace_first: 'នរោត្តម សីហនុ', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">នរោត្តម សីហនុ</a>'
+				| replace_first: 'កឹម សុខា', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">កឹម សុខា</a>'
+				| replace_first: 'នរោត្តម រណឫទ្ធិ', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">នរោត្តម រណឫទ្ធិ</a>'
+
+				| replace_first: 'គណបក្សប្រជាជនកម្ពុជា', '<a href="CPP" class="trigger__party" title="Profile of CPP">គណបក្ស​ប្រជាជន​កម្ពុជា</a>'
+				| replace_first: 'គណបក្សសិទ្ធិមនុស្ស', '<a href="HRP" class="trigger__party" title="Profile of HRP">គណបក្សសិទ្ធិមនុស្ស</a>'
+				| replace_first: 'គណបក្ស សម រង្', '<a href="SRP" class="trigger__party" title="Profile of SRP">គណបក្ស សម រង្</a>'
+				| replace_first: 'គណបក្សសង្គ្រោះជាតិ', '<a href="CNRP" class="trigger__party" title="Profile of CNRP">គណបក្សសង្គ្រោះជាតិ</a>'
+				| replace_first: 'គណបក្សហ្វ៊ុនស៊ិនពិច', '<a href="FUNCINPEC" class="trigger__party" title="Profile of FUNCINPEC">គណបក្សហ្វ៊ុនស៊ិនពិច</a>'
+				| replace_first: 'ខ្មែរក្រហម', '<a href="KhmerRouge" class="trigger__party" title="Profile of Khmer Rouge">ខ្មែរក្រហម</a>'
+				| replace_first: 'មីក្រូហរិញ្ញវត្ថុ', '<a href="Microfinance" class="trigger__party" title="Explanation of microfinance">មីក្រូហរិញ្ញវត្ថុ</a>'
+
+				| replace: 'LANGUAGEREPLACE', current_language
+				| replace: '...', site.url_base
+
+			 }}
+
+		</div>
+
+{% endfor %}
+
+	</div>
+
+</div>

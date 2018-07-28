@@ -1,0 +1,9 @@
+/* VOA language CSS */
+@import 'translations/translationFonts';
+@import 'mixins/mixins';
+
+$font__display:      $font__primary--lao;
+$font__primary:      $font__primary--lao;
+$font__secondary:    $font__secondary--lao;
+
+@include language(lao);

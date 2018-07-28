@@ -1,0 +1,87 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+{% if include.tag and include.tag != "" %}
+	{% assign tag = include.tag %}
+	{% assign label_tag = "label_" | append: tag %}
+{% else %}
+	{% assign tag = "" %}
+{% endif %}
+
+<div class="voa__grid__full" style="background-color: #FFF; border-top: 1px dotted #CCC; padding: 30px 0;">
+	<div class="voa__promo__container">
+		
+		<h3 class="voa__label" style="padding: 0;"><a href="{{ site.url_base }}/{{ current_language }}/video/">{% if current_language == "english" %}More videos{% elsif current_language=="khmer" %}វីដេអូផ្សេងទៀត {% else %} {{ include.label }}{% endif %}{% if tag != "" %} | {{ site_info.dictionary[label_tag] }} {% endif %}</a></h3>
+
+		<div class="voa__grid__full">
+
+
+{% if include.featured_video == true %}
+
+	{% assign sorted-posts = site.posts | where: "categories","video" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% assign sorted-posts-by-subcategory = sorted-posts-language | where: "categories", tag %}
+
+	{% for post in sorted-posts-by-subcategory limit: 1 %}
+
+		{% assign featured-title = post.title %}
+
+			<div class="voa__promo ">
+				<div class='embed-container' style="background-color: #F1F1F1; margin: 10px 0;"><iframe src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+				<a href="{{ site.url_base }}{{ post.url | relative_url }}"><h4 style="padding: 0;">{{ post.title }}</h4></a>
+				<p class="voa__cutline" style="padding: 0;">{{ post.summary }}</p>
+			</div>
+	{% endfor %}
+
+{% endif %}
+
+
+		</div>
+
+
+		<div class="voa__grid__full">
+
+{% if tag == "" %}
+	{% assign sorted-posts = site.posts | where: "categories","video" %}
+	{% assign sorted-posts-by-subcategory = sorted-posts | where: "categories",current_language %}
+{% else %}
+	{% assign sorted-posts = site.posts | where: "categories","video" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% assign sorted-posts-by-subcategory = sorted-posts-language | where: "categories", tag %}
+{% endif %}
+
+{% assign counter = 0 %}
+
+<!--
+
+{% for post in sorted-posts-by-subcategory limit: 4 %}
+	{% if post.title != page.title and post.title != featured-title %}
+		{% if counter < 3 %}
+
+			--><div class="voa__promo voa__grid__one-third">
+				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
+					<h4>{{ post.title }}</h4>
+				</a>
+			</div><!--
+			{% assign counter = counter | plus: 1 %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+
+-->
+		</div>
+
+	</div>
+
+</div>

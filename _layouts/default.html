@@ -1,0 +1,163 @@
+<!DOCTYPE html>{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+{% assign random = site.time | date: "%s%N" %}
+<html lang="{{ site_info.analytics.abbreviation }}">
+{% include head.html %}
+
+	<body class="voa__project {{ page.language | default: 'english'}}">
+
+{% if page.layout == "home" %}
+	<script src="{{ site.url_base }}/js/scripts-home.js?{{ random }}"></script>
+{% elsif page.layout == "timeline" %}
+	<script src="{{ site.url_base }}/js/scripts-timeline-standalone.js?{{ random }}"></script>
+{% else %}
+	<script src="{{ site.url_base }}/js/scripts.js?{{ random }}"></script>
+{% endif %}
+
+{% if site.development_mode %}
+
+		<div id="siteWarning" class="voa__publish-warning" style="position: fixed; bottom: 0; width: 100%; padding: 10px; text-align: center; background-color: #900; color: #FFF; z-index: 9999999">
+		  {{ site.development_warning }}  <br/><span style="color: orange; font-weight: bold;">Please do not share outside of the project team.</span>
+			<h3 id="closeWarning" class="voa__publish-warning__close-button">[X]</h3>
+
+		</div>
+
+	<script type="text/javascript">
+		// "https://www.voacambodia.com/api/zk-pqvemvmqt" 
+	{% if page.layout == "home" %}
+		//var rssFeedEncoded ="{{ 'https://khmer.voanews.com/api/z$ytretqur' | cgi_escape }}";
+		var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+	{% else %}
+		var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+	{% endif %}
+		var language = "{{current_language}}";
+		var projectPrefix = "{{ site.url_base }}";
+
+		$(document).ready(function(){
+			$("#closeWarning").click(function(){
+				console.log("close the warning box");
+				$(".voa__publish-warning").toggle();
+			})
+		})
+	</script>
+
+{% else %}
+	{% if page.layout != "live-blog" %}
+			<!-- Google Tag Manager (noscript) -->
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W72N2D"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<!-- End Google Tag Manager (noscript) -->
+
+
+			<script type="text/javascript">
+
+		{% if page.layout == "home" %}
+			//var rssFeedEncoded ="{{ 'https://khmer.voanews.com/api/z$ytretqur' | cgi_escape }}";
+			var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+		{% else %}
+			var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+		{% endif %}
+			var language = "{{current_language}}";
+			var projectPrefix = "{{ site.url_base }}";
+
+			var utag_data = {
+				entity:"VOA",
+				language:"{{ current_language }}",
+				language_service:"{{ site_info.analytics.language_service }}",
+				short_language_service:"{{ site_info.analytics.lang }}",
+				property_id:"{{ site_info.analytics.id }}",
+				platform:"Responsive",
+				platform_short:"R",
+				runs_js:"Yes",
+				section:"Special Projects",
+				english_section:"special-projects",
+				page_title:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				page_type:"interactive",
+				page_name:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				short_headline:"{% if page.title %}{{ page.title }}{% else %}{{ site_info.title_short }}{% endif %}",
+				long_headline:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				headline:"{% if page.title %}{{ site_info.title_short }} | {{ page.title }}{% else %}{{ site_info.title }}{% endif %}",
+				content_type:"interactive",
+				pub_year:"{{ page.date | date: "%Y" | default: 2018 }}",
+				pub_month:"{{ page.date | date: "%m" | default: '07' }}",
+				pub_day:"{{ page.date | date: "%d" | default: '04' }}",
+				pub_weekday:"{{ page.date | date: "%A" | default: 'Wednesday' }}",
+				byline:"{{ page.metrics-byline | default: 'Soksreinith, Ten; Hong, Chenda' }}",
+				slug:"cambodia-election"
+			}
+			</script>
+
+			<script type="text/javascript">
+			(function(a,b,c,d){
+			a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
+			b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+			a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+			})();
+			</script>
+
+	{% else %}
+	<script type="text/javascript">
+		var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+		var language = "{{current_language}}";
+		var projectPrefix = "{{ site.url_base }}";
+	</script>
+	{% endif %}
+{% endif %}
+
+{% include header.html %}
+
+{% if page.layout == "home" %}
+
+	{% assign sorted-posts = site.posts | where: "categories","mainbar" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language limit: 1 %}
+
+		<section class="voa__section__full-width voa__section__title" style="background-image: url('{{ site.url_base }}/img/banner__cambodia-adrift--1920.jpg'); z-index:99999;">
+			<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<div style="position: absolute; top: 0; width: 100%;">
+					<div style="display: block; text-align: center; margin: 0 auto;">
+						<h3 class="voa__kicker" style="font-size: 18px; padding: 7px 10px;">{{ site_info.title_tagline }}</h3>
+					</div>
+				</div>
+
+				<div style="position: absolute; {% if current_language == "english" %}bottom: 40%;{% else %}bottom: 20%;{% endif %} width: 100%; z-index: 999999999999;">
+					<h1 id="projectIntro" class="project-title  {{ current_language }}" style="margin-bottom: 0;">{{ site_info.title_short }}</h1>
+				</div>
+			</a>
+		</section>
+
+	{% endfor %}
+{% endif %}
+
+
+
+
+
+{% if page.window_image %}
+		<div class="voa__window-background show loaded voa__border-sides" ></div>
+{% endif %}
+
+
+
+
+
+		<div style="background-color: #fbfbfb; position: relative;">
+
+			{{ content }}
+
+		</div>
+
+
+	</body>
+
+</html>

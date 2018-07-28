@@ -1,0 +1,332 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+{% if page.includeTweets %}
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+{% endif %}
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
+{% if page.window_image %}
+<style type="text/css">
+	{% if page.window_image contains "https://gdb.voanews.com/" %}
+		.voa__window-background.show.loaded {
+			background-image: url({{ page.window_image | replace: '_w1023', '_w1280' }});
+		}
+	{% else %}
+		.voa__window-background.show.loaded {
+			background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+		}
+	{% endif %}
+</style>
+{% endif %}
+
+
+<script type="text/javascript">
+	var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
+	var pinLocation = "{{ page.location | default: 'Cambodia'}}";
+	{% assign locationTemp = page.location | replace: " ", "_" %}
+	var pinLocationTranslation = "{{ site_info.map[locationTemp] }}"
+	var pinLabel = "{% if page.map_pin %}{{ page.map_pin }}{% else %}{{ page.location | default: 'Cambodia'}}{% endif %}";
+
+	var dictionaryMap = {
+		"Cambodia": "{{ site_info.map.Cambodia }}",
+		"Vietnam": "{{ site_info.map.Vietnam }}",
+		"Thailand": "{{ site_info.map.Thailand }}",
+		"Laos": "{{ site_info.map.Laos }}",
+		"Phnom Penh": "{{ site_info.map.Phnom_Penh }}",
+		"Gulf of Thailand": "{{ site_info.map.Gulf_of_Thailand }}",//"Gulf of<br/> Thailand"
+		"infant mortality": {
+			"label": "{{ site_info.dictionary.label_data_infant_mortality | default: 'infant mortality' }}",
+			"suffix": " {{ site_info.dictionary.label_per | default: 'per' }} 1000",
+			"description": "Number of infant deaths per 1,000 live births",
+			"year": "{{ site_info.dictionary.label_year_2008 | default: 2008 }}"
+		},
+		"population density": {
+			"label": "{{ site_info.dictionary.label_data_population_density | default: 'Population Density' }}",
+			"suffix": "{{ site_info.dictionary.label_data_population_density_suffix | default: ' per km²' }}",
+			"description": "{{ site_info.dictionary.label_data_population_density_explanation | default: 'The number of people living per square kilometer' }}"
+		},
+		"electricity": {
+			"label": "{{ site_info.dictionary.label_electricity | default: 'electricity' }}",
+			"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+			"description": "{{ site_info.dictionary.label_electricity_explanation | default: 'The percentage of the population with access to electricity' }}",
+			"year": "{{ site_info.dictionary.label_year_2013 | default: 2013}}"
+		},
+		"unemployment": {
+			"label": "unemployment",
+			"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+			"description": "The percentage of the population that is unemployed"
+		},
+		"election results": {
+			"label": "election results",
+			"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+			"description": "The percentage of seats won by CPP in 2013 in each province"
+		},
+		"primary school completed": {
+			"label": "{{ site_info.dictionary.label_data_primary_school | default: 'primary school completed' }}",
+			"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+			"description": "The percentage of population that had completed primary school",
+			"year": "{{ site_info.dictionary.label_year_2016 | default: 2016 }}"
+		},
+		"primary school completed 2016": {
+			"label": "{{ site_info.dictionary.label_data_primary_school | default: 'primary school completed' }}",
+			"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+			"description": "The percentage of population that had completed primary school",
+			"year": "{{ site_info.dictionary.label_year_2016 | default: 2016}}"
+		},
+		"CPP": "គណបក្សប្រជាជនកម្ពុជា",
+		"CNRP": "គណបក្សសង្គ្រោះជាតិ",
+		"provinces": {
+			"Battambang":       "{{ site_info.map.Battambang | default: 'Battambang' }}",
+			"Banteay Meanchey": "{{ site_info.map.Banteay_Meanchey | default: 'Banteay Meanchey' }}",
+			"Kampong Chhnang":  "{{ site_info.map.Kampong_Chhnang | default: 'Kampong Chhnang' }}",
+			"Kampong Thom":     "{{ site_info.map.Kampong_Thom | default: 'Kampong Thom' }}",
+			"Kampong Cham":     "{{ site_info.map.Kampong_Cham | default: 'Kampong Cham' }}", 
+			"Kampong Speu":     "{{ site_info.map.Kampong_Speu | default: 'Kampong Speu' }}",
+			"Kampot":           "{{ site_info.map.Kampot | default: 'Kampot' }}",
+			"Kandal":           "{{ site_info.map.Kandal | default: 'Kandal' }}",
+			"Kep":              "{{ site_info.map.Kep | default: 'Kep' }}",
+			"Koh Kong":         "{{ site_info.map.Koh_Kong| default: 'Koh Kong' }}",
+			"Kratie":           "{{ site_info.map.Kratie| default: 'Kratie' }}",      
+			"Mondul Kiri":      "{{ site_info.map.Mondul_Kiri| default: 'Mondul Kiri' }}",
+			"Oddar Meanchey":   "{{ site_info.map.Oddar_Meanchey | default: 'Oddar Meanchey' }}",
+			"Pailin":           "{{ site_info.map.Pailin | default: 'Pailin' }}",
+			"Phnom Penh":       "{{ site_info.map.Phnom_Penh | default: 'Phnom Penh' }}",
+			"Preah Sihanouk":   "{{ site_info.map.Preah_Sihanouk | default: 'Preah Sihanouk' }}",
+			"Prey Veng":        "{{ site_info.map.Prey_Veng | default: 'Prey Veng' }}",
+			"Preah Vihear":     "{{ site_info.map.Preah_Vihear | default: 'Preah Vihear' }}",
+			"Pursat":           "{{ site_info.map.Pursat | default: 'Pursat' }}",
+			"Ratanak Kiri":     "{{ site_info.map.Ratanak_Kiri | default: 'Ratanak Kiri' }}",
+			"Siem Reap":        "{{ site_info.map.Siem_Reap | default: 'Siem Reap' }}",
+			"Stung Treng":      "{{ site_info.map.Stung_Treng | default: 'Stung Treng' }}",
+			"Svay Rieng":       "{{ site_info.map.Svay_Rieng | default: 'Svay Rieng' }}",
+			"Takeo":            "{{ site_info.map.Takeo | default: 'Takeo' }}",
+			"Tboung Khmum":     "{{ site_info.map.Tboung_Khmum | default: 'Tboung Khmum' }}"
+		}
+	}
+
+</script>
+
+
+<article class="post voa__grid__full voa__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+
+
+
+{% if page.youtube %}
+
+					<div class='embed-container' style="background-color: #F1F1F1;"><iframe src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+					<div class="voa__grid white" style="">
+						<p class="voa__credit">{{ page.credit }}</p>
+					</div>
+
+					<div class="voa__grid__full ">
+
+{% elsif page.image %}
+
+	
+	{% if page.image contains "https://gdb.voanews.com/" %}
+							<picture>
+								<source srcset="{{ page.image | replace: '_w1023', '_w1280' }}" media="(min-width: 992px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w992' }}" media="(min-width: 640px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+								<img src="{{ page.image | replace: '_w1023', '_w420_h420' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+							</picture>
+
+	{% else %}
+							<img src="{{ site.url_base }}{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%;"/>
+	{% endif %}
+
+
+	{% if page.cutline %}
+						<div class="voa__grid__full white">
+							<div class="voa__grid">
+								<p class="voa__cutline">{{ page.cutline }} ({{ page.credit }})</p>
+							</div>
+						</div>
+	{% elsif page.credit %}
+						<div class="voa__grid__full white">
+							<div class="voa__grid">
+								<p class="voa__credit" style="font-size: 12px; margin-top: 2px; color: #999;">{{ page.credit }}</p>
+							</div>
+						</div>
+	{% endif %}
+
+{% endif %}
+
+					</div>
+
+
+
+
+{% include share-buttons.html %}
+
+
+
+					<div class="voa__grid__full" >
+
+							<div class="voa__story__centered">
+
+								<div class="voa__story">
+
+									<div class="voa__grid white">
+
+{% if page.categories.last == "dirty-dozen" %}
+	{% assign page_label = "Dirty Dozen" %}
+	{% assign page_link = site.url_base | append: '/draft/dirty-dozen/' %}
+{% endif %}
+
+										<h3 class="voa__label" style="width: 100%; text-align: center;"><a href="{{ page_link }}">{{ page_label }}</a></h3>
+
+										<h1 class="voa__featured__headline{% if current_language == 'english' %} balance-text{% endif %}" style="font-size: 46px;">{{ page.title }}</h1>
+									</div>
+{% if page.summary %}
+									<h3 class="voa__featured__summary">{{ page.summary }}</h3>
+{% endif %}
+
+
+{% if page.twitter %}
+									<p class="voa__byline">{% if current_language == "english" %}By {% endif %}<a href="https://twitter.com/{{ page.twitter }}" style="font-weight: bold;">{{ page.byline }}</a> | VOA Khmer
+	{% if page.translation %}
+										<br/><span style="color: #666;"><a href="{{ site.url_base }}{{ page.translation }}">{% if current_language == "khmer" %}{{ site.site_info__object.english.dictionary.label_read_the_translation }}{% else %}{{ site.site_info__object.khmer.dictionary.label_read_the_translation }}{% endif %}</a></span>
+	{% endif %}
+									</p>
+{% else %}
+									<p class="voa__byline">{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{{ page.byline }}</span> | VOA Khmer
+	{% if page.translation %}
+										<br/><span style="color: #666;"><a href="{{ site.url_base }}{{ page.translation }}">{% if current_language == "khmer" %}{{ site.site_info__object.english.dictionary.label_read_the_translation }}{% else %}{{ site.site_info__object.khmer.dictionary.label_read_the_translation }}{% endif %}</a></span>
+	{% endif %}
+									</p>
+
+{% endif %}
+
+
+
+
+{% if page.dateline %}
+
+									{% assign datelineStart = '<span class="voa__dateline">' %}
+									{% assign datelineEnd = '</span>' %}
+
+									{% assign dateline = datelineStart | append: page.dateline | append: datelineEnd  %}
+{% else %}
+									{% assign dateline = "" %}
+{% endif %}
+
+
+									{% if current_language == "khmer" %}
+									<p><strong>អំពើ​ហិង្សា​សិទ្ធិ​មនុស្ស​ជា​ច្រើន​បាន​កើត​ឡើង​ក្រោម​ការ​ដឹកនាំ​របស់​លោក​នាយក​រដ្ឋមន្រ្តី​ ហ៊ុន សែន​ ដែល​មាន​រយៈ​កាល​ជាង​៣០ឆ្នាំ​មកហើយ។ អំពើ​ហិង្សា​ទាំង​នោះ​ ជាប់​ពាក់ព័ន្ធ​នឹងយោធា ដែល​គេ​ដឹង​ថា​ស្ថិត​នៅ​ក្រោម​ការ​គ្រប់គ្រង​របស់​គណបក្ស​ប្រជាជន​កម្ពុជា។ ខាង​ក្រោម​នេះ​ គឺ​ជាប្រវត្តិសង្ខេប​របស់ឧត្តមសេនីយ៍​កម្ពុជា​១២រូប​ ដែល​បាន​ធ្វើ​ការ​បម្រើ​គណបក្ស​ប្រជាជនកម្ពុជា​ក្នុង​ការ​បង្រ្កាប​ និង​ធ្វើ​ទុក្ខ​បុក​ម្នេញ​អ្នក​ដែល​មាន​ទំនោរ​ប្រឆាំង​នឹង​គណបក្ស​ប្រជាជនកម្ពុជា​ និង​ការ​ដឹកនាំ​របស់​លោក​នាយក​រដ្ឋមន្រ្តី​ ហ៊ុន សែន។ អត្ថបទនេះ ជាសេចក្តីសង្ខេបនៃរបាយការណ៍របស់អង្គការឃ្លាំមើលសិទ្ធិមនុស្ស Human Rights Watch​ ដែលមានចំណងជើងថា​ «ឧត្តមសេនីយ៍ទុច្ចរិតទាំង១២រូបរបស់កម្ពុជា​ ឬ​ Cambodia's Dirty Dozen»។</strong></p>
+									{% endif %}
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+										| replace_first: 'Hun Sen', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">Hun Sen</a>'
+										| replace_first: 'Sam Rainsy', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">Sam Rainsy</a>'
+										| replace_first: 'Norodom Sihanouk', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">Norodom Sihanouk</a>'
+										| replace_first: 'Kem Sokha', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">Kem Sokha</a>'
+										| replace_first: 'Norodom Ranariddh', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">Norodom Ranariddh</a>'
+										| replace_first: 'Pol Pot', '<a href=".../LANGUAGEREPLACE/biography/pol-pot.html" class="voa__wiki__bio-link" title="Bio of Pol Pot">Pol Pot</a>'
+										| replace_first: 'Lon Nol', '<a href=".../LANGUAGEREPLACE/biography/lon-nol.html" class="voa__wiki__bio-link" title="Bio of Lon Nol">Lon Nol</a>'
+
+										| replace_first: 'ហ៊ុន សែន', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">ហ៊ុន សែន</a>'
+										| replace_first: 'សម រង្ស៊ី', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">សម រង្ស៊ី</a>'
+										| replace_first: 'នរោត្តម សីហនុ', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">នរោត្តម សីហនុ</a>'
+										| replace_first: 'កឹម សុខា', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">កឹម សុខា</a>'
+										| replace_first: 'នរោត្តម រណឫទ្ធិ', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">នរោត្តម រណឫទ្ធិ</a>'
+
+										| replace_first: 'CPP', '<a href="CPP" class="trigger__party" title="Profile of CPP">CPP</a>'
+										| replace_first: 'HRP', '<a href="HRP" class="trigger__party" title="Profile of HRP">HRP</a>'
+										| replace_first: 'SRP', '<a href="SRP" class="trigger__party" title="Profile of SRP">SRP</a>'
+										| replace_first: 'CNRP', '<a href="CNRP" class="trigger__party" title="Profile of CNRP">CNRP</a>'
+										| replace_first: 'FUNCINPEC', '<a href="FUNCINPEC" class="trigger__party" title="Profile of FUNCINPEC">FUNCINPEC</a>'
+										| replace_first: 'Khmer Rouge', '<a href="KhmerRouge" class="trigger__party" title="Profile of Khmer Rouge">Khmer Rouge</a>'
+										| replace_first: 'microfinance', '<a href="Microfinance" class="trigger__party" title="Explanation of microfinance">microfinance</a>'
+										| replace_first: 'national elections', '<a href="nationalelections" class="trigger__party" title="Explanation of national elections">national elections</a>'
+										| replace_first: 'commune elections', '<a href="communeelections" class="trigger__party" title="Explanation of commune elections">commune elections</a>'
+
+										| replace_first: 'គណបក្សប្រជាជនកម្ពុជា', '<a href="CPP" class="trigger__party" title="Profile of CPP">គណបក្ស​ប្រជាជន​កម្ពុជា</a>'
+										| replace_first: 'គណបក្សសិទ្ធិមនុស្ស', '<a href="HRP" class="trigger__party" title="Profile of HRP">គណបក្សសិទ្ធិមនុស្ស</a>'
+										| replace_first: 'គណបក្ស សម រង្', '<a href="SRP" class="trigger__party" title="Profile of SRP">គណបក្ស សម រង្</a>'
+										| replace_first: 'គណបក្សសង្គ្រោះជាតិ', '<a href="CNRP" class="trigger__party" title="Profile of CNRP">គណបក្សសង្គ្រោះជាតិ</a>'
+										| replace_first: 'គណបក្សហ្វ៊ុនស៊ិនពិច', '<a href="FUNCINPEC" class="trigger__party" title="Profile of FUNCINPEC">គណបក្សហ្វ៊ុនស៊ិនពិច</a>'
+										| replace_first: 'ខ្មែរក្រហម', '<a href="KhmerRouge" class="trigger__party" title="Profile of Khmer Rouge">ខ្មែរក្រហម</a>'
+										| replace_first: 'មីក្រូហរិញ្ញវត្ថុ', '<a href="Microfinance" class="trigger__party" title="Explanation of microfinance">មីក្រូហរិញ្ញវត្ថុ</a>'
+
+										| replace: 'LANGUAGEREPLACE', current_language
+										| replace: '...', site.url_base
+									}}
+
+
+
+{% if page.tagline or page.link-project %}
+									<p class="voa__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+	{% endif %}	
+
+	{% if page.link-project %}
+									This story originally appeared on <a href="{{ page.link-project }}">VOA Khmer</a>. ({{ page.date | date: '%B %-d, %Y' }})
+	{% endif %}
+									</p>
+{% endif %}
+
+								</div>
+
+							</div>
+
+
+
+{% include dirty-dozen-lineup.html 
+
+	label="true"
+
+%}
+
+
+
+
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+	<section class="voa__section__full-width">
+	</section>
+
+</article>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+
+
+{% include factboxes.html %}
+
+
+{% include footer.html %}

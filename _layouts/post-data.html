@@ -1,0 +1,181 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+
+{% endif %}
+
+
+{% if page.includeTweets %}
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+{% endif %}
+
+{% if page.window_image %}
+<style type="text/css">
+.voa__window-background.show.loaded {
+	background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+}
+</style>
+{% endif %}
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+<script type="text/javascript">
+	var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
+	var pinLocation = "{{ page.location | default: 'Cambodia'}}";
+</script>
+
+
+<article class="post voa__grid__full voa__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+	{% if page.image %}
+					<div class="voa__grid__full">
+							<img src="{{ site.url_base }}{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%; "/>
+					</div>
+	{% endif %}
+
+
+
+<!--
+					<div class="voa__photo__container--large">
+						<div class="voa__photo__container__shell">
+							<div class="add-padding">
+								<div id="mapShell" class="map__shell">
+									<div id="map" class="map__container"></div>
+								</div>
+							</div>
+						</div>
+						<div class="voa__grid__full white" style="height: 30px;"></div>
+					</div>
+-->
+
+
+
+
+
+					<div class="voa__grid__full" >
+
+							<div class="voa__story__centered">
+
+								<div class="voa__story">
+
+									<div class="voa__grid white">
+
+{% if page.categories.last == "profile" %}
+	{% assign page_label = site_info.dictionary.label_voters_voices %}
+{% else %}
+	{% assign page_label = page.categories.last %}
+{% endif %}
+
+										<h3 class="voa__label" style="width: 100%; text-align: center;">{{ page_label }}</h3>
+
+										<h1 class="voa__featured__headline balance-text" style="">{{ page.title }}</h1>
+									</div>
+{% if page.summary %}
+									<h3 class="voa__featured__summary">{{ page.summary }}</h3>
+{% endif %}
+
+
+{% if page.twitter %}
+									<p class="voa__byline" style="font-family: Arial, sans-serif; font-size: 15px; text-align: left; font-weight: normal;">By <a href="https://twitter.com/{{ page.twitter }}" style="font-weight: bold;">{{ page.byline }}</a> | VOA News</p>
+{% else %}
+									<p class="voa__byline" style="font-family: Arial, sans-serif; font-size: 15px; text-align: left; font-weight: normal;">By <span style="font-weight: bold;">{{ page.byline }}</span> | VOA News</p>
+
+{% endif %}
+
+
+
+
+{% if page.dateline %}
+
+									{% assign datelineStart = '<span class="voa__dateline">' %}
+									{% assign datelineEnd = '</span>' %}
+
+									{% assign dateline = datelineStart | append: page.dateline | append: datelineEnd  %}
+{% else %}
+									{% assign dateline = "" %}
+{% endif %}
+
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+										| replace_first: 'Hun Sen', '<a href="../biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">Hun Sen</a>'
+										| replace_first: 'Sam Rainsy', '<a href="../biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">Sam Rainsy</a>'
+										| replace_first: 'Norodom Sihanouk', '<a href="../biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">Norodom Sihanouk</a>'
+										| replace_first: 'Kem Sokha', '<a href="../biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">Kem Sokha</a>'
+										| replace_first: 'Norodom Ranariddh', '<a href="../biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">Norodom Ranariddh</a>'
+									}}
+
+
+
+{% if page.tagline or page.link-project %}
+									<p class="voa__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+	{% endif %}	
+
+	{% if page.link-project %}
+									This story originally appeared on <a href="page.link-project">VOAcambodia.com</a>. ({{ page.date | date: '%B %-d, %Y' }})
+	{% endif %}
+									</p>
+{% endif %}
+
+								</div>
+
+							</div>
+
+
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+
+
+<div id="factbox" class="voa__factbox" style="padding: 0; background-color: #FFF;">
+
+	<div class="voa__factbox__header">
+		<div id="closeFactbox" class="voa__factbox__header__text voa__factbox__close">
+			<h3>Cambodia (1953 - 2018)</h3>
+			<h5 class="voa__factbox__close-button">[x]</h5>
+		</div>
+	</div>
+	<div class="voa__grid__full" style="position: relative; margin-bottom: 0; padding-top: 50px;">
+		<div style="width: 90%; max-width: 720px; margin: 0 auto;">
+			<div class="voa__timeline-intro" style="border-right: 1px dashed #999;"></div>
+		</div>
+	</div>
+	<div class="voa__grid__full">
+		<div class="voa__grid" style="padding-bottom: 0;">
+			<div style="background-color: #FFF;">
+				{% include timeline-english.html %}
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	var mode = "editing";//"editing"; //"production";
+</script>
+
+{% include footer.html %}

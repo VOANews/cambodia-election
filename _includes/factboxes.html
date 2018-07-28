@@ -1,0 +1,85 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<div id="timeline" class="voa__factbox voa__factbox__timeline" style="padding: 0; background-color: #FFF;">
+
+	<div id="timelineHeader" class="voa__factbox__header">
+		<div id="closeFactbox" class="voa__factbox__header__text voa__factbox__close">
+			<h3>{% if current_language == "english" %}Cambodia (1953 - 2018){% else %}កម្ពុជា (១៩៥៣ - ២០១៨){% endif %}</h3>
+			<h5 class="voa__factbox__close-button">[x]</h5>
+		</div>
+	</div>
+	<div class="voa__grid__full" style="position: relative; margin-bottom: 0; padding-top: 50px;">
+		<div style="width: 90%; max-width: 720px; margin: 0 auto;">
+			<div class="voa__timeline-intro" style="border-right: 1px dashed #999;"></div>
+		</div>
+	</div>
+	<div class="voa__grid__full">
+		<div class="voa__grid" style="padding-bottom: 0;">
+			<div style="background-color: #FFF;">
+
+				<div class="voa__timeline__shell">
+
+					<div class="voa__timeline ltr">
+
+								{% assign timeline = "timeline-" | append: current_language | append: ".html" %}
+
+								{% include {{ timeline }} %}
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="parties" class="voa__factbox voa__factbox__parties" style="padding: 0; background-color: #FFF;">
+
+	<div id="partiesHeader" class="voa__factbox__header">
+		<div id="closeFactboxParties" class="voa__factbox__header__text voa__factbox__close" style="padding: 20px 0 20px 10%;">
+			<h3>{{ site_info.dictionary.label_reference }}</h3>
+			<h5 class="voa__factbox__close-button">[x]</h5>
+		</div>
+	</div>
+	<div class="voa__grid__full">
+		<div class="voa__grid" style="padding-bottom: 0;">
+			<div style="background-color: #FFF;  padding-top: 75px;">
+				{% include wiki-parties.html %}
+			</div>
+		</div>
+
+		<div class="voa__grid" style="padding-bottom: 0;">
+			<div style="background-color: #FFF;  padding: 65px 5% 0 5%;">
+				<h5>{% if current_language == "english" %}SEE ALSO{% else %}អានបន្ថែម{% endif %}</h5>
+			</div>
+		</div>
+
+		<ul class="voa__factbox__menu">
+
+{% assign sorted-posts = site.posts | where: "categories","party" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language %}
+
+			<li><a href="{{ post.party | replace: " ", ""}}" class="voa__factbox__menu__link">{{ post.title | smartify }}</a></li>
+
+{% endfor %}
+
+		</ul>
+
+
+	</div>
+
+</div>

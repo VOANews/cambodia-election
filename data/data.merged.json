@@ -1,0 +1,2902 @@
+{
+  "Banteay Meanchey": {
+    "elections": {
+      "1998": {
+        "CPP": 3,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 4,
+        "CNRP": 2
+      }
+    },
+    "education": {
+      "beyond_secondary": 2940,
+      "lower_secondary": 88285,
+      "none": 11009,
+      "other": 133,
+      "primary_not_completed": 237327,
+      "primary_school": 134816,
+      "secondary_technical_diploma": 11952,
+      "total": 486462,
+      "Province": null,
+      "percent_beyond_secondary": 0.6,
+      "percent_lower_secondary": 18.1,
+      "percent_none": 2.3,
+      "percent_other": 0,
+      "percent_primary_not_completed": 48.8,
+      "percent_primary_school": 27.7,
+      "percent_secondary_technical_diploma": 2.5,
+      "percent_primary_school_2016": 69.93
+    },
+    "electricity": {
+      "available": 92224,
+      "unavailable": 69199,
+      "percent_available": 57.1,
+      "percent_unavailable": 42.9,
+      "available_difference_from_national": 9.1
+    },
+    "fuel": {
+      "charcoal": 40281,
+      "electricity": 6040,
+      "firewood": 107885,
+      "kerosene": 382,
+      "LPG": 6720,
+      "none": 117,
+      "other": 0,
+      "percent_charcoal": 25,
+      "percent_electricity": 3.7,
+      "percent_firewood": 66.8,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 4.2,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 44.9
+    },
+    "migration": {
+      "total": 176876,
+      "percent_in_province": 50.3,
+      "percent_another_province": 43.7,
+      "percent_from_outside_cambodia": 6
+    },
+    "migrationReason": {
+      "education": 505,
+      "family_moved": 71111,
+      "insecurity": 8153,
+      "lost_land_or_house": 3113,
+      "marriage": 29358,
+      "natural_calamity": 268,
+      "orphaned": 419,
+      "other": 7322,
+      "repatriation": 6429,
+      "search_of_employment": 38933,
+      "transfer_of_work_place": 9934,
+      "visiting": 1331,
+      "total": 176876,
+      "percent_other": 4.1,
+      "percent_education": 0.3,
+      "percent_family_moved": 40.2,
+      "percent_insecurity": 4.6,
+      "percent_lost_land_or_house": 1.8,
+      "percent_marriage": 16.6,
+      "percent_natural_calamity": 0.2,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 3.6,
+      "percent_search_of_employment": 22,
+      "percent_transfer_of_work_place": 5.6,
+      "percent_visiting": 0.8
+    },
+    "population": {
+      "total": 729569,
+      "male": 354604,
+      "female": 374965,
+      "annual_growth": 1.47,
+      "percent_male": 48.6,
+      "percent_female": 51.4
+    },
+    "unemployment": {
+      "percent": 2.19,
+      "percent_male": 2.14,
+      "percent_female": 2.24
+    }
+  },
+  "Battambang": {
+    "elections": {
+      "1998": {
+        "CPP": 3,
+        "FCP": 3,
+        "SRP": 2
+      },
+      "2003": {
+        "CPP": 5,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 6,
+        "FCP": 0,
+        "SRP": 2,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 5,
+        "CNRP": 3
+      }
+    },
+    "education": {
+      "beyond_secondary": 9844,
+      "lower_secondary": 151854,
+      "none": 8493,
+      "other": 1220,
+      "primary_not_completed": 338834,
+      "primary_school": 245172,
+      "secondary_technical_diploma": 16927,
+      "total": 772344,
+      "Province": null,
+      "percent_beyond_secondary": 1.3,
+      "percent_lower_secondary": 19.7,
+      "percent_none": 1.1,
+      "percent_other": 0.2,
+      "percent_primary_not_completed": 43.9,
+      "percent_primary_school": 31.7,
+      "percent_secondary_technical_diploma": 2.2,
+      "percent_primary_school_2016": 75.31
+    },
+    "electricity": {
+      "available": 140262,
+      "unavailable": 90042,
+      "percent_available": 60.9,
+      "percent_unavailable": 39.1,
+      "available_difference_from_national": 12.8
+    },
+    "fuel": {
+      "charcoal": 34203,
+      "electricity": 3474,
+      "firewood": 177611,
+      "kerosene": 0,
+      "LPG": 13443,
+      "none": 719,
+      "other": 854,
+      "percent_charcoal": 14.9,
+      "percent_electricity": 1.5,
+      "percent_firewood": 77.1,
+      "percent_kerosene": 0,
+      "percent_LPG": 5.8,
+      "percent_none": 0.3,
+      "percent_other": 0.4
+    },
+    "health": {
+      "infant_mortality": 48.1
+    },
+    "migration": {
+      "total": 397273,
+      "percent_in_province": 52.7,
+      "percent_another_province": 43.9,
+      "percent_from_outside_cambodia": 3.5
+    },
+    "migrationReason": {
+      "education": 1475,
+      "family_moved": 219374,
+      "insecurity": 10851,
+      "lost_land_or_house": 3956,
+      "marriage": 56848,
+      "natural_calamity": 729,
+      "orphaned": 853,
+      "other": 6031,
+      "repatriation": 11489,
+      "search_of_employment": 60126,
+      "transfer_of_work_place": 21790,
+      "visiting": 3751,
+      "total": 397273,
+      "percent_other": 1.5,
+      "percent_education": 0.4,
+      "percent_family_moved": 55.2,
+      "percent_insecurity": 2.7,
+      "percent_lost_land_or_house": 1,
+      "percent_marriage": 14.3,
+      "percent_natural_calamity": 0.2,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 2.9,
+      "percent_search_of_employment": 15.1,
+      "percent_transfer_of_work_place": 5.5,
+      "percent_visiting": 0.9
+    },
+    "population": {
+      "total": 1121019,
+      "male": 557164,
+      "female": 563855,
+      "annual_growth": 1.79,
+      "percent_male": 49.7,
+      "percent_female": 50.3
+    },
+    "unemployment": {
+      "percent": 3.29,
+      "percent_male": 3.02,
+      "percent_female": 3.59
+    }
+  },
+  "Kampong Cham": {
+    "elections": {
+      "1998": {
+        "CPP": 7,
+        "FCP": 8,
+        "SRP": 3
+      },
+      "2003": {
+        "CPP": 8,
+        "FCP": 5,
+        "SRP": 5
+      },
+      "2008": {
+        "CPP": 11,
+        "FCP": 0,
+        "SRP": 5,
+        "HRP": 1,
+        "NRP": 1
+      },
+      "2013": {
+        "CPP": 8,
+        "CNRP": 10
+      }
+    },
+    "education": {
+      "beyond_secondary": 8741,
+      "lower_secondary": 175889,
+      "none": 26710,
+      "other": 0,
+      "primary_not_completed": 562673,
+      "primary_school": 351771,
+      "secondary_technical_diploma": 17864,
+      "total": 1143648,
+      "Province": null,
+      "percent_beyond_secondary": 0.8,
+      "percent_lower_secondary": 15.4,
+      "percent_none": 2.3,
+      "percent_other": 0,
+      "percent_primary_not_completed": 49.2,
+      "percent_primary_school": 30.8,
+      "percent_secondary_technical_diploma": 1.6,
+      "percent_primary_school_2016": 83.98
+    },
+    "electricity": {
+      "available": 119200,
+      "unavailable": 284427,
+      "percent_available": 29.5,
+      "percent_unavailable": 70.5,
+      "available_difference_from_national": -18.5
+    },
+    "fuel": {
+      "charcoal": 12516,
+      "electricity": 2722,
+      "firewood": 372534,
+      "kerosene": 275,
+      "LPG": 14080,
+      "none": 638,
+      "other": 863,
+      "percent_charcoal": 3.1,
+      "percent_electricity": 0.7,
+      "percent_firewood": 92.3,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 3.5,
+      "percent_none": 0.2,
+      "percent_other": 0.2
+    },
+    "health": {
+      "infant_mortality": 49.9
+    },
+    "migration": {
+      "total": 362914,
+      "percent_in_province": 74.4,
+      "percent_another_province": 25.4,
+      "percent_from_outside_cambodia": 0.2
+    },
+    "migrationReason": {
+      "education": 1260,
+      "family_moved": 127450,
+      "insecurity": 14237,
+      "lost_land_or_house": 2756,
+      "marriage": 115646,
+      "natural_calamity": 2375,
+      "orphaned": 0,
+      "other": 2702,
+      "repatriation": 38093,
+      "search_of_employment": 45275,
+      "transfer_of_work_place": 7836,
+      "visiting": 5284,
+      "total": 362914,
+      "percent_other": 0.7,
+      "percent_education": 0.3,
+      "percent_family_moved": 35.1,
+      "percent_insecurity": 3.9,
+      "percent_lost_land_or_house": 0.8,
+      "percent_marriage": 31.9,
+      "percent_natural_calamity": 0.7,
+      "percent_orphaned": 0,
+      "percent_repatriation": 10.5,
+      "percent_search_of_employment": 12.5,
+      "percent_transfer_of_work_place": 2.2,
+      "percent_visiting": 1.5
+    },
+    "population": {
+      "total": 1757223,
+      "male": 836965,
+      "female": 920258,
+      "annual_growth": 0.9,
+      "percent_male": 47.6,
+      "percent_female": 52.4
+    },
+    "unemployment": {
+      "percent": 2.69,
+      "percent_male": 2.13,
+      "percent_female": 3.26
+    }
+  },
+  "Kampong Chhnang": {
+    "elections": {
+      "1998": {
+        "CPP": 3,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 3,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 3,
+        "FCP": 0,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 2,
+        "CNRP": 2
+      }
+    },
+    "education": {
+      "beyond_secondary": 1010,
+      "lower_secondary": 56180,
+      "none": 3279,
+      "other": 0,
+      "primary_not_completed": 163144,
+      "primary_school": 93868,
+      "secondary_technical_diploma": 4881,
+      "total": 322362,
+      "Province": null,
+      "percent_beyond_secondary": 0.3,
+      "percent_lower_secondary": 17.4,
+      "percent_none": 1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 50.6,
+      "percent_primary_school": 29.1,
+      "percent_secondary_technical_diploma": 1.5,
+      "percent_primary_school_2016": 81.7
+    },
+    "electricity": {
+      "available": 32029,
+      "unavailable": 79327,
+      "percent_available": 28.8,
+      "percent_unavailable": 71.2,
+      "available_difference_from_national": -19.3
+    },
+    "fuel": {
+      "charcoal": 12008,
+      "electricity": 447,
+      "firewood": 94172,
+      "kerosene": 112,
+      "LPG": 4275,
+      "none": 180,
+      "other": 161,
+      "percent_charcoal": 10.8,
+      "percent_electricity": 0.4,
+      "percent_firewood": 84.6,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 3.8,
+      "percent_none": 0.2,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 42.1
+    },
+    "migration": {
+      "total": 154148,
+      "percent_in_province": 80.4,
+      "percent_another_province": 16.3,
+      "percent_from_outside_cambodia": 3.3
+    },
+    "migrationReason": {
+      "education": 1017,
+      "family_moved": 63374,
+      "insecurity": 4009,
+      "lost_land_or_house": 3223,
+      "marriage": 34219,
+      "natural_calamity": 0,
+      "orphaned": 367,
+      "other": 333,
+      "repatriation": 36297,
+      "search_of_employment": 5488,
+      "transfer_of_work_place": 3544,
+      "visiting": 2277,
+      "total": 154148,
+      "percent_other": 0.2,
+      "percent_education": 0.7,
+      "percent_family_moved": 41.1,
+      "percent_insecurity": 2.6,
+      "percent_lost_land_or_house": 2.1,
+      "percent_marriage": 22.2,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 23.5,
+      "percent_search_of_employment": 3.6,
+      "percent_transfer_of_work_place": 2.3,
+      "percent_visiting": 1.5
+    },
+    "population": {
+      "total": 523202,
+      "male": 250548,
+      "female": 272654,
+      "annual_growth": 2.05,
+      "percent_male": 47.9,
+      "percent_female": 52.1
+    },
+    "unemployment": {
+      "percent": 1.29,
+      "percent_male": 1.49,
+      "percent_female": 1.11
+    }
+  },
+  "Kampong Speu": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 2,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 5,
+        "FCP": 0,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 3,
+        "CNRP": 3
+      }
+    },
+    "education": {
+      "beyond_secondary": 2846,
+      "lower_secondary": 98660,
+      "none": 5143,
+      "other": 0,
+      "primary_not_completed": 236362,
+      "primary_school": 188320,
+      "secondary_technical_diploma": 5390,
+      "total": 536721,
+      "Province": null,
+      "percent_beyond_secondary": 0.5,
+      "percent_lower_secondary": 18.4,
+      "percent_none": 1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 44,
+      "percent_primary_school": 35.1,
+      "percent_secondary_technical_diploma": 1,
+      "percent_primary_school_2016": 80.17
+    },
+    "electricity": {
+      "available": 48606,
+      "unavailable": 109376,
+      "percent_available": 30.8,
+      "percent_unavailable": 69.2,
+      "available_difference_from_national": -17.3
+    },
+    "fuel": {
+      "charcoal": 4806,
+      "electricity": 1396,
+      "firewood": 145558,
+      "kerosene": 256,
+      "LPG": 5597,
+      "none": 369,
+      "other": 0,
+      "percent_charcoal": 3,
+      "percent_electricity": 0.9,
+      "percent_firewood": 92.1,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 3.5,
+      "percent_none": 0.2,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 62.4
+    },
+    "migration": {
+      "total": 190697,
+      "percent_in_province": 68.4,
+      "percent_another_province": 31.3,
+      "percent_from_outside_cambodia": 0.3
+    },
+    "migrationReason": {
+      "education": 489,
+      "family_moved": 67321,
+      "insecurity": 1304,
+      "lost_land_or_house": 3794,
+      "marriage": 56239,
+      "natural_calamity": 216,
+      "orphaned": 247,
+      "other": 425,
+      "repatriation": 41069,
+      "search_of_employment": 15262,
+      "transfer_of_work_place": 2562,
+      "visiting": 1769,
+      "total": 190697,
+      "percent_other": 0.2,
+      "percent_education": 0.3,
+      "percent_family_moved": 35.3,
+      "percent_insecurity": 0.7,
+      "percent_lost_land_or_house": 2,
+      "percent_marriage": 29.5,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 21.5,
+      "percent_search_of_employment": 8,
+      "percent_transfer_of_work_place": 1.3,
+      "percent_visiting": 0.9
+    },
+    "population": {
+      "total": 755465,
+      "male": 363337,
+      "female": 392128,
+      "annual_growth": 1.05,
+      "percent_male": 48.1,
+      "percent_female": 51.9
+    },
+    "unemployment": {
+      "percent": 3.13,
+      "percent_male": 2.73,
+      "percent_female": 3.48
+    }
+  },
+  "Kampong Thom": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 2,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 3,
+        "CNRP": 3
+      }
+    },
+    "education": {
+      "beyond_secondary": 1425,
+      "lower_secondary": 67781,
+      "none": 4287,
+      "other": 0,
+      "primary_not_completed": 190832,
+      "primary_school": 129690,
+      "secondary_technical_diploma": 6380,
+      "total": 400395,
+      "Province": null,
+      "percent_beyond_secondary": 0.4,
+      "percent_lower_secondary": 16.9,
+      "percent_none": 1.1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 47.7,
+      "percent_primary_school": 32.4,
+      "percent_secondary_technical_diploma": 1.6,
+      "percent_primary_school_2016": 78.55
+    },
+    "electricity": {
+      "available": 35244,
+      "unavailable": 114161,
+      "percent_available": 23.6,
+      "percent_unavailable": 76.4,
+      "available_difference_from_national": -24.5
+    },
+    "fuel": {
+      "charcoal": 7726,
+      "electricity": 280,
+      "firewood": 138573,
+      "kerosene": 578,
+      "LPG": 2165,
+      "none": 82,
+      "other": 0,
+      "percent_charcoal": 5.2,
+      "percent_electricity": 0.2,
+      "percent_firewood": 92.8,
+      "percent_kerosene": 0.4,
+      "percent_LPG": 1.4,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 58.3
+    },
+    "migration": {
+      "total": 186317,
+      "percent_in_province": 81.9,
+      "percent_another_province": 17.5,
+      "percent_from_outside_cambodia": 0.5
+    },
+    "migrationReason": {
+      "education": 1946,
+      "family_moved": 66239,
+      "insecurity": 5028,
+      "lost_land_or_house": 3881,
+      "marriage": 46014,
+      "natural_calamity": 2077,
+      "orphaned": 1241,
+      "other": 702,
+      "repatriation": 25550,
+      "search_of_employment": 26114,
+      "transfer_of_work_place": 5065,
+      "visiting": 2460,
+      "total": 186317,
+      "percent_other": 0.4,
+      "percent_education": 1,
+      "percent_family_moved": 35.6,
+      "percent_insecurity": 2.7,
+      "percent_lost_land_or_house": 2.1,
+      "percent_marriage": 24.7,
+      "percent_natural_calamity": 1.1,
+      "percent_orphaned": 0.7,
+      "percent_repatriation": 13.7,
+      "percent_search_of_employment": 14,
+      "percent_transfer_of_work_place": 2.7,
+      "percent_visiting": 1.3
+    },
+    "population": {
+      "total": 690414,
+      "male": 333979,
+      "female": 356434,
+      "annual_growth": 1.79,
+      "percent_male": 48.4,
+      "percent_female": 51.6
+    },
+    "unemployment": {
+      "percent": 1.82,
+      "percent_male": 1.77,
+      "percent_female": 1.87
+    }
+  },
+  "Kampot": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 2,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 3,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 5,
+        "FCP": 0,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 3,
+        "CNRP": 3
+      }
+    },
+    "education": {
+      "beyond_secondary": 4638,
+      "lower_secondary": 102533,
+      "none": 4564,
+      "other": 96,
+      "primary_not_completed": 173503,
+      "primary_school": 123830,
+      "secondary_technical_diploma": 25769,
+      "total": 434933,
+      "Province": null,
+      "percent_beyond_secondary": 1.1,
+      "percent_lower_secondary": 23.6,
+      "percent_none": 1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 39.9,
+      "percent_primary_school": 28.5,
+      "percent_secondary_technical_diploma": 5.9,
+      "percent_primary_school_2016": 83.13
+    },
+    "electricity": {
+      "available": 49348,
+      "unavailable": 86800,
+      "percent_available": 36.2,
+      "percent_unavailable": 63.8,
+      "available_difference_from_national": -11.8
+    },
+    "fuel": {
+      "charcoal": 11554,
+      "electricity": 2199,
+      "firewood": 111120,
+      "kerosene": 274,
+      "LPG": 10129,
+      "none": 223,
+      "other": 648,
+      "percent_charcoal": 8.5,
+      "percent_electricity": 1.6,
+      "percent_firewood": 81.6,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 7.4,
+      "percent_none": 0.2,
+      "percent_other": 0.5
+    },
+    "health": {
+      "infant_mortality": 69.6
+    },
+    "migration": {
+      "total": 124695,
+      "percent_in_province": 56.9,
+      "percent_another_province": 41.6,
+      "percent_from_outside_cambodia": 1.5
+    },
+    "migrationReason": {
+      "education": 1033,
+      "family_moved": 43301,
+      "insecurity": 1783,
+      "lost_land_or_house": 214,
+      "marriage": 35340,
+      "natural_calamity": 0,
+      "orphaned": 594,
+      "other": 1191,
+      "repatriation": 7807,
+      "search_of_employment": 25911,
+      "transfer_of_work_place": 6826,
+      "visiting": 695,
+      "total": 124695,
+      "percent_other": 1,
+      "percent_education": 0.8,
+      "percent_family_moved": 34.7,
+      "percent_insecurity": 1.4,
+      "percent_lost_land_or_house": 0.2,
+      "percent_marriage": 28.3,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.5,
+      "percent_repatriation": 6.3,
+      "percent_search_of_employment": 20.8,
+      "percent_transfer_of_work_place": 5.5,
+      "percent_visiting": 0.6
+    },
+    "population": {
+      "total": 611557,
+      "male": 303709,
+      "female": 307849,
+      "annual_growth": 0.86,
+      "percent_male": 49.7,
+      "percent_female": 50.3
+    },
+    "unemployment": {
+      "percent": 1.16,
+      "percent_male": 1.04,
+      "percent_female": 1.27
+    }
+  },
+  "Kandal": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 5,
+        "SRP": 2
+      },
+      "2003": {
+        "CPP": 5,
+        "FCP": 3,
+        "SRP": 3
+      },
+      "2008": {
+        "CPP": 7,
+        "FCP": 0,
+        "SRP": 3,
+        "HRP": 1,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 5,
+        "CNRP": 6
+      }
+    },
+    "education": {
+      "beyond_secondary": 11436,
+      "lower_secondary": 226180,
+      "none": 26992,
+      "other": 584,
+      "primary_not_completed": 306760,
+      "primary_school": 241595,
+      "secondary_technical_diploma": 24830,
+      "total": 838377,
+      "Province": null,
+      "percent_beyond_secondary": 1.4,
+      "percent_lower_secondary": 27,
+      "percent_none": 3.2,
+      "percent_other": 0.1,
+      "percent_primary_not_completed": 36.6,
+      "percent_primary_school": 28.8,
+      "percent_secondary_technical_diploma": 3,
+      "percent_primary_school_2016": 82.32
+    },
+    "electricity": {
+      "available": 194111,
+      "unavailable": 44324,
+      "percent_available": 81.4,
+      "percent_unavailable": 18.6,
+      "available_difference_from_national": 33.4
+    },
+    "fuel": {
+      "charcoal": 8988,
+      "electricity": 1971,
+      "firewood": 202965,
+      "kerosene": 0,
+      "LPG": 24340,
+      "none": 171,
+      "other": 0,
+      "percent_charcoal": 3.8,
+      "percent_electricity": 0.8,
+      "percent_firewood": 85.1,
+      "percent_kerosene": 0,
+      "percent_LPG": 10.2,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 48.4
+    },
+    "migration": {
+      "total": 289833,
+      "percent_in_province": 54.3,
+      "percent_another_province": 44.6,
+      "percent_from_outside_cambodia": 1.2
+    },
+    "migrationReason": {
+      "education": 1499,
+      "family_moved": 103131,
+      "insecurity": 15921,
+      "lost_land_or_house": 2098,
+      "marriage": 109280,
+      "natural_calamity": 0,
+      "orphaned": 584,
+      "other": 1113,
+      "repatriation": 24794,
+      "search_of_employment": 14598,
+      "transfer_of_work_place": 12868,
+      "visiting": 3947,
+      "total": 289833,
+      "percent_other": 0.4,
+      "percent_education": 0.5,
+      "percent_family_moved": 35.6,
+      "percent_insecurity": 5.5,
+      "percent_lost_land_or_house": 0.7,
+      "percent_marriage": 37.7,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 8.6,
+      "percent_search_of_employment": 5,
+      "percent_transfer_of_work_place": 4.4,
+      "percent_visiting": 1.4
+    },
+    "population": {
+      "total": 1115965,
+      "male": 538040,
+      "female": 577924,
+      "annual_growth": 0.45,
+      "percent_male": 48.2,
+      "percent_female": 51.8
+    },
+    "unemployment": {
+      "percent": 1.54,
+      "percent_male": 1,
+      "percent_female": 2.04
+    }
+  },
+  "Kep": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 359,
+      "lower_secondary": 4643,
+      "none": 409,
+      "other": 10,
+      "primary_not_completed": 13413,
+      "primary_school": 7340,
+      "secondary_technical_diploma": 1205,
+      "total": 27379,
+      "Province": null,
+      "percent_beyond_secondary": 1.3,
+      "percent_lower_secondary": 17,
+      "percent_none": 1.5,
+      "percent_other": 0,
+      "percent_primary_not_completed": 49,
+      "percent_primary_school": 26.8,
+      "percent_secondary_technical_diploma": 4.4,
+      "percent_primary_school_2016": 58.21
+    },
+    "electricity": {
+      "available": 4534,
+      "unavailable": 3844,
+      "percent_available": 54.1,
+      "percent_unavailable": 45.9,
+      "available_difference_from_national": 6.1
+    },
+    "fuel": {
+      "charcoal": 266,
+      "electricity": 190,
+      "firewood": 7256,
+      "kerosene": 9,
+      "LPG": 640,
+      "none": 8,
+      "other": 9,
+      "percent_charcoal": 3.2,
+      "percent_electricity": 2.3,
+      "percent_firewood": 86.6,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 7.6,
+      "percent_none": 0.1,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 57.2
+    },
+    "migration": {
+      "total": 9713,
+      "percent_in_province": 22.1,
+      "percent_another_province": 77.3,
+      "percent_from_outside_cambodia": 0.6
+    },
+    "migrationReason": {
+      "education": 31,
+      "family_moved": 3964,
+      "insecurity": 1010,
+      "lost_land_or_house": 109,
+      "marriage": 2342,
+      "natural_calamity": 45,
+      "orphaned": 49,
+      "other": 41,
+      "repatriation": 439,
+      "search_of_employment": 940,
+      "transfer_of_work_place": 609,
+      "visiting": 134,
+      "total": 9713,
+      "percent_other": 0.4,
+      "percent_education": 0.3,
+      "percent_family_moved": 40.8,
+      "percent_insecurity": 10.4,
+      "percent_lost_land_or_house": 1.1,
+      "percent_marriage": 24.1,
+      "percent_natural_calamity": 0.5,
+      "percent_orphaned": 0.5,
+      "percent_repatriation": 4.5,
+      "percent_search_of_employment": 9.7,
+      "percent_transfer_of_work_place": 6.3,
+      "percent_visiting": 1.4
+    },
+    "population": {
+      "total": 38701,
+      "male": 19016,
+      "female": 19685,
+      "annual_growth": 1.58,
+      "percent_male": 49.1,
+      "percent_female": 50.9
+    },
+    "unemployment": {
+      "percent": 2.29,
+      "percent_male": 2.47,
+      "percent_female": 2.12
+    }
+  },
+  "Koh Kong": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 878,
+      "lower_secondary": 13869,
+      "none": 1337,
+      "other": 0,
+      "primary_not_completed": 34965,
+      "primary_school": 23632,
+      "secondary_technical_diploma": 2282,
+      "total": 76963,
+      "Province": null,
+      "percent_beyond_secondary": 1.1,
+      "percent_lower_secondary": 18,
+      "percent_none": 1.7,
+      "percent_other": 0,
+      "percent_primary_not_completed": 45.4,
+      "percent_primary_school": 30.7,
+      "percent_secondary_technical_diploma": 3,
+      "percent_primary_school_2016": 58.5
+    },
+    "electricity": {
+      "available": 14162,
+      "unavailable": 11497,
+      "percent_available": 55.2,
+      "percent_unavailable": 44.8,
+      "available_difference_from_national": 7.1
+    },
+    "fuel": {
+      "charcoal": 8093,
+      "electricity": 327,
+      "firewood": 12725,
+      "kerosene": 147,
+      "LPG": 4366,
+      "none": 0,
+      "other": 0,
+      "percent_charcoal": 31.5,
+      "percent_electricity": 1.3,
+      "percent_firewood": 49.6,
+      "percent_kerosene": 0.6,
+      "percent_LPG": 17,
+      "percent_none": 0,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 75.1
+    },
+    "migration": {
+      "total": 39612,
+      "percent_in_province": 21.7,
+      "percent_another_province": 74.1,
+      "percent_from_outside_cambodia": 4.3
+    },
+    "migrationReason": {
+      "education": 459,
+      "family_moved": 17476,
+      "insecurity": 101,
+      "lost_land_or_house": 662,
+      "marriage": 2688,
+      "natural_calamity": 201,
+      "orphaned": 127,
+      "other": 110,
+      "repatriation": 123,
+      "search_of_employment": 15220,
+      "transfer_of_work_place": 2131,
+      "visiting": 314,
+      "total": 39612,
+      "percent_other": 0.3,
+      "percent_education": 1.2,
+      "percent_family_moved": 44.1,
+      "percent_insecurity": 0.3,
+      "percent_lost_land_or_house": 1.7,
+      "percent_marriage": 6.8,
+      "percent_natural_calamity": 0.5,
+      "percent_orphaned": 0.3,
+      "percent_repatriation": 0.3,
+      "percent_search_of_employment": 38.4,
+      "percent_transfer_of_work_place": 5.4,
+      "percent_visiting": 0.8
+    },
+    "population": {
+      "total": 122263,
+      "male": 61319,
+      "female": 60944,
+      "annual_growth": 0.8,
+      "percent_male": 50.2,
+      "percent_female": 49.8
+    },
+    "unemployment": {
+      "percent": 7.38,
+      "percent_male": 6.27,
+      "percent_female": 8.79
+    }
+  },
+  "Kratie": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 2,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 2,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 2,
+        "FCP": 0,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 2,
+        "CNRP": 1
+      }
+    },
+    "education": {
+      "beyond_secondary": 955,
+      "lower_secondary": 30398,
+      "none": 2273,
+      "other": 125,
+      "primary_not_completed": 109466,
+      "primary_school": 59998,
+      "secondary_technical_diploma": 6137,
+      "total": 209352,
+      "Province": null,
+      "percent_beyond_secondary": 0.5,
+      "percent_lower_secondary": 14.5,
+      "percent_none": 1.1,
+      "percent_other": 0.1,
+      "percent_primary_not_completed": 52.3,
+      "percent_primary_school": 28.7,
+      "percent_secondary_technical_diploma": 2.9,
+      "percent_primary_school_2016": 72.48
+    },
+    "electricity": {
+      "available": 21184,
+      "unavailable": 51866,
+      "percent_available": 29,
+      "percent_unavailable": 71,
+      "available_difference_from_national": -19.1
+    },
+    "fuel": {
+      "charcoal": 4524,
+      "electricity": 68,
+      "firewood": 65061,
+      "kerosene": 178,
+      "LPG": 2922,
+      "none": 188,
+      "other": 109,
+      "percent_charcoal": 6.2,
+      "percent_electricity": 0.1,
+      "percent_firewood": 89.1,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 4,
+      "percent_none": 0.3,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 76.7
+    },
+    "migration": {
+      "total": 73827,
+      "percent_in_province": 48.5,
+      "percent_another_province": 50.6,
+      "percent_from_outside_cambodia": 0.9
+    },
+    "migrationReason": {
+      "education": 590,
+      "family_moved": 29723,
+      "insecurity": 158,
+      "lost_land_or_house": 1780,
+      "marriage": 19687,
+      "natural_calamity": 59,
+      "orphaned": 257,
+      "other": 1004,
+      "repatriation": 3956,
+      "search_of_employment": 8964,
+      "transfer_of_work_place": 5457,
+      "visiting": 2192,
+      "total": 73827,
+      "percent_other": 1.4,
+      "percent_education": 0.8,
+      "percent_family_moved": 40.3,
+      "percent_insecurity": 0.2,
+      "percent_lost_land_or_house": 2.4,
+      "percent_marriage": 26.7,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0.3,
+      "percent_repatriation": 5.4,
+      "percent_search_of_employment": 12.1,
+      "percent_transfer_of_work_place": 7.4,
+      "percent_visiting": 3
+    },
+    "population": {
+      "total": 344195,
+      "male": 167425,
+      "female": 176770,
+      "annual_growth": 1.51,
+      "percent_male": 48.6,
+      "percent_female": 51.4
+    },
+    "unemployment": {
+      "percent": 0.74,
+      "percent_male": 0.6,
+      "percent_female": 0.88
+    }
+  },
+  "Mondul Kiri": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 212,
+      "lower_secondary": 5648,
+      "none": 508,
+      "other": 30,
+      "primary_not_completed": 18162,
+      "primary_school": 9088,
+      "secondary_technical_diploma": 143,
+      "total": 33791,
+      "Province": null,
+      "percent_beyond_secondary": 0.6,
+      "percent_lower_secondary": 16.7,
+      "percent_none": 1.5,
+      "percent_other": 0.1,
+      "percent_primary_not_completed": 53.7,
+      "percent_primary_school": 26.9,
+      "percent_secondary_technical_diploma": 0.4,
+      "percent_primary_school_2016": 70.18
+    },
+    "electricity": {
+      "available": 5498,
+      "unavailable": 9753,
+      "percent_available": 36.1,
+      "percent_unavailable": 63.9,
+      "available_difference_from_national": -12
+    },
+    "fuel": {
+      "charcoal": 622,
+      "electricity": 81,
+      "firewood": 13191,
+      "kerosene": 47,
+      "LPG": 1265,
+      "none": 30,
+      "other": 15,
+      "percent_charcoal": 4.1,
+      "percent_electricity": 0.5,
+      "percent_firewood": 86.5,
+      "percent_kerosene": 0.3,
+      "percent_LPG": 8.3,
+      "percent_none": 0.2,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 156.8
+    },
+    "migration": {
+      "total": 18787,
+      "percent_in_province": 29.1,
+      "percent_another_province": 69.7,
+      "percent_from_outside_cambodia": 1.3
+    },
+    "migrationReason": {
+      "education": 48,
+      "family_moved": 9897,
+      "insecurity": 115,
+      "lost_land_or_house": 306,
+      "marriage": 1601,
+      "natural_calamity": 84,
+      "orphaned": 0,
+      "other": 0,
+      "repatriation": 234,
+      "search_of_employment": 5208,
+      "transfer_of_work_place": 938,
+      "visiting": 356,
+      "total": 18787,
+      "percent_other": 0,
+      "percent_education": 0.3,
+      "percent_family_moved": 52.7,
+      "percent_insecurity": 0.6,
+      "percent_lost_land_or_house": 1.6,
+      "percent_marriage": 8.5,
+      "percent_natural_calamity": 0.4,
+      "percent_orphaned": 0,
+      "percent_repatriation": 1.2,
+      "percent_search_of_employment": 27.7,
+      "percent_transfer_of_work_place": 5,
+      "percent_visiting": 1.9
+    },
+    "population": {
+      "total": 72680,
+      "male": 37098,
+      "female": 35582,
+      "annual_growth": 3.47,
+      "percent_male": 51,
+      "percent_female": 49
+    },
+    "unemployment": {
+      "percent": 0.91,
+      "percent_male": 0.95,
+      "percent_female": 0.87
+    }
+  },
+  "Oddar Meanchey": {
+    "elections": {
+      "1998": {
+        "CPP": 0,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 183,
+      "lower_secondary": 23185,
+      "none": 2207,
+      "other": 36,
+      "primary_not_completed": 69715,
+      "primary_school": 42529,
+      "secondary_technical_diploma": 1871,
+      "total": 139726,
+      "Province": null,
+      "percent_beyond_secondary": 0.1,
+      "percent_lower_secondary": 16.6,
+      "percent_none": 1.6,
+      "percent_other": 0,
+      "percent_primary_not_completed": 49.9,
+      "percent_primary_school": 30.4,
+      "percent_secondary_technical_diploma": 1.3,
+      "percent_primary_school_2016": 68.31
+    },
+    "electricity": {
+      "available": 15158,
+      "unavailable": 35109,
+      "percent_available": 30.2,
+      "percent_unavailable": 69.8,
+      "available_difference_from_national": -17.9
+    },
+    "fuel": {
+      "charcoal": 13681,
+      "electricity": 707,
+      "firewood": 34508,
+      "kerosene": 96,
+      "LPG": 1243,
+      "none": 30,
+      "other": 0,
+      "percent_charcoal": 27.2,
+      "percent_electricity": 1.4,
+      "percent_firewood": 68.7,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 2.5,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 75.6
+    },
+    "migration": {
+      "total": 112088,
+      "percent_in_province": 27.5,
+      "percent_another_province": 62.8,
+      "percent_from_outside_cambodia": 9.7
+    },
+    "migrationReason": {
+      "education": 207,
+      "family_moved": 71722,
+      "insecurity": 1493,
+      "lost_land_or_house": 4726,
+      "marriage": 6014,
+      "natural_calamity": 132,
+      "orphaned": 0,
+      "other": 388,
+      "repatriation": 9210,
+      "search_of_employment": 12023,
+      "transfer_of_work_place": 5067,
+      "visiting": 1106,
+      "total": 112088,
+      "percent_other": 0.3,
+      "percent_education": 0.2,
+      "percent_family_moved": 64,
+      "percent_insecurity": 1.3,
+      "percent_lost_land_or_house": 4.2,
+      "percent_marriage": 5.4,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0,
+      "percent_repatriation": 8.2,
+      "percent_search_of_employment": 10.7,
+      "percent_transfer_of_work_place": 4.5,
+      "percent_visiting": 1
+    },
+    "population": {
+      "total": 231390,
+      "male": 116090,
+      "female": 115299,
+      "annual_growth": 4.39,
+      "percent_male": 50.2,
+      "percent_female": 49.8
+    },
+    "unemployment": {
+      "percent": 2.75,
+      "percent_male": 3.03,
+      "percent_female": 2.47
+    }
+  },
+  "Pailin": {
+    "elections": {
+      "1998": {
+        "CPP": 0,
+        "FCP": 0,
+        "SRP": 1
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 561,
+      "lower_secondary": 9220,
+      "none": 677,
+      "other": 0,
+      "primary_not_completed": 21041,
+      "primary_school": 12884,
+      "secondary_technical_diploma": 1371,
+      "total": 45754,
+      "Province": null,
+      "percent_beyond_secondary": 1.2,
+      "percent_lower_secondary": 20.2,
+      "percent_none": 1.5,
+      "percent_other": 0,
+      "percent_primary_not_completed": 46,
+      "percent_primary_school": 28.2,
+      "percent_secondary_technical_diploma": 3,
+      "percent_primary_school_2016": 59.6
+    },
+    "electricity": {
+      "available": 9144,
+      "unavailable": 5339,
+      "percent_available": 63.1,
+      "percent_unavailable": 36.9,
+      "available_difference_from_national": 15.1
+    },
+    "fuel": {
+      "charcoal": 4992,
+      "electricity": 271,
+      "firewood": 7200,
+      "kerosene": 0,
+      "LPG": 2010,
+      "none": 11,
+      "other": 0,
+      "percent_charcoal": 34.5,
+      "percent_electricity": 1.9,
+      "percent_firewood": 49.7,
+      "percent_kerosene": 0,
+      "percent_LPG": 13.9,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 60.6
+    },
+    "migration": {
+      "total": 42973,
+      "percent_in_province": 9.8,
+      "percent_another_province": 88.1,
+      "percent_from_outside_cambodia": 2.1
+    },
+    "migrationReason": {
+      "education": 171,
+      "family_moved": 24225,
+      "insecurity": 2497,
+      "lost_land_or_house": 626,
+      "marriage": 966,
+      "natural_calamity": 0,
+      "orphaned": 95,
+      "other": 66,
+      "repatriation": 350,
+      "search_of_employment": 11317,
+      "transfer_of_work_place": 2282,
+      "visiting": 378,
+      "total": 42973,
+      "percent_other": 0.2,
+      "percent_education": 0.4,
+      "percent_family_moved": 56.4,
+      "percent_insecurity": 5.8,
+      "percent_lost_land_or_house": 1.5,
+      "percent_marriage": 2.2,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 0.8,
+      "percent_search_of_employment": 26.3,
+      "percent_transfer_of_work_place": 5.3,
+      "percent_visiting": 0.9
+    },
+    "population": {
+      "total": 65795,
+      "male": 32859,
+      "female": 32936,
+      "annual_growth": -1.38,
+      "percent_male": 49.9,
+      "percent_female": 50.1
+    },
+    "unemployment": {
+      "percent": 2.05,
+      "percent_male": 1.62,
+      "percent_female": 2.56
+    }
+  },
+  "Phnom Penh": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 4,
+        "SRP": 4
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 2,
+        "SRP": 6
+      },
+      "2008": {
+        "CPP": 7,
+        "FCP": 0,
+        "SRP": 5,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 5,
+        "CNRP": 7
+      }
+    },
+    "education": {
+      "beyond_secondary": 114118,
+      "lower_secondary": 435205,
+      "none": 12039,
+      "other": 2653,
+      "primary_not_completed": 300428,
+      "primary_school": 331716,
+      "secondary_technical_diploma": 143705,
+      "total": 1339864,
+      "Province": null,
+      "percent_beyond_secondary": 8.5,
+      "percent_lower_secondary": 32.5,
+      "percent_none": 0.9,
+      "percent_other": 0.2,
+      "percent_primary_not_completed": 22.4,
+      "percent_primary_school": 24.8,
+      "percent_secondary_technical_diploma": 10.7,
+      "percent_primary_school_2016": 76.76
+    },
+    "electricity": {
+      "available": 347101,
+      "unavailable": 5601,
+      "percent_available": 98.4,
+      "percent_unavailable": 1.6,
+      "available_difference_from_national": 50.4
+    },
+    "fuel": {
+      "charcoal": 34467,
+      "electricity": 11898,
+      "firewood": 71548,
+      "kerosene": 229,
+      "LPG": 233864,
+      "none": 355,
+      "other": 340,
+      "percent_charcoal": 9.8,
+      "percent_electricity": 3.4,
+      "percent_firewood": 20.3,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 66.3,
+      "percent_none": 0.1,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 33.4
+    },
+    "migration": {
+      "total": 955349,
+      "percent_in_province": 45,
+      "percent_another_province": 52.1,
+      "percent_from_outside_cambodia": 2.9
+    },
+    "migrationReason": {
+      "education": 37231,
+      "family_moved": 495107,
+      "insecurity": 1870,
+      "lost_land_or_house": 3203,
+      "marriage": 101800,
+      "natural_calamity": 325,
+      "orphaned": 3050,
+      "other": 3801,
+      "repatriation": 63454,
+      "search_of_employment": 145595,
+      "transfer_of_work_place": 93776,
+      "visiting": 6137,
+      "total": 955349,
+      "percent_other": 0.4,
+      "percent_education": 3.9,
+      "percent_family_moved": 51.8,
+      "percent_insecurity": 0.2,
+      "percent_lost_land_or_house": 0.3,
+      "percent_marriage": 10.7,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.3,
+      "percent_repatriation": 6.6,
+      "percent_search_of_employment": 15.2,
+      "percent_transfer_of_work_place": 9.8,
+      "percent_visiting": 0.6
+    },
+    "population": {
+      "total": 1688044,
+      "male": 816145,
+      "female": 871900,
+      "annual_growth": 2.34,
+      "percent_male": 48.3,
+      "percent_female": 51.7
+    },
+    "unemployment": {
+      "percent": 3.64,
+      "percent_male": 3.46,
+      "percent_female": 3.84
+    }
+  },
+  "Preah Sihanouk": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 4773,
+      "lower_secondary": 54812,
+      "none": 1800,
+      "other": 52,
+      "primary_not_completed": 57080,
+      "primary_school": 53845,
+      "secondary_technical_diploma": 17498,
+      "total": 189860,
+      "Province": null,
+      "percent_beyond_secondary": 2.5,
+      "percent_lower_secondary": 28.9,
+      "percent_none": 0.9,
+      "percent_other": 0,
+      "percent_primary_not_completed": 30.1,
+      "percent_primary_school": 28.4,
+      "percent_secondary_technical_diploma": 9.2,
+      "percent_primary_school_2016": 68.41
+    },
+    "electricity": {
+      "available": 42834,
+      "unavailable": 9121,
+      "percent_available": 82.4,
+      "percent_unavailable": 17.6,
+      "available_difference_from_national": 34.4
+    },
+    "fuel": {
+      "charcoal": 19567,
+      "electricity": 935,
+      "firewood": 19031,
+      "kerosene": 121,
+      "LPG": 12178,
+      "none": 34,
+      "other": 89,
+      "percent_charcoal": 37.7,
+      "percent_electricity": 1.8,
+      "percent_firewood": 36.6,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 23.4,
+      "percent_none": 0.1,
+      "percent_other": 0.2
+    },
+    "health": {
+      "infant_mortality": 106.1
+    },
+    "migration": {
+      "total": 96157,
+      "percent_in_province": 17.3,
+      "percent_another_province": 79.8,
+      "percent_from_outside_cambodia": 2.9
+    },
+    "migrationReason": {
+      "education": 1449,
+      "family_moved": 43045,
+      "insecurity": 577,
+      "lost_land_or_house": 409,
+      "marriage": 8625,
+      "natural_calamity": 97,
+      "orphaned": 85,
+      "other": 107,
+      "repatriation": 438,
+      "search_of_employment": 33819,
+      "transfer_of_work_place": 6899,
+      "visiting": 607,
+      "total": 96157,
+      "percent_other": 0.1,
+      "percent_education": 1.5,
+      "percent_family_moved": 44.8,
+      "percent_insecurity": 0.6,
+      "percent_lost_land_or_house": 0.4,
+      "percent_marriage": 9,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 0.5,
+      "percent_search_of_employment": 35.2,
+      "percent_transfer_of_work_place": 7.2,
+      "percent_visiting": 0.6
+    },
+    "population": {
+      "total": 250180,
+      "male": 123007,
+      "female": 127173,
+      "annual_growth": 2.44,
+      "percent_male": 49.2,
+      "percent_female": 50.8
+    },
+    "unemployment": {
+      "percent": 3.87,
+      "percent_male": 2.26,
+      "percent_female": 5.89
+    }
+  },
+  "Preah Vihear": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 725,
+      "lower_secondary": 21526,
+      "none": 3990,
+      "other": 0,
+      "primary_not_completed": 67950,
+      "primary_school": 32432,
+      "secondary_technical_diploma": 1873,
+      "total": 128496,
+      "Province": null,
+      "percent_beyond_secondary": 0.6,
+      "percent_lower_secondary": 16.8,
+      "percent_none": 3.1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 52.9,
+      "percent_primary_school": 25.2,
+      "percent_secondary_technical_diploma": 1.5,
+      "percent_primary_school_2016": 86.04
+    },
+    "electricity": {
+      "available": 7225,
+      "unavailable": 41017,
+      "percent_available": 15,
+      "percent_unavailable": 85,
+      "available_difference_from_national": -33.1
+    },
+    "fuel": {
+      "charcoal": 4208,
+      "electricity": 156,
+      "firewood": 42934,
+      "kerosene": 0,
+      "LPG": 835,
+      "none": 63,
+      "other": 45,
+      "percent_charcoal": 8.7,
+      "percent_electricity": 0.3,
+      "percent_firewood": 89,
+      "percent_kerosene": 0,
+      "percent_LPG": 1.7,
+      "percent_none": 0.1,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 170.3
+    },
+    "migration": {
+      "total": 69707,
+      "percent_in_province": 29,
+      "percent_another_province": 70.8,
+      "percent_from_outside_cambodia": 0.2
+    },
+    "migrationReason": {
+      "education": 1224,
+      "family_moved": 44042,
+      "insecurity": 577,
+      "lost_land_or_house": 2657,
+      "marriage": 8223,
+      "natural_calamity": 49,
+      "orphaned": 36,
+      "other": 131,
+      "repatriation": 265,
+      "search_of_employment": 7304,
+      "transfer_of_work_place": 4473,
+      "visiting": 726,
+      "total": 69707,
+      "percent_other": 0.2,
+      "percent_education": 1.8,
+      "percent_family_moved": 63.2,
+      "percent_insecurity": 0.8,
+      "percent_lost_land_or_house": 3.8,
+      "percent_marriage": 11.8,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 0.4,
+      "percent_search_of_employment": 10.5,
+      "percent_transfer_of_work_place": 6.4,
+      "percent_visiting": 1
+    },
+    "population": {
+      "total": 235370,
+      "male": 116737,
+      "female": 118633,
+      "annual_growth": 6.37,
+      "percent_male": 49.6,
+      "percent_female": 50.4
+    },
+    "unemployment": {
+      "percent": 0.99,
+      "percent_male": 0.99,
+      "percent_female": 0.98
+    }
+  },
+  "Prey Veng": {
+    "elections": {
+      "1998": {
+        "CPP": 7,
+        "FCP": 4,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 6,
+        "FCP": 3,
+        "SRP": 2
+      },
+      "2008": {
+        "CPP": 7,
+        "FCP": 0,
+        "SRP": 2,
+        "HRP": 1,
+        "NRP": 1
+      },
+      "2013": {
+        "CPP": 5,
+        "CNRP": 6
+      }
+    },
+    "education": {
+      "beyond_secondary": 5324,
+      "lower_secondary": 136101,
+      "none": 6702,
+      "other": 0,
+      "primary_not_completed": 379910,
+      "primary_school": 249710,
+      "secondary_technical_diploma": 17843,
+      "total": 795590,
+      "Province": null,
+      "percent_beyond_secondary": 0.7,
+      "percent_lower_secondary": 17.1,
+      "percent_none": 0.8,
+      "percent_other": 0,
+      "percent_primary_not_completed": 47.8,
+      "percent_primary_school": 31.4,
+      "percent_secondary_technical_diploma": 2.2,
+      "percent_primary_school_2016": 88.38
+    },
+    "electricity": {
+      "available": 47007,
+      "unavailable": 208953,
+      "percent_available": 18.4,
+      "percent_unavailable": 81.6,
+      "available_difference_from_national": -29.7
+    },
+    "fuel": {
+      "charcoal": 2267,
+      "electricity": 0,
+      "firewood": 246296,
+      "kerosene": 165,
+      "LPG": 6795,
+      "none": 438,
+      "other": 0,
+      "percent_charcoal": 0.9,
+      "percent_electricity": 0,
+      "percent_firewood": 96.2,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 2.7,
+      "percent_none": 0.2,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 54
+    },
+    "migration": {
+      "total": 159923,
+      "percent_in_province": 64,
+      "percent_another_province": 34,
+      "percent_from_outside_cambodia": 2.1
+    },
+    "migrationReason": {
+      "education": 3298,
+      "family_moved": 43769,
+      "insecurity": 3270,
+      "lost_land_or_house": 387,
+      "marriage": 71986,
+      "natural_calamity": 598,
+      "orphaned": 204,
+      "other": 5253,
+      "repatriation": 12966,
+      "search_of_employment": 8809,
+      "transfer_of_work_place": 4358,
+      "visiting": 5025,
+      "total": 159923,
+      "percent_other": 3.3,
+      "percent_education": 2.1,
+      "percent_family_moved": 27.4,
+      "percent_insecurity": 2,
+      "percent_lost_land_or_house": 0.2,
+      "percent_marriage": 45,
+      "percent_natural_calamity": 0.4,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 8.1,
+      "percent_search_of_employment": 5.5,
+      "percent_transfer_of_work_place": 2.7,
+      "percent_visiting": 3.1
+    },
+    "population": {
+      "total": 1156739,
+      "male": 557793,
+      "female": 598946,
+      "annual_growth": 3.99,
+      "percent_male": 48.2,
+      "percent_female": 51.8
+    },
+    "unemployment": {
+      "percent": 2.07,
+      "percent_male": 2.27,
+      "percent_female": 1.89
+    }
+  },
+  "Pursat": {
+    "elections": {
+      "1998": {
+        "CPP": 2,
+        "FCP": 2,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 3,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 4,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 3,
+        "CNRP": 1
+      }
+    },
+    "education": {
+      "beyond_secondary": 2855,
+      "lower_secondary": 55672,
+      "none": 4351,
+      "other": 0,
+      "primary_not_completed": 124800,
+      "primary_school": 84179,
+      "secondary_technical_diploma": 11348,
+      "total": 283205,
+      "Province": null,
+      "percent_beyond_secondary": 1,
+      "percent_lower_secondary": 19.7,
+      "percent_none": 1.5,
+      "percent_other": 0,
+      "percent_primary_not_completed": 44.1,
+      "percent_primary_school": 29.7,
+      "percent_secondary_technical_diploma": 4,
+      "percent_primary_school_2016": 79.04
+    },
+    "electricity": {
+      "available": 27682,
+      "unavailable": 68602,
+      "percent_available": 28.8,
+      "percent_unavailable": 71.2,
+      "available_difference_from_national": -19.3
+    },
+    "fuel": {
+      "charcoal": 7610,
+      "electricity": 83,
+      "firewood": 86564,
+      "kerosene": 92,
+      "LPG": 1860,
+      "none": 74,
+      "other": 0,
+      "percent_charcoal": 7.9,
+      "percent_electricity": 0.1,
+      "percent_firewood": 89.9,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 1.9,
+      "percent_none": 0.1,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 56.4
+    },
+    "migration": {
+      "total": 110170,
+      "percent_in_province": 75.4,
+      "percent_another_province": 23,
+      "percent_from_outside_cambodia": 1.6
+    },
+    "migrationReason": {
+      "education": 0,
+      "family_moved": 44884,
+      "insecurity": 4980,
+      "lost_land_or_house": 1039,
+      "marriage": 24142,
+      "natural_calamity": 0,
+      "orphaned": 184,
+      "other": 909,
+      "repatriation": 14358,
+      "search_of_employment": 11825,
+      "transfer_of_work_place": 6331,
+      "visiting": 1518,
+      "total": 110170,
+      "percent_other": 0.8,
+      "percent_education": 0,
+      "percent_family_moved": 40.7,
+      "percent_insecurity": 4.5,
+      "percent_lost_land_or_house": 0.9,
+      "percent_marriage": 21.9,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 13,
+      "percent_search_of_employment": 10.7,
+      "percent_transfer_of_work_place": 5.7,
+      "percent_visiting": 1.4
+    },
+    "population": {
+      "total": 435596,
+      "male": 208292,
+      "female": 227305,
+      "annual_growth": 1.85,
+      "percent_male": 47.8,
+      "percent_female": 52.2
+    },
+    "unemployment": {
+      "percent": 1.98,
+      "percent_male": 1.78,
+      "percent_female": 2.18
+    }
+  },
+  "Ratanak Kiri": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 815,
+      "lower_secondary": 13376,
+      "none": 2946,
+      "other": 61,
+      "primary_not_completed": 29498,
+      "primary_school": 17313,
+      "secondary_technical_diploma": 3364,
+      "total": 67373,
+      "Province": null,
+      "percent_beyond_secondary": 1.2,
+      "percent_lower_secondary": 19.9,
+      "percent_none": 4.4,
+      "percent_other": 0.1,
+      "percent_primary_not_completed": 43.8,
+      "percent_primary_school": 25.7,
+      "percent_secondary_technical_diploma": 5,
+      "percent_primary_school_2016": 69.97
+    },
+    "electricity": {
+      "available": 14520,
+      "unavailable": 21657,
+      "percent_available": 40.1,
+      "percent_unavailable": 59.9,
+      "available_difference_from_national": -7.9
+    },
+    "fuel": {
+      "charcoal": 1654,
+      "electricity": 82,
+      "firewood": 30595,
+      "kerosene": 54,
+      "LPG": 3711,
+      "none": 81,
+      "other": 0,
+      "percent_charcoal": 4.6,
+      "percent_electricity": 0.2,
+      "percent_firewood": 84.6,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 10.3,
+      "percent_none": 0.2,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 231.6
+    },
+    "migration": {
+      "total": 47206,
+      "percent_in_province": 21.6,
+      "percent_another_province": 77.7,
+      "percent_from_outside_cambodia": 0.8
+    },
+    "migrationReason": {
+      "education": 552,
+      "family_moved": 24254,
+      "insecurity": 102,
+      "lost_land_or_house": 186,
+      "marriage": 4631,
+      "natural_calamity": 0,
+      "orphaned": 31,
+      "other": 350,
+      "repatriation": 594,
+      "search_of_employment": 13404,
+      "transfer_of_work_place": 3033,
+      "visiting": 69,
+      "total": 47206,
+      "percent_other": 0.7,
+      "percent_education": 1.2,
+      "percent_family_moved": 51.4,
+      "percent_insecurity": 0.2,
+      "percent_lost_land_or_house": 0.4,
+      "percent_marriage": 9.8,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 1.3,
+      "percent_search_of_employment": 28.4,
+      "percent_transfer_of_work_place": 6.4,
+      "percent_visiting": 0.1
+    },
+    "population": {
+      "total": 183699,
+      "male": 91265,
+      "female": 92434,
+      "annual_growth": 3.99,
+      "percent_male": 49.7,
+      "percent_female": 50.3
+    },
+    "unemployment": {
+      "percent": 0.85,
+      "percent_male": 0.93,
+      "percent_female": 0.78
+    }
+  },
+  "Siem Reap": {
+    "elections": {
+      "1998": {
+        "CPP": 3,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 5,
+        "FCP": 0,
+        "SRP": 1,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 4,
+        "CNRP": 2
+      }
+    },
+    "education": {
+      "beyond_secondary": 4122,
+      "lower_secondary": 94162,
+      "none": 13337,
+      "other": 0,
+      "primary_not_completed": 285652,
+      "primary_school": 150063,
+      "secondary_technical_diploma": 36645,
+      "total": 583981,
+      "Province": null,
+      "percent_beyond_secondary": 0.7,
+      "percent_lower_secondary": 16.1,
+      "percent_none": 2.3,
+      "percent_other": 0,
+      "percent_primary_not_completed": 48.9,
+      "percent_primary_school": 25.7,
+      "percent_secondary_technical_diploma": 6.3,
+      "percent_primary_school_2016": 80.81
+    },
+    "electricity": {
+      "available": 88251,
+      "unavailable": 101457,
+      "percent_available": 46.5,
+      "percent_unavailable": 53.5,
+      "available_difference_from_national": -1.5
+    },
+    "fuel": {
+      "charcoal": 22977,
+      "electricity": 1847,
+      "firewood": 152472,
+      "kerosene": 0,
+      "LPG": 12073,
+      "none": 0,
+      "other": 339,
+      "percent_charcoal": 12.1,
+      "percent_electricity": 1,
+      "percent_firewood": 80.4,
+      "percent_kerosene": 0,
+      "percent_LPG": 6.4,
+      "percent_none": 0,
+      "percent_other": 0.2
+    },
+    "health": {
+      "infant_mortality": 36.3
+    },
+    "migration": {
+      "total": 244043,
+      "percent_in_province": 72.2,
+      "percent_another_province": 27.6,
+      "percent_from_outside_cambodia": 0.3
+    },
+    "migrationReason": {
+      "education": 4672,
+      "family_moved": 90857,
+      "insecurity": 4237,
+      "lost_land_or_house": 2255,
+      "marriage": 59613,
+      "natural_calamity": 0,
+      "orphaned": 234,
+      "other": 6112,
+      "repatriation": 23257,
+      "search_of_employment": 40596,
+      "transfer_of_work_place": 8990,
+      "visiting": 3220,
+      "total": 244043,
+      "percent_other": 2.5,
+      "percent_education": 1.9,
+      "percent_family_moved": 37.2,
+      "percent_insecurity": 1.7,
+      "percent_lost_land_or_house": 0.9,
+      "percent_marriage": 24.4,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.1,
+      "percent_repatriation": 9.5,
+      "percent_search_of_employment": 16.6,
+      "percent_transfer_of_work_place": 3.7,
+      "percent_visiting": 1.3
+    },
+    "population": {
+      "total": 922982,
+      "male": 447089,
+      "female": 475893,
+      "annual_growth": 0.58,
+      "percent_male": 48.4,
+      "percent_female": 51.6
+    },
+    "unemployment": {
+      "percent": 3.42,
+      "percent_male": 1.79,
+      "percent_female": 5.03
+    }
+  },
+  "Stung Treng": {
+    "elections": {
+      "1998": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 1,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 1,
+        "CNRP": 0
+      }
+    },
+    "education": {
+      "beyond_secondary": 625,
+      "lower_secondary": 11219,
+      "none": 693,
+      "other": 0,
+      "primary_not_completed": 33293,
+      "primary_school": 17266,
+      "secondary_technical_diploma": 2170,
+      "total": 65266,
+      "Province": null,
+      "percent_beyond_secondary": 1,
+      "percent_lower_secondary": 17.2,
+      "percent_none": 1.1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 51,
+      "percent_primary_school": 26.5,
+      "percent_secondary_technical_diploma": 3.3,
+      "percent_primary_school_2016": 71.53
+    },
+    "electricity": {
+      "available": 8935,
+      "unavailable": 16424,
+      "percent_available": 35.2,
+      "percent_unavailable": 64.8,
+      "available_difference_from_national": -12.8
+    },
+    "fuel": {
+      "charcoal": 2809,
+      "electricity": 196,
+      "firewood": 20710,
+      "kerosene": 172,
+      "LPG": 1471,
+      "none": 0,
+      "other": 0,
+      "percent_charcoal": 11.1,
+      "percent_electricity": 0.8,
+      "percent_firewood": 81.7,
+      "percent_kerosene": 0.7,
+      "percent_LPG": 5.8,
+      "percent_none": 0,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 105.2
+    },
+    "migration": {
+      "total": 36102,
+      "percent_in_province": 32.4,
+      "percent_another_province": 66.6,
+      "percent_from_outside_cambodia": 1
+    },
+    "migrationReason": {
+      "education": 305,
+      "family_moved": 20223,
+      "insecurity": 178,
+      "lost_land_or_house": 371,
+      "marriage": 4528,
+      "natural_calamity": 0,
+      "orphaned": 90,
+      "other": 27,
+      "repatriation": 330,
+      "search_of_employment": 7401,
+      "transfer_of_work_place": 1587,
+      "visiting": 1062,
+      "total": 36102,
+      "percent_other": 0.1,
+      "percent_education": 0.8,
+      "percent_family_moved": 56,
+      "percent_insecurity": 0.5,
+      "percent_lost_land_or_house": 1,
+      "percent_marriage": 12.5,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 0.9,
+      "percent_search_of_employment": 20.5,
+      "percent_transfer_of_work_place": 4.4,
+      "percent_visiting": 2.9
+    },
+    "population": {
+      "total": 122791,
+      "male": 62149,
+      "female": 60641,
+      "annual_growth": 1.9,
+      "percent_male": 50.6,
+      "percent_female": 49.4
+    },
+    "unemployment": {
+      "percent": 4.1,
+      "percent_male": 3.84,
+      "percent_female": 4.36
+    }
+  },
+  "Svay Rieng": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2003": {
+        "CPP": 4,
+        "FCP": 1,
+        "SRP": 0
+      },
+      "2008": {
+        "CPP": 5,
+        "FCP": 0,
+        "SRP": 0,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 3,
+        "CNRP": 2
+      }
+    },
+    "education": {
+      "beyond_secondary": 2887,
+      "lower_secondary": 100056,
+      "none": 1624,
+      "other": 0,
+      "primary_not_completed": 160082,
+      "primary_school": 145331,
+      "secondary_technical_diploma": 9072,
+      "total": 419052,
+      "Province": null,
+      "percent_beyond_secondary": 0.7,
+      "percent_lower_secondary": 23.9,
+      "percent_none": 0.4,
+      "percent_other": 0,
+      "percent_primary_not_completed": 38.2,
+      "percent_primary_school": 34.7,
+      "percent_secondary_technical_diploma": 2.2,
+      "percent_primary_school_2016": 91
+    },
+    "electricity": {
+      "available": 48880,
+      "unavailable": 82093,
+      "percent_available": 37.3,
+      "percent_unavailable": 62.7,
+      "available_difference_from_national": -10.7
+    },
+    "fuel": {
+      "charcoal": 968,
+      "electricity": 230,
+      "firewood": 120416,
+      "kerosene": 0,
+      "LPG": 9358,
+      "none": 0,
+      "other": 0,
+      "percent_charcoal": 0.7,
+      "percent_electricity": 0.2,
+      "percent_firewood": 91.9,
+      "percent_kerosene": 0,
+      "percent_LPG": 7.1,
+      "percent_none": 0,
+      "percent_other": 0
+    },
+    "health": {
+      "infant_mortality": 84.8
+    },
+    "migration": {
+      "total": 162577,
+      "percent_in_province": 46.2,
+      "percent_another_province": 44.4,
+      "percent_from_outside_cambodia": 9.4
+    },
+    "migrationReason": {
+      "education": 595,
+      "family_moved": 38358,
+      "insecurity": 10767,
+      "lost_land_or_house": 0,
+      "marriage": 45205,
+      "natural_calamity": 228,
+      "orphaned": 0,
+      "other": 2745,
+      "repatriation": 57197,
+      "search_of_employment": 3212,
+      "transfer_of_work_place": 1687,
+      "visiting": 2583,
+      "total": 162577,
+      "percent_other": 1.7,
+      "percent_education": 0.4,
+      "percent_family_moved": 23.6,
+      "percent_insecurity": 6.6,
+      "percent_lost_land_or_house": 0,
+      "percent_marriage": 27.8,
+      "percent_natural_calamity": 0.1,
+      "percent_orphaned": 0,
+      "percent_repatriation": 35.2,
+      "percent_search_of_employment": 2,
+      "percent_transfer_of_work_place": 1,
+      "percent_visiting": 1.6
+    },
+    "population": {
+      "total": 578380,
+      "male": 286073,
+      "female": 292307,
+      "annual_growth": 3.61,
+      "percent_male": 49.5,
+      "percent_female": 50.5
+    },
+    "unemployment": {
+      "percent": 0.3,
+      "percent_male": 0.33,
+      "percent_female": 0.27
+    }
+  },
+  "Takeo": {
+    "elections": {
+      "1998": {
+        "CPP": 4,
+        "FCP": 3,
+        "SRP": 1
+      },
+      "2003": {
+        "CPP": 5,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 6,
+        "FCP": 0,
+        "SRP": 2,
+        "HRP": 0,
+        "NRP": 0
+      },
+      "2013": {
+        "CPP": 4,
+        "CNRP": 4
+      }
+    },
+    "education": {
+      "beyond_secondary": 5411,
+      "lower_secondary": 152542,
+      "none": 7129,
+      "other": 314,
+      "primary_not_completed": 237787,
+      "primary_school": 242526,
+      "secondary_technical_diploma": 25443,
+      "total": 671152,
+      "Province": null,
+      "percent_beyond_secondary": 0.8,
+      "percent_lower_secondary": 22.7,
+      "percent_none": 1.1,
+      "percent_other": 0,
+      "percent_primary_not_completed": 35.4,
+      "percent_primary_school": 36.1,
+      "percent_secondary_technical_diploma": 3.8,
+      "percent_primary_school_2016": 86.64
+    },
+    "electricity": {
+      "available": 106929,
+      "unavailable": 93170,
+      "percent_available": 53.4,
+      "percent_unavailable": 46.6,
+      "available_difference_from_national": 5.4
+    },
+    "fuel": {
+      "charcoal": 4873,
+      "electricity": 1800,
+      "firewood": 184091,
+      "kerosene": 361,
+      "LPG": 8825,
+      "none": 0,
+      "other": 149,
+      "percent_charcoal": 2.4,
+      "percent_electricity": 0.9,
+      "percent_firewood": 92,
+      "percent_kerosene": 0.2,
+      "percent_LPG": 4.4,
+      "percent_none": 0,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 60.1
+    },
+    "migration": {
+      "total": 180702,
+      "percent_in_province": 73.8,
+      "percent_another_province": 24,
+      "percent_from_outside_cambodia": 2.2
+    },
+    "migrationReason": {
+      "education": 612,
+      "family_moved": 26836,
+      "insecurity": 10127,
+      "lost_land_or_house": 515,
+      "marriage": 79810,
+      "natural_calamity": 0,
+      "orphaned": 906,
+      "other": 1068,
+      "repatriation": 54146,
+      "search_of_employment": 1349,
+      "transfer_of_work_place": 1979,
+      "visiting": 3354,
+      "total": 180702,
+      "percent_other": 0.6,
+      "percent_education": 0.3,
+      "percent_family_moved": 14.9,
+      "percent_insecurity": 5.6,
+      "percent_lost_land_or_house": 0.3,
+      "percent_marriage": 44.2,
+      "percent_natural_calamity": 0,
+      "percent_orphaned": 0.5,
+      "percent_repatriation": 30,
+      "percent_search_of_employment": 0.7,
+      "percent_transfer_of_work_place": 1.1,
+      "percent_visiting": 1.9
+    },
+    "population": {
+      "total": 923373,
+      "male": 440805,
+      "female": 482568,
+      "annual_growth": 1.78,
+      "percent_male": 47.7,
+      "percent_female": 52.3
+    },
+    "unemployment": {
+      "percent": 1.25,
+      "percent_male": 1.17,
+      "percent_female": 1.31
+    }
+  },
+  "national": {
+    "elections": {
+      "1998": {
+        "CPP": 99,
+        "FCP": 3,
+        "SRP": 1
+      },
+      "2003": {
+        "CPP": 99,
+        "FCP": 2,
+        "SRP": 1
+      },
+      "2008": {
+        "CPP": 99,
+        "FCP": 0,
+        "SRP": 2,
+        "HRP": 0,
+        "NRP": 99
+      },
+      "2013": {
+        "CPP": 4,
+        "CNRP": 99
+      }
+    },
+    "education": {
+      "beyond_secondary": 187683,
+      "lower_secondary": 2128996,
+      "none": 152499,
+      "other": 5314,
+      "primary_not_completed": 4152677,
+      "primary_school": 2988914,
+      "secondary_technical_diploma": 395963,
+      "total": 10012046,
+      "Province": null,
+      "percent_beyond_secondary": 1.9,
+      "percent_lower_secondary": 21.3,
+      "percent_none": 1.5,
+      "percent_other": 0.1,
+      "percent_primary_not_completed": 41.5,
+      "percent_primary_school": 29.9,
+      "percent_secondary_technical_diploma": 4,
+      "percent_primary_school_2016": 79.87
+    },
+    "electricity": {
+      "available": 1520068,
+      "unavailable": 1643158,
+      "percent_available": 48.1,
+      "percent_unavailable": 51.9,
+      "available_difference_from_national": null
+    },
+    "fuel": {
+      "charcoal": 265660,
+      "electricity": 37400,
+      "firewood": 2465016,
+      "kerosene": 3548,
+      "LPG": 384165,
+      "none": 3811,
+      "other": 3621,
+      "percent_charcoal": 8.4,
+      "percent_electricity": 1.2,
+      "percent_firewood": 77.9,
+      "percent_kerosene": 0.1,
+      "percent_LPG": 12.1,
+      "percent_none": 0.1,
+      "percent_other": 0.1
+    },
+    "health": {
+      "infant_mortality": 77.7
+    },
+    "migration": {
+      "total": 4241689,
+      "percent_in_province": 48.1,
+      "percent_another_province": 49.4,
+      "percent_from_outside_cambodia": 2.4
+    },
+    "migrationReason": {
+      "education": 60668,
+      "family_moved": 1789683,
+      "insecurity": 103345,
+      "lost_land_or_house": 42266,
+      "marriage": 924805,
+      "natural_calamity": 7483,
+      "orphaned": 9653,
+      "other": 41931,
+      "repatriation": 432845,
+      "search_of_employment": 558693,
+      "transfer_of_work_place": 220022,
+      "visiting": 50295,
+      "total": 4241689,
+      "percent_other": 1,
+      "percent_education": 1.4,
+      "percent_family_moved": 42.2,
+      "percent_insecurity": 2.4,
+      "percent_lost_land_or_house": 1,
+      "percent_marriage": 21.8,
+      "percent_natural_calamity": 0.2,
+      "percent_orphaned": 0.2,
+      "percent_repatriation": 10.2,
+      "percent_search_of_employment": 13.2,
+      "percent_transfer_of_work_place": 5.2,
+      "percent_visiting": 1.2
+    },
+    "population": {
+      "total": 14676591,
+      "male": 7121508,
+      "female": 7555083,
+      "annual_growth": 1.46,
+      "percent_male": 48.5,
+      "percent_female": 51.5
+    },
+    "unemployment": {
+      "percent": 2.33,
+      "percent_male": 2.05,
+      "percent_female": 2.59
+    }
+  }
+}

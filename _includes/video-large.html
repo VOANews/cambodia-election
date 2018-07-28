@@ -1,0 +1,8 @@
+<div class="voa__photo__container--large">
+
+	<div class='embed-container' style="background-color: #F1F1F1; margin: 0;"><iframe src="https://www.youtube.com/embed/{{ include.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+
+{% if include.caption || include.credit %}
+	<p class="voa__cutline large {{ include.caption_style }}">{{ include.caption }} {{ include.credit }}</p>
+{% endif %}
+</div>

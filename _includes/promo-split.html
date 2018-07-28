@@ -1,0 +1,121 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+<section class="voa__section white voa__promo__profiles">
+	<div class="voa__grid__full">
+		<div class="voa__grid">
+
+			<div class="voa__grid__one-half border-right">
+	{% assign counter = 0 %}
+
+	{% assign sorted-posts = site.posts | where: "categories","feature" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language limit: 2 %}
+
+		{% if post.title != page.title and counter == 0 %}
+							<div class="voa__grid__full">
+								<h3 class="voa__kicker" style="margin-bottom: 7px !important;"><a href="{{ site.url_base }}/{{current_language}}/feature/">{{ site_info.dictionary.label_features_short }}</a></h3>
+							</div>
+
+							<div class="voa__promo__feature">
+
+									<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+
+			{% if post.image contains "https://gdb.voanews.com/" %}
+										<picture>
+											<source srcset="{{ post.image | replace: '_w1023', '_w640_h360' }}" media="(min-width: 640px)">
+											<source srcset="{{ post.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+											<img src="{{ post.image | replace: '_w1023', '_w420_h420' }}" />
+										</picture>
+
+			{% else %}
+										<picture>
+											<source srcset="{{ site.url_base }}{{ post.image }}" media="(min-width: 640px)">
+											<img src="{{ site.url_base }}{{ post.image-square }}" style="margin-bottom: 5px;">
+										</picture>
+			{% endif %}
+
+										<div class="voa__portfolio-grid__profile__text">
+											<h3 class="{% if current_language== 'english' %}balance-text{% endif %}">{{ post.title | escape }}</h3>
+										</div>
+									</a>
+								</div>
+			{% assign counter = counter | plus: 1 %}
+		{% endif %}
+
+	{% endfor %}
+
+			</div><!--
+
+
+
+			--><div class="voa__grid__one-half">
+			<div class="voa__grid__full">
+
+					<div class="voa__grid__full">
+						<h3 class="voa__kicker" style="margin-bottom: 7px !important;"><a href="{{ site.url_base }}/{{current_language}}/profile/">{{ site_info.dictionary.label_voices }}</a></h3>
+					</div>
+					<div class="voa__grid__full">
+						<div class="voa__portfolio-grid">
+	<!--
+
+	{% assign sorted-posts = site.posts | where: "categories","voter" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language limit: 1 %}
+
+							 --><div class="voa__portfolio-grid__profile half">
+									<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+										<img src="{{ site.url_base }}{{ post.mugshot }}">
+										<div class="voa__portfolio-grid__profile__text">
+											<h3 class="voa__label" style="font-size: 14px;">{{ post.persona }}</h3>
+											<h3 class="{% if current_language== 'english' %}balance-text{% endif %}">{{ post.title | escape }}</h3>
+										</div>
+									</a>
+								</div><!--
+	{% endfor %}
+
+
+	{% assign sorted-posts = site.posts | where: "categories","politician" %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language limit: 1 %}
+
+							 --><div class="voa__portfolio-grid__profile half">
+									<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+										<img src="{{ site.url_base }}{{ post.mugshot }}">
+										<div class="voa__portfolio-grid__profile__text">
+											<h3 class="voa__label" style="font-size: 14px;">{{ post.persona }}</h3>
+											<h3 class="{% if current_language== 'english' %}balance-text{% endif %}">{{ post.title | escape }} </h3>
+										</div>
+									</a>
+								</div><!--
+	{% endfor %}
+	-->
+
+						</div>
+
+				</div>
+			</div>
+
+
+
+
+			</div>
+
+			
+		</div>
+	</div>
+
+</section>
+
+

@@ -1,0 +1,134 @@
+---
+layout: default
+---
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+<script type="text/javascript">
+	var projectPrefix = "{{ site.url_base }}";
+	var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
+	var pinLocation = "{{ page.location | default: 'Cambodia'}}";
+</script>
+
+
+<article class="post voa__grid__full voa__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+
+	{% assign counter = 0 %}
+	{% assign sorted-posts = site.posts | where: "categories",page.category %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language %}
+
+		{% if counter == 0 %}
+
+					<div class='embed-container' style="background-color: #F1F1F1;"><iframe src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+
+					<div class="voa__grid__full" >
+
+							<div class="voa__story__centered">
+
+								<div class="voa__story">
+
+									<div class="voa__grid white">
+
+{% if current_language == "english" %}
+	{% assign page_label = "Videos" %}
+{% else %}
+	{% assign page_label = "វីដេអូ" %}
+{% endif %}
+
+
+										<h3 class="voa__label" style="width: 100%; text-align: center; margin-top: 25px !important;">{{ page_label }}</h3>
+
+										<h1 class="voa__video__headline {% if current_language == 'english' %}balance-text{% endif %}">{{ post.title }}</h1>
+									</div>
+
+
+									{{ post.content }}
+
+								</div>
+
+							</div>
+
+
+
+
+		{% elsif counter == 1 %}
+
+
+
+
+<div class="voa__grid__full" style="background-color: #FFF; padding: 0 0 30px 0;">
+	<div class="voa__promo__container">
+		
+		<h3 class="voa__label" style="padding: 0;">{% if current_language == "english" %}More videos{% elsif current_language=="khmer" %}វីដេអូផ្សេងទៀត {% else %} {{ include.label }}{% endif %}</h3>
+
+
+		<div class="voa__grid__full">
+			<div class="voa__promo voa__grid__one-third">
+				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
+					<h4>{{ post.title }}</h4>
+				</a>
+			</div><!--
+
+
+
+
+
+
+		{% else %}
+
+--><div class="voa__promo voa__grid__one-third">
+				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
+					<h4>{{ post.title }}</h4>
+				</a>
+			</div><!--
+
+
+		{% endif %}
+		{% assign counter = counter | plus: 1 %}
+	{% endfor %}
+
+		--></div>
+
+	</div>
+
+</div>
+
+
+
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+<script type="text/javascript">
+	var mode = "editing";//"editing"; //"production";
+</script>
+
+{% include footer.html %}

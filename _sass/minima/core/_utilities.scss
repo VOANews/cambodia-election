@@ -1,0 +1,66 @@
+// utility classes
+
+.voa__project {
+	.voa__clear:before,
+	.voa__clear:after {
+		content: " ";
+		display: table;
+	}
+
+	.voa__clear:after {
+		clear: both;
+	}
+
+	.voa__rule {
+		@media only screen and (min-width: 640px) {
+			&.wide-right {
+				border-right: $border__solid-light;
+				padding-right: 30px; 
+			}
+			&.wide-left {
+				border-left: $border__solid-light;
+				padding-left: 30px; 
+			}
+		}
+	}
+
+	@media only screen and (max-width: $media__medium) {
+		.voa__no-mobile {
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: $media__medium) , screen and (max-height: 475px) {
+		.voa__no-mobile {
+			display: none;
+		}
+	}
+
+
+
+	@media only screen and (min-width: $media__medium-large) and (max-width: $media__large--) {
+		.voa__no-tablet {
+			display: none;
+		}
+	}
+
+	.voa__hide-mobile {
+		@media only screen and (max-width: $media__medium) {
+			display: none;
+		}
+	}
+	.voa__show-mobile {
+		display: block;
+		@media only screen and (min-width: $media__medium) {
+			display: none;
+		}
+	}
+
+	.voa__show-mobil--small {
+		display: block;
+		@media only screen and (min-width: $media__small--) {
+			display: none;
+		}
+	}
+
+}

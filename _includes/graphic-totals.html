@@ -1,0 +1,51 @@
+<div class="voa__grid" style="background-color: #FFF;">
+	<div id="graphic" class="graphic__container"></div>
+	<h3 id="graphicsTotalLabel" style="margin-top: 20px;"></h3>
+	<p style="margin: 0;">Grouped by party</p>
+	<div id="graphicTotals" class="graphic__container"></div>
+	<div class="voa__key">
+
+		<div id="CPP" class="voa__key__group"><span class="voa__key__swatch">XX</span>CPP</div>
+		<div id="FCP" class="voa__key__group"><span class="voa__key__swatch">XX</span>FCP</div>
+		<div id="SRP" class="voa__key__group"><span class="voa__key__swatch">XX</span>SRP</div>
+		<div id="HRP" class="voa__key__group"><span class="voa__key__swatch">XX</span>HRP</div>
+		<div id="NRP" class="voa__key__group"><span class="voa__key__swatch">XX</span>NRP</div>
+		<div id="CNRP" class="voa__key__group"><span class="voa__key__swatch">XX</span>CNRP</div>
+
+	</div>
+</div>
+
+<style type="text/css">
+	.graphic__container {
+		width: 100%;
+	}
+
+	.voa__key__swatch {
+		//background-color: #900;
+		//border: 1px solid #999;
+		color: #FFF;
+		display: inline-block;
+		font-size: 13px;
+		height: 20px;
+		margin-right: 4px;
+		padding: 2px 2px;
+		text-align: center;
+		vertical-align: middle;
+		min-width: 20px;
+	}
+
+	.voa__key__group {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	#graphic svg path {
+		stroke: #333;
+		stroke-width: .5;
+	}
+	#graphic svg path:first-of-type {
+		stroke: #333;
+		stroke-width: 4;
+	}
+
+</style>

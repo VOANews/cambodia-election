@@ -1,0 +1,506 @@
+---
+layout: default
+date: 2018-07-04
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+
+
+	<style type="text/css">
+		
+		.voa__project a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.voa__navbar__tab a {
+			color: #999;
+		}
+
+		/*@media only screen and (min-width: 640px) and (min-height: 640px) { */
+		@media only screen and (min-width: 640px) {
+
+		}
+
+	</style>
+
+
+	<div class="voa__landing-page">
+
+{% assign sorted-posts = site.posts | where: "categories","mainbar" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language limit: 1 %}
+
+		<section class="voa__section white" style="z-index: 99999;">
+			<div class="voa__grid">
+				<div class="voa__grid__full" style="padding-top: 40px;">
+					
+					<div class="voa__project__intro">
+						<h3 class="voa__graphic__readin" style="text-align: center; line-height: 1.4;">{{ site_info.project_intro }} | <a href="{{ site.url_base }}{{ post.url | relative_url }}" style="text-decoration: underline; color: #1330bf; white-space: nowrap;">{{ site_info.dictionary.label_learn_more }}</a></h3>
+					</div><!--
+					--><div class="voa__landing-page__live-blog__promo" style="margin-right: 0;">
+
+					</div>
+				</div>
+			</div>
+		</section>
+{% endfor %}
+
+
+		<section class="voa__section white" style="padding-top: 20px; padding-bottom: 40px;">
+
+			<div class="voa__grid__full">
+
+{% assign ledeSet = 'false' %}
+{% assign featuredHeadline = "" %}
+
+
+{% assign sorted-posts = site.posts | where: "categories","feature" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language %}
+	{% if ledeSet == 'false' and post.lede %}
+
+				<div class="voa__grid__full">
+					<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+						<div class="voa__grid" style="padding-bottom: 0;">
+		{% if post.image contains "https://gdb.voanews.com/" %}
+							<picture>
+								<source srcset="{{ post.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+								<source srcset="{{ post.image | replace: '_w1023', '_w992' }}" media="(min-width: 640px)">
+								<source srcset="{{ post.image | replace: '_w1023', '_w640_h640' }}" media="(min-width: 420px)">
+								<img src="{{ post.image | replace: '_w1023', '_w420_h420' }}" />
+							</picture>
+
+		{% else %}
+							<picture>
+								<source srcset="{{ site.url_base }}{{ post.image }}" media="(min-width: 640px)">
+								<img src="{{ site.url_base }}{{ post.image-square }}" style="margin-bottom: 5px;">
+							</picture>
+		{% endif %}
+
+							<h2 class="lede {% if current_language == 'english' %} balance-text{% endif %}" style="text-align: center;">{% if post.title-homepage %}{{post.title-homepage}}{% else %}{{ post.title | escape }}{% endif %}</h2>
+
+
+						</div>
+					</a>
+					<div class="voa__grid">
+						<p class="lede {% if current_language == 'english' %} balance-text{% endif %}" style="margin-top: 0; padding: 0; text-align: center;">{{ post.summary}}</p>
+
+						<p class="voa__byline" style="text-align: center; font-size: 13px;">{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{{ post.byline }}</span> | VOA Khmer</p>
+					</div>
+				</div>
+		{% assign featuredHeadline = post.title %}
+		{% assign ledeSet = 'true' %}
+	{% endif %}
+{% endfor %}
+			</div>
+
+
+
+
+			<div class="voa__grid__full">
+				<div class="voa__grid">
+<!--
+
+
+{% assign counter = 0 %}
+{% assign sorted-posts = site.posts | where: "categories","feature" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+
+{% for post in sorted-posts-language %}
+	{% if featuredHeadline != post.title %}
+		{% if counter < 2 %}
+
+				 --><div class="voa__grid__one-half">
+				 		<div class="voa__secondary-feature__link">
+				 			
+						<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+
+			{% if post.image contains "https://gdb.voanews.com/" %}
+							<picture>
+								<source srcset="{{ post.image | replace: '_w1023', '_w640_h360' }}" media="(min-width: 992px)">
+								<source srcset="{{ post.image | replace: '_w1023', '_w460_h258' }}" media="(min-width: 640px)">
+								<img src="{{ post.image | replace: '_w1023', '_w240_h240' }}" />
+							</picture>
+
+			{% else %}
+							<img src="{{ site.url_base }}{{ post.image }}" />
+			{% endif %}
+
+							<h2>{{ post.title | escape }} </h2>
+						</a>
+						<p style="margin-top: 7px; padding-top: 0;">{{ post.summary}}</p>
+						<p class="voa__byline" style="font-size: 13px;">{% if current_language == "english" %}By {% endif %}<span style="font-weight: bold;">{{ post.byline }}</span> | VOA Khmer</p>
+
+				 		</div>
+					</div><!--
+			{% assign counter = counter | plus: 1 %}
+		{% endif %}
+	{% endif %}
+
+{% endfor %}
+				--></div>
+			</div>
+
+
+
+		</section>
+
+
+
+		<section class="voa__section voa__spotlight" style="">
+			<div class="voa__grid__full">
+			<div class="voa__spotlight__cutout__container">
+				
+				<a href="{{ site.url_base }}/{{ current_language }}/hun-sen/"><img class="voa__spotlight__cutout" src="{{ site.url_base }}/img/hun-sen-cutout.png" style=""></a>
+			</div>
+
+				<div class="voa__grid">
+					<h3 class="voa__kicker" style="margin-bottom: 0;"><a href="{{ site.url_base }}/{{ current_language }}/hun-sen/">{{ site_info.dictionary.label_hun_sen_series }}</a></h3>
+				</div>
+
+				<div class="voa__spotlight__headlines">
+
+					<div class="voa__grid__full">
+{% assign counter = 0 %}
+{% assign sorted-posts = site.posts | where: "categories","hun-sen" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language %}
+	{% if counter == 0 %}
+						<div class="voa__grid__two-thirds border-right" style="border-color: #333;">
+							<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+								<h2 {% if current_language == "english" %}class="balance-text" {% endif %} style="color: #999;">{{ post.title }}</h2>
+								<img src="{{ site.url_base }}/img/mugshot__hun-sen.jpg" class="voa__show-mobil--small" style="float: left; margin-right: 10px; width: 80px;">
+								<p style="color: #999;">{{ post.summary }}</p>
+							</a>
+						</div><!--
+						--><div class="voa__grid__one-third " style="margin-right: 0;">
+	{% else %}
+
+							<a href="{{ site.url_base }}{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
+								<h3 style="color: #999;">{{ post.title }}</h3>
+							</a>
+
+	{% endif %}
+	{% assign counter = counter | plus: 1 %}
+
+{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+		<section class="voa__section white voa__border-bottom" style="padding-top: 20px; padding-bottom: 20px;">
+			<div class="voa__grid__full">
+				<div class="voa__grid">
+
+					<div class="voa__grid__one-half--even border-right">
+						
+						<div class="voa__grid__full">
+							<h3 class="voa__kicker" style="margin-bottom: 7px;"><a href="{{ site.url_base }}/{{current_language}}/profile/voter/">{{ site_info.dictionary.label_voters_voices }}</a></h3>
+						</div>
+
+						<div class="voa__grid__full">
+							<div class="voa__portfolio-grid">
+<!--
+
+{% assign sorted-posts = site.posts | where: "categories","voter" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language limit: 3 %}
+
+								 --><div class="voa__portfolio-grid__profile third">
+										<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+											<img src="{{ site.url_base }}{{ post.mugshot }}">
+											<div class="voa__portfolio-grid__profile__text">
+												<h3 class="voa__label">{{ post.persona }}</h3>
+												<h3 class="voa__portfolio-grid__headline {% if current_language== 'english' %}balance-text{% endif %}">{{ post.title | escape }} </h3>
+											</div>
+										</a>
+									</div><!--
+{% endfor %}
+-->
+
+							</div>
+						</div>
+
+					</div><!--
+
+
+
+					--><div class="voa__grid__one-half--even">
+						<div class="voa__grid__full">
+							<h3 class="voa__kicker" style="margin-bottom: 7px;"><a href="{{ site.url_base }}/{{current_language}}/profile/politician/">{{ site_info.dictionary.label_politicians_voices }}</a></h3>
+						</div>
+
+						<div class="voa__grid__full">
+							<div class="voa__portfolio-grid">
+<!--
+
+{% assign sorted-posts = site.posts | where: "categories","politician" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language limit: 3 %}
+
+							 --><div class="voa__portfolio-grid__profile third">
+									<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+										<img src="{{ site.url_base }}{{ post.mugshot }}">
+										<div class="voa__portfolio-grid__profile__text">
+											<h3 class="voa__label">{{ post.persona }}</h3>
+											<h3 class="voa__portfolio-grid__headline {% if current_language== 'english' %}balance-text{% endif %}">{{ post.title | escape }} </h3>
+										</div>
+									</a>
+								</div><!--
+{% endfor %}
+
+-->							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+
+
+
+{% assign sorted-posts = site.posts | where: "categories","map" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language limit: 1 %}
+
+		<section class="voa__section white" style="padding: 40px 0 20px 0;">
+			<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<div class="voa__grid__full">
+					<div class="voa__grid">
+						<h2 class="featured">{% if post.title-homepage %}{{ post.title-homepage }}{% else %}{{ post.title }}{% endif %}</h2>
+						<h3 style="text-align: center; font-weight: normal; text-decoration: none;">{{ post.summary }}</h3>
+					</div>
+				</div>
+
+				<div class="voa__grid" style="padding-bottom: 0;">
+					<div id="map" class="map__container" style="background-image: url({{ site.url_base }}/img/map-homepage.jpg); background-size: cover; background-position: center;"></div>
+				</div>
+
+
+{% if current_language == "english" %}
+			<div class="voa__grid__full voa__ribbon__extended">
+				<div class="voa__grid" style="padding: 20px 5% 30px 5%;">
+
+	{% assign sorted-quotes = site.posts | where: "categories","quote" %}
+	{% assign sorted-quotes-language = sorted-quotes | where: "categories",current_language %}
+	{% for quote in sorted-quotes-language %}
+
+					<div class="voa__ribbon__quotation" data-url="{{ site.url_base }}{{ quote.mugshot }}">
+						<div class="voa__ribbon__quotation__text" style="">
+							<h3 id="profileQuotation" class="voa__ribbon__quotation__text__quotation" style="text-decoration: none;">{{ quote.content | remove: '<p>' | remove: '</p>' }}</h3>
+
+							<img id="profilePhoto" src="https://placehold.it/50x50" class="voa__ribbon__quotation__mugshot--small">
+							<div class="voa__ribbon__quotation__attribution" style="display: inline-block; vertical-align: top;">
+								<h4 id="profileName" class="voa__ribbon__quotation__text__name">{{ quote.title }}</h4>
+								<h5 id="profileOccupation" class="voa__ribbon__quotation__text__occupation" style="font-weight: normal;">{{ quote.occupation }}</h5>
+							</div>
+						</div>
+						<img id="profilePhoto" src="https://placehold.it/50x50" class="voa__ribbon__quotation__mugshot">
+					</div>
+
+	{% endfor %}
+				</div>
+			</div>
+
+{% endif %}
+
+
+			</a>
+		</section>
+
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+{% assign ledeVideoSet = 'false' %}
+
+
+{% assign sorted-posts = site.posts | where: "categories","video" %}
+{% assign sorted-posts-subcategory-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-subcategory-language %}
+
+	{% if ledeVideoSet == 'false' and post.ledeVideo %}
+
+		<section class="voa__section white" style="padding: 40px 0 20px 0;">
+
+			<div class="voa__grid__full">
+
+				<div class='embed-container' style="background-color: #F1F1F1; margin-bottom: 20px;"><iframe src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+
+				<div class="voa__grid">
+					<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+						<h2>{{ post.title }}</h2>
+					</a>
+					<p>{{ post.summary }}</p>
+				</div>
+			</div>
+		</section>
+
+	{% assign ledeVideoSet = 'true' %}
+	{% endif %}
+
+{% endfor %}
+
+
+{% comment %}
+		<section class="voa__section white" style="padding-top: 20px;">
+			<div class="voa__grid__full">
+				<div class="voa__grid">
+					<h3 class="voa__kicker">Special reports</h3>
+				</div>
+			</div>
+
+			<div class="voa__grid__full">
+				<div class="voa__grid voa__portfolio-grid">
+<!--
+{% for post in site.categories[current_language] %}
+	{% if post.categories.last == "background" %}
+
+				 --><div class="voa__grid__one-half">
+						<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+							<img src="{{ site.url_base }}{{ post.image }}">
+							<h3>{{ post.title | escape }} </h3>
+						</a>
+						<p>{{ post.summary }}</p>
+					</div><!--
+	{% endif %}
+{% endfor %}
+				-->
+				</div>
+			</div>
+
+		</section>
+
+{% endcomment %}
+
+		<section class="voa__section voa__section__news-headlines dark">
+
+			<div class="voa__grid__full">
+
+				<div class="voa__grid">
+					<div style="display: block; margin-bottom: 10px; text-align: center;">
+						<h3 class="voa__kicker" style="font-size: 18px; padding: 7px 10px;">{% if current_language == "english" %}More from voacambodia.com{% else %}ព័ត៌មានដទៃទៀតពី VOA ខ្មែរ{% endif %}</h3>
+					</div>
+				</div>
+				<div class="voa__grid">
+					<div class="voa__news-headline__featured voa__grid__two-thirds border-right" style="border-color: #333;">
+
+						<div class="content-placeholder"></div>
+
+{% raw %}
+						<script id="handlebars-template-featured-headlines" type="text/x-handlebars-template">
+
+						    {{reverse stories}}
+
+							<a href="{{ stories.0.link }}">
+								<picture>
+									<source srcset="{{ stories.0.image_rectangle }}" media="(min-width: 992px)">
+									<source srcset="{{ stories.0.image_square }}" media="(min-width: 420px)">
+									<img src="{{ stories.0.image_square_small }}"/>
+								</picture>
+
+								<h2 class="headline">{{ stories.0.headline }}</h2>
+							</a>
+							<p style="">{{ stories.0.description }}</p>
+
+						</script>
+{% endraw %}
+
+						<div class="voa__grid__full" style="margin-top: 40px;">
+							<ul id="rssList" class="voa__rss dark" style="">
+						</div>
+
+					</div><!--
+					--><div class="voa__grid__one-third" style="margin-right: 0;">
+						<div class="content-placeholder2"></div>
+
+{% raw %}
+						<script id="handlebars-template-secondary-headlines" type="text/x-handlebars-template">
+
+							<div class="voa__news-headline__secondary voa__grid__full" style="">
+								<a href="{{ stories.1.link }}">
+									<h4 class="headline">{{ stories.1.headline }}</h4>
+									<img src="{{ stories.1.image_thumbnail }}" style="">
+									<p>{{ stories.1.description }}</p>
+								</a>
+							</div>
+							<div class="voa__news-headline__secondary voa__grid__full" style="">
+								<a href="{{ stories.2.link }}">
+									<h4 class="headline">{{ stories.2.headline }}</h4>
+									<img src="{{ stories.2.image_thumbnail }}" style="">
+									<p>{{ stories.2.description }}</p>
+								</a>
+							</div>
+							<div class="voa__news-headline__secondary voa__grid__full" style="">
+								<a href="{{ stories.3.link }}">
+									<h4 class="headline">{{ stories.3.headline }}</h4>
+									<img src="{{ stories.3.image_thumbnail }}" style="">
+									<p>{{ stories.3.description }}</p>
+								</a>
+							</div>
+							<!--
+							<div class="voa__news-headline__secondary voa__grid__full" style="background-color: #111; padding: 20px 20px 0 20px; border-radius: 8px; border: 1px solid #222;">
+								<a href="{{ stories.4.link }}">
+									<h4 class="voa__label" style="color: #555; font-size: 14px;">From the web</h4>
+									<h4 class="headline">{{ stories.4.headline }}</h4>
+									<p>{{ stories.4.description }}</p>
+									<p class="voa__tagline" style="font-style: italic; color: #555; text-align: right;">— The Xxxxxxx Times</p>
+								</a>
+							</div>
+							-->
+
+						</script>
+{% endraw %}
+
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+	</div>
+
+	<script type="text/javascript">
+		var mode = "editing";//"editing"; //"production";
+	</script>
+
+{% include footer.html %}

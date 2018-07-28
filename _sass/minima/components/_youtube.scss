@@ -1,0 +1,26 @@
+/* Responsive youtube embeds */
+.embed-container {
+	position: relative; 
+	padding-bottom: 56.25%; 
+	height: 0; 
+	overflow: hidden; 
+	max-width: 100%;
+	z-index: 999999;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	height: 100%; 
+	position: absolute;
+		top: 0;
+		left: 0;
+	width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+	.voa__photo--inset {
+		float: right;
+		margin-left: 10px;
+		width: 50%;
+	}
+}

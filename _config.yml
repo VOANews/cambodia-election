@@ -1,0 +1,282 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+# title: Your awesome title
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - ai2html
+  - README.md
+  - graphics_raw
+  - ap
+
+
+
+# EDIT FOR DEPLOYING IN A SUB FOLDER
+# (USE THE PATH WHERE IT'LL BE HOSTED)
+# url_base: ""
+# url_base: "/cambodia-election"
+url_base: "https://voanews.github.io/cambodia-election"
+
+
+# ADD A WARNING FLAG AND DISABLE METRICS
+development_mode: true
+development_warning: This site is currently under active development.
+
+
+permalink: /:categories/:title:output_ext
+
+banner: https://gdb.voanews.com/7BFE7165-251C-4DFA-A229-EF6589CDE620_w1280_h720.jpg
+credit_default: (VOA News)
+
+
+
+# This site_info_object is used for labels, site-wide content, and analytics.
+# It's baked out from a couple of Google Spreadsheets using "config-oven"
+
+site_info__object:
+  english:
+    title: Cambodia Adrift | Election 2018
+    title_short: Cambodia Adrift
+    title_tagline: Election 2018
+    description_short: Having dissolved the main opposition party, Cambodia’s ruling party faces certain victory in a July 29 national election even as its crackdown on dissent continues.
+    language_analytics: khmerenglish
+    keywords: News, Khmer, Cambodia, World, Human Rights, International, Politics, Economics, Khmer Rouge, election
+    twitter_handle: VOAkhmer
+    hashtags: CambodiaAdrift
+    rss_feed: https://www.voacambodia.com/api/zk-pqvemvmqt
+    project_intro: On July 29, the Cambodian government will hold the nation’s sixth general election to choose representatives for the National Assembly. International groups have spent billions of dollars funding pro-democracy civil society efforts over the past 25 years yet the vote has been deemed the most unfair and unfree since the United Nations organized the first post-genocide election in 1993. The government, headed by Prime Minister Hun Sen who has been in power since 1985, believes otherwise.
+    about_the_project: A VOA Khmer Service team spent six months talking with Cambodians during the run-up to the nation’s sixth national vote for 125 members of the National Assembly on July 29, 2018. The team traveled to six provinces and Phnom Penh, the capital city, and focused on rural residents because they are the majority of Cambodia’s voters. Many spoke of how they feel left behind by their nation’s economic expansion, which is upending their traditional way of life as they are buffeted by national and global forces.
+    dictionary:
+      label_voices: Voices 
+      label_voters_voices: Voters’ Voices 
+      label_voters_voices_short: Voters 
+      label_features: Community Voices 
+      label_features_short: Community Stories
+      label_hun_sen: Hun Sen page
+      label_hun_sen_series: "Spotlight: Hun Sen"
+      label_about_this_series: This is the first of a multi-part series, based on a rare video interview with Hun Sen by American filmmaker Robert Lieberman for his 2016 documentary “Angkor Awakens.”
+      label_politicians_voices: Politicians’ Voices 
+      label_politicians_voices_short: Politicians 
+      label_history: History 
+      label_share: Share 
+      label_twitter: Share on Twitter 
+      label_facebook: Share on Facebook 
+      label_translations: Translations 
+      label_about_the_author: About the Authors 
+      label_about_the_project: About the Project 
+      label_learn_more: Read more 
+      label_read_the_translation: Read this story in English
+      label_rss: More from VOACambodia.com
+      label_reference: Reference 
+      label_video: Videos
+      label_national: National 
+      label_special_reports: Special reports  
+      label_feature: Feature 
+      label_by_the_numbers: By the numbers 
+      label_related_videos: Related videos 
+      label_biography: Biography 
+      label_electricity: Electricity 
+      label_electricity_explanation: The percentage of the population with access to electricity
+      label_data_infant_mortality: Infant mortality
+      label_education: Education
+      label_education_explanation: Post secondary levels of education in each province
+      label_data_primary_school: Primary school completed
+      label_unemployment: Unemployment
+      label_unemployment_explanation: The percentage of the population that is unemployed
+      label_data_population_density: Population density
+      label_data_percent_symbol: "%"
+      label_per: per
+      label_data_population_density_explanation: The number of people living per square kilometer
+      label_data_population_density_suffix:  per km²
+      label_data_election_results: Election results
+      label_election_results_explanation: The percentage of seats won by the CPP in each province in 2013
+      label_year_1998: 1998
+      label_year_2003: 2003
+      label_year_2008: 2008
+      label_year_2013: 2013
+      label_year_2016: 2016
+      label_development: Development
+      label_agriculture: Agriculture
+    map:
+      Cambodia: Cambodia 
+      Vietnam: Vietnam 
+      Laos: Laos 
+      Gulf_of_Thailand: Gulf of Thailand 
+      Battambang: Battambang  
+      Banteay_Meanchey: Banteay Meanchey 
+      Kampong_Chhnang: Kampong Chhnang 
+      Kampong_Thom: Kampong Thom  
+      Kampong_Cham: Kampong Cham 
+      Kampong_Speu: Kampong Speu  
+      Kampot: Kampot 
+      Kandal: Kandal 
+      Kep: Kep 
+      Koh_Kong: Koh Kong  
+      Kratie: Kratie 
+      Mondul_Kiri: Mondul Kiri 
+      Oddar_Meanchey: Oddar Meanchey 
+      Pailin: Pailin 
+      Phnom_Penh: Phnom Penh 
+      Preah_Sihanouk: Preah Sihanouk 
+      Prey_Veng: Prey Veng
+      Preah_Vihear: Preah Vihear
+      Pursat: Pursat 
+      Ratanak_Kiri: Ratanak Kiri  
+      Siem_Reap: Siem Reap  
+      Stung_Treng: Stung Treng 
+      Svay_Rieng: Svay Rieng  
+      Takeo: Takeo 
+      Tboung_Khmum: Tboung Khmum 
+    note_Tboung Khmum_primary_education-completed: "Note: In 2014, Kampong Cham province was officially split into two provinces. The new province Tboung Khmum has 85.12% primary education completed in 2016."
+    analytics:
+      language: English
+      language_service: VOA Khmer
+      service: Khmer - English
+      division: EAP
+      lang: ENG
+      abbreviation: en
+      id: 604
+      direction: ltr
+      website: https://www.voacambodia.com/
+      language_label: 
+  khmer:
+    title: កម្ពុជារសាត់អណ្តែត | ការបោះឆ្នោតឆ្នាំ២០១៨
+    title_short: កម្ពុជារសាត់អណ្តែត
+    title_tagline: ការបោះឆ្នោតឆ្នាំ២០១៨
+    description_short: ប្រជាជនខ្មែរចែករំលែកការយល់ឃើញអំពីការផ្លាស់ប្តូរសង្គម សេដ្ឋកិច្ច និងនយោបាយ និងបញ្ចេញមតិអំពីអ្វីដែលពួកគេចង់បានពីមេដឹកនាំថ្មី នៅមុនការបោះឆ្នោតជាតិ ថ្ងៃទី២៩ ខែកក្កដា។ 
+    language_analytics: khmer
+    keywords: ព័ត៌មាន, ខ្មែរ, កម្ពុជា, ពិភពលោក, សិទ្ធិ​មនុស្ស, អន្តរជាតិ, នយោបាយ, សេដ្ឋកិច្ច, ខ្មែរក្រហម
+    twitter_handle: VOAkhmer
+    hashtags: CambodiaAdrift
+    rss_feed: https://khmer.voanews.com/api/zu-pqyepvmqv
+    project_intro: ក្នុងរយៈពេលពីរទសវត្សរ៍កន្លងមកនេះ នៅពេលដែលប្រទេសកម្ពុជាបានផ្លាស់ប្តូរសេដ្ឋកិច្ចសង្គម​យ៉ាង​ខ្លាំង មិនមែនប្រជាពលរដ្ឋគ្រប់រូបទទួលបានអត្ថប្រយោជន៍ពីការផ្លាស់ប្តូរនោះទេ។ ចាប់ពីឆ្នាំ ២០១៧ មក ប្រទេសកម្ពុជាត្រូវបានញាំញីដោយការបំភិតបំភ័យ ការឃ្លាំមើល និងការគាបសង្កត់ ដោយរដ្ឋាភិបាលប្រឆាំងនឹងអ្នករិះគន់របស់ខ្លួន រួមមានប្រព័ន្ធផ្សព្វផ្សាយឯករាជ្យ សង្គមស៊ីវិល និងគណបក្សប្រឆាំង​ជាដើម។ ប្រជាជនកម្ពុជានៅតាមជនបទមានឆន្ទៈក្នុងការចែករំលែកអំពីការតស៊ូនិងសុទិដ្ឋិនិយមរបស់ពួកគេជាមួយ VOA។ ស្របពេលជាមួយគ្នានេះ ពួកគេក៏មានការភ័យខ្លាចចំពោះអ្វីដែលនឹងកើតឡើងនាពេលអនាគតផងដែរ នៅ​ពេលដែលការបោះឆ្នោតជាតិ​នីតិកាលទី ៦ នឹងប្រព្រឹត្តទៅនៅថ្ងៃទី ២៩ ខែកក្កដា ខាង​មុខ​នេះ។ 
+    about_the_project: ក្រុម​ការងារ​របស់​ VOA ផ្សាយ​ជា​ខេមរភាសា បាន​ចំណាយ​ពេល​៦ខែ សម្ភាស​ប្រជាពលរដ្ឋ​កម្ពុជា​មុន​អំឡុង​ពេល​នៃ​ការ​បោះឆ្នោត​ថ្នាក់ជាតិ​អាណត្តិ​ទី៦ ដើម្បី​ជ្រើសរើស​សមាជិក​រដ្ឋសភា​​ចំនួន​១២៥នាក់ នៅ​ថ្ងៃទី២៩ ខែកក្កដា ឆ្នាំ​២០១៨​ខាង​មុខ​នេះ។ ក្រុម​ការងារ​ VOA បាន​ធ្វើ​ដំណើរ​ទៅ​កាន់​ខេត្ត​ចំនួន​៦ និង​រាជធានី​ភ្នំពេញ ហើយ​បាន​សម្ភាស​ប្រជាពលរដ្ឋ​រស់នៅ​តាម​សហគមន៍​ជនបទ ដោយសារ​តែ​ពួក​គេ​ភាគច្រើន​គឺជា​អ្នក​បោះឆ្នោត។​ មួយ​ភាគ​ធំ​នៃ​ពលរដ្ឋ​ទាំង​នេះ យល់​ថា ពួកគេ​មិន​បាន​ទទួល​បាន​ផល​ប្រយោជន៍​ខ្លាំង​ពី​ការ​ផ្លាស់ប្តូរ​រីកចំរើន​ខាង​សេដ្ឋកិច្ច​របស់​កម្ពុជា​ ដែល​កំពុង​តែ​ផ្លាស់ប្តូរ​របៀប​របប​រស់នៅ​របស់​ពួកគេ​តាម​បែប​ប្រពៃណី ខណៈ​ដែល​ពួក​គេ​កំពុង​តែ​រង​ផល​ប៉ះពាល់​នៃ​ការ​ផ្លាស់ប្តូរ​ទាំង​ក្នុង​ប្រទេស និង​ជុំ​វិញ​សាកលលោក។ 
+    dictionary:
+      label_voices: សំឡេង 
+      label_voters_voices: សំឡេងអ្នកបោះឆ្នោត 
+      label_voters_voices_short: អ្នកបោះឆ្នោត 
+      label_features: 
+      label_hun_sen: ហ៊ុន សែន។ series
+      label_hun_sen_series: កម្រងសេចក្តីរាយការណ៍អំពីលោក ហ៊ុន សែន
+      label_about_this_series: អំពីកម្រងនៃ​សេចក្តីរាយការណ៍នេះ នេះគឺជា​សេចក្តីរាយការណ៍ទី១នៃ​កម្រងសេចក្តីរាយការណ៍​ពិសេស ដែលមានបួនផ្នែក ដែលត្រូវបានដកស្រង់ចេញពី​បទសម្ភាសន៍​ដ៏​កម្រ​មួយ​រវាង​លោក​នាយករដ្ឋមន្ត្រី ហ៊ុន សែន ជាមួយ​នឹង​ផលិតករ​ខ្សែភាពយន្ត​អាមេរិកគឺលោក Robert Lieberman សម្រាប់ខ្សែភាពយន្តឯកសារ​របស់លោកដែលផលិតនៅឆ្នាំ២០១៦ ដែលមានចំណងជើងថា «‍អង្គរភ្ញាក់ឡើង»។
+      label_features_short: សំឡេងសហគមន៍
+      label_politicians_voices: សំឡេងអ្នកនយោបាយ
+      label_politicians_voices_short: អ្នកនយោបាយ 
+      label_history: ប្រវត្តិសាស្ត្រ
+      label_share: ចែករំលែក
+      label_twitter: ចែករំលែកតាម Twitter
+      label_facebook: ចែករំលែកតាម Facebook 
+      label_translations: ខ្លឹមសារជាភាសាខ្មែរ
+      label_about_the_author: អំពីអ្នកនិពន្ធ
+      label_about_the_project: អំពីគម្រោង
+      label_learn_more: អានបន្ថែមទៀត 
+      label_read_the_translation: អានអត្ថបទ​នេះជាភាសាខ្មែរ
+      label_rss: ព័ត៌មាន VOA ដទៃទៀត
+      label_reference: ឯកសារយោង 
+      label_video: វីដេអូ
+      label_national: ថ្នាក់ជាតិ 
+      label_special_reports: របាយការណ៍​ពិសេស
+      label_feature: Feature 
+      label_by_the_numbers: តាមតួលេខ
+      label_related_videos: វីដេអូពាក់ព័ន្ធ
+      label_biography: ជីវប្រវត្តិ
+      label_electricity: អគ្គិសនី
+      label_electricity_explanation: ភាគរយ​ប្រជាជន​ដែល​មាន​អគ្គិសនី​ប្រើប្រាស់
+      label_data_infant_mortality: មរណភាព​ទារក
+      label_education: ការអប់រំ
+      label_education_explanation: កម្រិត​អប់​រំ​​លើស​ថ្នាក់​វិទ្យាល័យ​​ក្នុង​ខេត្ត​នីមួយៗ
+      label_data_primary_school: រៀនចប់ថ្នាក់បឋមសិក្សា
+      label_unemployment: អត្រា​គ្មាន​ការងារ​ធ្វើ​​
+      label_unemployment_explanation: ភាគរយ​នៃ​ប្រជាជន​ដែល​គ្មាន​ការងារ​ធ្វើ
+      label_data_population_density: ដង់ស៊ីតេប្រជាជន
+      label_migration: ចំណាកស្រុក
+      label_data_percent_symbol: "%"
+      label_per: ក្នុង
+      label_data_population_density_explanation: ចំនួនប្រជាជនរស់នៅក្នុងមួយគីឡូម៉ែត្រការ៉េ
+      label_data_population_density_suffix:  ក្នុង​មួយ km²
+      label_data_election_results: លទ្ធផលបោះឆ្នោត
+      label_election_results_explanation: ភាគរយនៃចំនួនអាសនៈឈ្នះដោយគណបក្សប្រជាជនកម្ពុជាតាមខេត្តនីមួយៗក្នុងឆ្នាំ២០១៣ 
+      label_year_1998: ១៩៩៨
+      label_year_2003: ២០០៣
+      label_year_2008: ២០០៨
+      label_year_2013: ២០១៣
+      label_year_2016: ២០១៦
+      label_development: ការអភិវឌ្ឍ
+      label_agriculture: កសិកម្ម
+      label_party name_CPP: ប្រជាជនកម្ពុជា
+      label_party_name_CNRP: សង្គ្រោះជាតិ
+      label_party_name_FCP: ហ៊្វុនស៊ីនប៉ិច
+      label_party_name_SRP: សមរង្ស៊ី
+      label_the number_of_seats_won: ចំនួនអាសនៈឈ្នះដោយគណបក្សនីមួយៗ
+      label_more_from_voanews: ព័ត៌មានដទៃទៀតពី VOA ខ្មែរ
+      label_see_also: អានបន្ថែម
+      label_note_Tboung_Khmum_primary_education-completed: បញ្ជាក់៖ កាល​ពី​ឆ្នាំ ២០១៤ ខេត្ត ​កំពង់ចាម ត្រូវ​បាន​បែងចែក​ជា​ពីរ​ខេត្ត។ ត្បូងឃ្មុំ ដែល​ជា​ខេត្ត​​បង្កើត​ថ្មី មាន​អត្រា​រៀន​ចប់​ថ្នាក់​បឋម​សិក្សា​ចំនួន ៨៥.១២% ក្នុង​ឆ្នាំ​២០១៦។ 
+    map:
+      Cambodia: កម្ពុជា 
+      Vietnam: វៀតណាម
+      Thailand: ថៃ
+      Laos: ឡាវ
+      Gulf_of_Thailand: ឈូងសមុទ្រថៃ
+      Battambang: បាត់ដំបង
+      Banteay_Meanchey: បន្ទាយមានជ័យ
+      Kampong_Chhnang: កំពង់ឆ្នាំង
+      Kampong_Thom: កំពង់ធំ
+      Kampong_Cham: កំពង់ចាម
+      Kampong_Speu: កំពង់ស្ពឺ
+      Kampot: កំពត
+      Kandal: កណ្តាល
+      Kep: កែប
+      Koh_Kong: កោះកុង
+      Kratie: ក្រចេះ
+      Mondul_Kiri: មណ្ឌលគិរី
+      Oddar_Meanchey: ឧត្ដរមានជ័យ
+      Pailin: ប៉ៃលិន
+      Phnom_Penh: ភ្នំពេញ
+      Preah_Sihanouk: ព្រះសីហនុ
+      Prey_Veng: ព្រៃវែង
+      Preah_Vihear: ព្រះវិហារ
+      Pursat: ពោធិ៍សាត់
+      Ratanak_Kiri: រតនគិរី
+      Siem_Reap: សៀមរាប
+      Stung_Treng: ស្ទឹងត្រែង
+      Svay_Rieng: ស្វាយរៀង
+      Takeo: តាកែវ
+      Tboung_Khmum: ត្បូងឃ្មុំ
+    analytics:
+      language: Khmer
+      language_service: VOA Khmer
+      service: Khmer
+      division: EAP
+      lang: KHM
+      abbreviation: km
+      id: 604
+      direction: ltr
+      website: https://khmer.voanews.com/
+      language_label: ខ្មែរ
+
+

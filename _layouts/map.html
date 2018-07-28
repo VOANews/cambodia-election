@@ -1,0 +1,363 @@
+<!DOCTYPE html>{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+{% assign random = site.time | date: "%s%N" %}
+
+<html lang="{{ site_info.analytics.abbreviation }}">
+{% include head.html %}
+
+<body class="voa__project voa__scrolling-page {{ page.language | default: 'english'}}">
+
+	<script src="{{ site.url_base }}/js/scroll-map.js?{{ random }}"></script>
+
+	<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="https://projects.voanews.com/js/resources/jquery.sticky.js"></script>
+	<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
+
+{% if site.development_mode %}
+
+	<div id="siteWarning" class="voa__publish-warning" style="position: fixed; bottom: 0; width: 100%; padding: 10px; text-align: center; background-color: #900; color: #FFF; z-index: 9999999">
+	  {{ site.development_warning }}  <br/><span style="color: orange; font-weight: bold;">Please do not share outside of the project team.</span>
+		<h3 id="closeWarning" class="voa__publish-warning__close-button">[X]</h3>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#closeWarning").click(function(){
+				console.log("close the warning box");
+				$(".voa__publish-warning").toggle();
+			})
+		})
+	</script>
+
+{% else %}
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W72N2D"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	<script type="text/javascript">
+
+	var utag_data = {
+		entity:"VOA",
+		language:"{{ current_language }}",
+		language_service:"{{ site_info.analytics.language_service }}",
+		short_language_service:"{{ site_info.analytics.lang }}",
+		property_id:"{{ site_info.analytics.id }}",
+		platform:"Responsive",
+		platform_short:"R",
+		runs_js:"Yes",
+		section:"Special Projects",
+		english_section:"special-projects",
+		page_title:"{% if page.title %}{{ site.title_short }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+		page_type:"interactive",
+		page_name:"{% if page.title %}{{ site.title_short }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+		short_headline:"{% if page.title %}{{ page.title }}{% else %}{{ site.title_short }}{% endif %}",
+		long_headline:"{% if page.title %}{{ site.title_short }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+		headline:"{% if page.title %}{{ site.title_short }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+		content_type:"interactive",
+		pub_year:"2018",
+		pub_month:"06",
+		pub_day:"04",
+		pub_weekday:"Mondayxxxx",
+		byline:"xxx, john",
+		slug:"xxxxx"
+	}
+
+	</script>
+
+	<script type="text/javascript">
+	(function(a,b,c,d){
+	a='//tags.tiqcdn.com/utag/bbg/voa-nonpangea/prod/utag.js';
+	b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+	a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+	})();
+	</script>
+
+{% endif %}
+
+
+	<script type="text/javascript">
+
+		var projectPrefix = "{{ site.url_base }}";
+		var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
+		var pinLocation = "{{ page.location | default: 'Cambodia'}}";
+
+		var rssFeedEncoded = "{{ site_info.rss_feed | cgi_escape }}";
+
+		var dictionaryMap = {
+			"Cambodia": "{{ site_info.map.Cambodia }}",
+			"Vietnam": "{{ site_info.map.Vietnam }}",
+			"Thailand": "{{ site_info.map.Thailand }}",
+			"Laos": "{{ site_info.map.Laos }}",
+			"Phnom Penh": "{{ site_info.map.Phnom_Penh }}",
+			"Gulf of Thailand": "{{ site_info.map.Gulf_of_Thailand }}",//"Gulf of<br/> Thailand"
+			"infant mortality": {
+				"label": "{{ site_info.dictionary.label_data_infant_mortality | default: 'infant mortality' }}",
+				"suffix": " {{ site_info.dictionary.label_per | default: 'per' }} 1000",
+				"description": "Number of infant deaths per 1,000 live births"
+			},
+			"population density": {
+				"label": "{{ site_info.dictionary.label_data_population_density | default: 'Population Densityxx' }}",
+				"suffix": " {{ site_info.dictionary.label_data_population_density_suffix | default: ' per km²' }}",
+				"description": "{{ site_info.dictionary.label_data_population_density_explanation | default: 'The number of people living per square kilometerxx' }}"
+			},
+			"electricity": {
+				"label": "{{ site_info.dictionary.label_electricity | default: 'electricity' }}",
+				"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+				"description": "{{ site_info.dictionary.label_electricity_explanation | default: 'The percentage of the population with access to electricity' }}"
+			},
+			"unemployment": {
+				"label": "{{ site_info.dictionary.label_unemployment | default: 'unemployment' }}",
+				"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+				"description": "{{ site_info.dictionary.label_unemployment_explanation | default: 'The percentage of the population that is unemployed' }}"
+			},
+			"election results": {
+				"label": "{{ site_info.dictionary.label_data_election_results | default: 'election results' }}",
+				"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+				"description": "{{ site_info.dictionary.label_election_results_explanation | default: 'The percentage of seats won by CPP in 2013 in each province' }}"
+			},
+			"education": {
+				"label": "{{ site_info.dictionary.label_education | default: 'education' }}",
+				"labelPrimary": "{{ site_info.dictionary.label_data_primary_school | default: 'primary school completed' }}",
+				"suffix": "{{ site_info.dictionary.label_data_percent_symbol | default: '%' }}",
+				"description": "{{ site_info.dictionary.label_education_explanation | default: 'Post secondary levels of education in each province' }}",
+				"descriptionPrimary": "The percentage of population that had completed primary school"
+			},
+			"CPP": "CPP",
+			"CNRP": "CNRP",
+			"provinces": {
+				"Battambang":       "{{ site_info.map.Battambang | default: 'Battambang' }}",
+				"Banteay Meanchey": "{{ site_info.map.Banteay_Meanchey | default: 'Banteay Meanchey' }}",
+				"Kampong Chhnang":  "{{ site_info.map.Kampong_Chhnang | default: 'Kampong Chhnang' }}",
+				"Kampong Thom":     "{{ site_info.map.Kampong_Thom | default: 'Kampong Thom' }}",
+				"Kampong Cham":     "{{ site_info.map.Kampong_Cham | default: 'Kampong Cham' }}", 
+				"Kampong Speu":     "{{ site_info.map.Kampong_Speu | default: 'Kampong Speu' }}",
+				"Kampot":           "{{ site_info.map.Kampot | default: 'Kampot' }}",
+				"Kandal":           "{{ site_info.map.Kandal | default: 'Kandal' }}",
+				"Kep":              "{{ site_info.map.Kep | default: 'Kep' }}",
+				"Koh Kong":         "{{ site_info.map.Koh_Kong| default: 'Koh Kong' }}",
+				"Kratie":           "{{ site_info.map.Kratie| default: 'Kratie' }}",      
+				"Mondul Kiri":      "{{ site_info.map.Mondul_Kiri| default: 'Mondul Kiri' }}",
+				"Oddar Meanchey":   "{{ site_info.map.Oddar_Meanchey | default: 'Oddar Meanchey' }}",
+				"Pailin":           "{{ site_info.map.Pailin | default: 'Pailin' }}",
+				"Phnom Penh":       "{{ site_info.map.Phnom_Penh | default: 'Phnom Penh' }}",
+				"Preah Sihanouk":   "{{ site_info.map.Preah_Sihanouk | default: 'Preah Sihanouk' }}",
+				"Prey Veng":        "{{ site_info.map.Prey_Veng | default: 'Prey Veng' }}",
+				"Preah Vihear":     "{{ site_info.map.Preah_Vihear | default: 'Preah Vihear' }}",
+				"Pursat":           "{{ site_info.map.Pursat | default: 'Pursat' }}",
+				"Ratanak Kiri":     "{{ site_info.map.Ratanak_Kiri | default: 'Ratanak Kiri' }}",
+				"Siem Reap":        "{{ site_info.map.Siem_Reap | default: 'Siem Reap' }}",
+				"Stung Treng":      "{{ site_info.map.Stung_Treng | default: 'Stung Treng' }}",
+				"Svay Rieng":       "{{ site_info.map.Svay_Rieng | default: 'Svay Rieng' }}",
+				"Takeo":            "{{ site_info.map.Takeo | default: 'Takeo' }}",
+				"Tboung Khmum":     "{{ site_info.map.Tboung_Khmum | default: 'Tboung Khmum' }}"
+			},
+			"year1998": "{{ site_info.dictionary.label_year_1998 | default: '1998' }}",
+			"year2003": "{{ site_info.dictionary.label_year_2003 | default: '2003' }}",
+			"year2008": "{{ site_info.dictionary.label_year_2008 | default: '2008' }}",
+			"year2013": "{{ site_info.dictionary.label_year_2013 | default: '2013' }}",
+		}
+
+	</script>
+
+
+{% include header.html %}
+
+
+<section class="voa__section__full-width voa__section__title" style="background-image: url('{% if page.image contains 'https://gdb.voanews.com/' %}{{ page.image | replace: '_w1023', '_w1280_h720' }}{% else %}{{ site.url_base }}{{ page.image }}{% endif %}'); background-position: center;">
+</section>
+
+<section class="voa__section__full-width" style=" box-shadow: 0 0 2px rgba(20,20,20,0); position: relative; z-index: 99999; background-color: #FFF; ">
+	<div class="voa__grid__full " style="margin: 0 auto; max-width: none; padding-top: 40px;">
+		<div class="voa__title-card" style="text-align: center; left: 0; width: 100%; position: relative;">
+			<div style="max-width: 1080px; margin: 0 auto;">
+				<h3 class="voa__kicker" style="margin-bottom: 15px;">{{ site_info.dictionary.label_by_the_numbers | default: "By the numbers "}}</h3>
+				<h1 class="voa__title" style="color: black; text-shadow: none;">{{ page.title }}</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<style type="text/css">
+	
+	.voa__project p.footnote {
+		background-color: #F1F1F1;
+		color: #555;
+		display: none;
+		font-family: Arial, sans-serif;
+		font-size: 14px;
+		line-height: 1.3;
+		padding: 15px;
+	}
+	.voa__map-scale__footnote {
+		display: none;
+	}
+
+	@media only screen and (min-width: 1800px) {
+		.voa__project p.footnote {
+			background-color: transparent;
+			border-left: 1px dotted #CCC;
+			color: #999;
+			display: block;
+			position: absolute;
+			right: 50px;
+			padding: 0 0 0 10px;
+			width: 200px;
+			z-index: 999999999;
+		}
+
+		.voa__map-scale__footnote {
+			border-right: 1px dotted #CCC;
+			color: #999;
+			display: block;
+			position: fixed; 
+				top: 100px;
+				left: 50px;
+			padding: 0 10px 0 0;
+			width: 200px;
+			z-index: 9995;
+
+			font-size: 14px !important;
+			font-family: Arial, sans-serif !important;
+			line-height: 1.3 !important;
+		}
+	}
+
+	.voa__map-key__table__swatch {
+		background-color: #F1F1F1;
+	}
+	.voa__map-key__table__swatch.level1 {
+		background-color: #CCC;
+	}
+	.voa__map-key__table__swatch.level2 {
+		background-color: #999;
+	}
+	.voa__map-key__table__swatch.level2 {
+		background-color: #777;
+	}
+	.voa__map-key__table__swatch.level3 {
+		background-color: #555;
+	}
+	.voa__map-key__table__swatch.level4 {
+		background-color: #333;
+	}
+	.voa__map-key__table__swatch.level5 {
+		background-color: #111;
+	}
+	.voa__map-key__table__swatch.level6 {
+		background-color: #000;
+	}
+
+	.voa__map-key__label__metric {
+		display: none;
+	}
+	.voa__map-key__table__label:first-of-type .voa__map-key__label__metric,
+	.voa__map-key__table__label:last-of-type .voa__map-key__label__metric {
+		display: inline;
+	}
+	@media only screen and (min-width: 1080px) {
+		.voa__map-key__label__metric {
+			//display: inline;
+		}
+	}
+
+</style>
+
+
+
+
+<div class="voa__country-profiles" style="position: relative;">
+
+	<div id="mapShell" class="map__shell" style="position: relative;">
+
+		<div class="voa__menu__election-years show">
+			<div class="voa__menu__election-years__container">
+				<div class="voa__menu__election-year"><a href="" id="year1998">{{ site_info.dictionary.label_year_1998 | default: '1998' }}</a></div><!--
+				--><div class="voa__menu__election-year"><a href="" id="year2003">{{ site_info.dictionary.label_year_2003 | default: '2003' }}</a></div><!--
+				--><div class="voa__menu__election-year"><a href="" id="year2008">{{ site_info.dictionary.label_year_2008 | default: '2008' }}</a></div><!--
+				--><div class="voa__menu__election-year"><a href="" id="year2013" class="current" >{{ site_info.dictionary.label_year_2013 | default: '2013' }}</a></div><!--
+				-->
+			</div>
+		</div>
+
+		<div id="map" class="map__container" style=""></div>
+		<div id="mapKey" class="voa__map__key__container" style="padding-top: 45px; background-color: #FFF; border: 1px solid #F1F1F1;">
+			<div>
+
+				<h3 id="mapLabel" style="text-transform: uppercase;padding: 10px 5% 2px 10%;"></h3>
+				<div id="mapDescription" style="padding: 0 5% 0 10%; font-size: 14px; color: #666; margin-bottom: 10px;"></div>
+
+				<table class="voa__map-key__table__swatches" style="height: 10px; width: 100%;">
+					<tbody>
+						<tr>
+							<td class="voa__map-key__table__swatch level0"></td>
+							<td class="voa__map-key__table__swatch level1"></td>
+							<td class="voa__map-key__table__swatch level2"></td>
+							<td class="voa__map-key__table__swatch level3"></td>
+							<td class="voa__map-key__table__swatch level4"></td>
+							<td class="voa__map-key__table__swatch level5"></td>
+							<td class="voa__map-key__table__swatch level6"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="voa__map-key__table__labels" style="margin: 0 auto 15px auto; width: 87%; text-align: center; table-layout: fixed;">
+					<tbody>
+						<tr>
+							<td id="mapKeyLevel5" class="voa__map-key__table__label level0"></td>
+							<td id="mapKeyLevel4" class="voa__map-key__table__label level1"></td>
+							<td id="mapKeyLevel3" class="voa__map-key__table__label level2"></td>
+							<td id="mapKeyLevel2" class="voa__map-key__table__label level3"></td>
+							<td id="mapKeyLevel1" class="voa__map-key__table__label level4"></td>
+							<td id="mapKeyLevel0" class="voa__map-key__table__label level5"></td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="overview" class="voa__column--right voa__story ">
+
+{% if page.summary %}
+			<h3 class="voa__featured__summary" style="margin-bottom: 30px; margin-top: 0; padding-top: 0;">{{ page.summary }}</h3>
+{% endif %}
+
+		{{ page.content }}
+
+	</div>
+</div>
+
+<div class="voa__clear"></div>
+
+
+
+
+
+<script type="text/javascript">
+	var mode = "editing";//"editing"; //"production";
+</script>
+
+
+{% include footer.html %}
+
+</body>
+
+</html>

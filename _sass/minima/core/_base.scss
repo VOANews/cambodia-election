@@ -1,0 +1,517 @@
+.voa__project {
+	height: 100%;
+	line-height: 1.2;
+	max-width: 100%;
+	overflow-wrap: break-word;
+	padding: 0;
+	word-wrap: break-word;
+
+	img {
+		max-width: 100%;
+	}
+
+	a {
+		color: $color__voa-blue;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: $font__sansDisplay;
+		margin: 0;
+	}
+
+	strong{
+		font-family: $font__sansDisplay;
+	}
+
+	.voa__story {
+		p{
+			font-family: $font__serif;
+			font-size: 16px;
+			line-height: 1.4;
+
+			@media only screen and (min-width: $media__small) {
+				line-height: 1.6;
+			}
+
+			&.voa__dateline {
+				float: left;
+				//font-family: Arial, sans-serif;
+				//font-weight: bold;
+				margin: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		h3 {
+			margin-top: 40px;
+		}
+	}
+
+	.voa__kicker,
+	.voa__graphic__kicker {
+		background-color: $color__voa-red--dark;
+		color: #FFF;
+		display: inline-block;
+		font-size: 14px;
+		padding: 5px 7px;
+		text-transform: uppercase;
+
+		a {
+			color: #FFF;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.voa__label {
+		color: $color__voa-red--dark;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		a {
+			color: $color__voa-red--dark;
+		}
+	}
+
+
+
+	.voa__byline {
+		font-family: $font__sans;
+		font-weight: bold;
+		margin-bottom: 20px;
+
+		.voa__agency {
+			font-weight: normal;
+		}
+	}
+
+	p.voa__tagline,
+	.voa__story p.voa__tagline {
+		color: #999;
+		font-family: $font__sans;
+		font-size: 13px;
+	}
+
+
+
+	.voa__story p.voa__cutline,
+	.voa__cutline {
+		color: #888;// $color__voa-gray-medium;
+		font-family: $font__sans;
+		font-size: 90%;
+		//font-weight: bold;
+		line-height: 1.5;
+		margin: 5px 0 20px 0;
+
+
+		&.voa__cutline--reversed {
+			background-color: rgba(20,20,20,.8);
+			color: #FFF;
+			margin-bottom: 0;
+			padding: 20px;
+			position: absolute;
+				bottom: 0;
+				right: 0;
+			width: 320px;
+				max-width: 100%;
+			z-index: 99999;
+		}
+	}
+	p.voa__credit {
+		color: #888;// $color__voa-gray-medium;
+		font-family: $font__sans;
+		font-size: 90%;
+		margin: 5px 5px 0 0;
+		text-align: right;
+	}
+
+
+
+
+	.voa__section {
+		margin: 0 auto;
+		max-width: $max-width;
+		padding: 0;
+		position: relative;
+		z-index: 9995; 
+
+		&.white {
+			background-color: #FFF;
+
+			border-right: 1px solid #F1F1F1;
+			border-left: 1px solid #F1F1F1; 
+		}
+
+		&.voa__footer {
+			z-index: 9996;
+		}
+	}
+
+	.voa__section__full-width {
+		padding: 0;
+		position: relative;
+		z-index: 9995; 
+
+		&.dark {
+			background-color: $color__voa-gray-dark;
+			padding: 40px 0;
+		}
+
+		&.white {
+			background-color: #FFF;
+		}
+
+		&.voa__section__title {
+			background-position: center bottom;
+			background-size: cover;
+			min-height: 90%;
+			position: relative;
+
+			@media only screen and (min-width: $media__small) {
+				min-height: 60%;
+			}
+
+
+			&.fullscreen {
+				min-height: 100%;
+			}
+		}
+
+		.voa__title-card__shadow {
+			background-image: linear-gradient(transparent 0%,#000 200%);
+			height: 30%;
+			position: absolute;
+				bottom: 0;
+			width: 100%;
+		}
+		.voa__title-card {
+			position: absolute;
+				bottom: 5%;
+		}
+
+		.voa__title {
+			@extend .voa__graphic__title--large;
+			color: #FFF;
+			text-shadow: 1px 1px 3px #333;
+		}
+
+
+
+
+
+
+
+
+		&.landing-page {
+			z-index: 9999 !important;
+
+			.voa__title-label{
+				max-width: 1280px;
+				position: absolute; 
+					top: 0px; 
+				width: 100%; 
+
+				.voa__kicker {
+					background-color: #000;
+					display: table;
+					font-size: 14px;
+					margin: 0 auto;
+					text-align: center;
+
+					@media only screen and (min-height: $media__small) {
+							font-size: 18px;
+					}
+
+				}
+
+				@media only screen and (min-height: $media__medium) {
+					top: 30px; 
+				}
+
+			}
+
+			.voa__title-card {
+
+				bottom: 30px;
+				left: 0;
+				width: 100%;
+				z-index: 9995;
+
+
+
+				.voa__title {
+					color: #000;
+					font-family: 'Oswald', sans-serif;
+					font-size: 48px;
+					font-weight: normal;
+					line-height: 1;
+					text-shadow: none;
+					//text-transform: uppercase;
+
+					&.white {
+						color: #FFF;
+						text-shadow: 1px 1px 5px rgba(20,20,20,.5);
+					}
+
+					@media only screen and (min-width: $media__small) {
+						margin-bottom: 10px;
+						font-size: 60px; 
+					}
+
+					@media only screen and (min-width: $media__medium) {
+						margin-bottom: 20px;
+						font-size: 66px; 
+					}
+					@media only screen and (min-width: $media__medium-large) {
+						font-size: 80px; 
+					}
+					@media only screen and (min-width: $media__large) {
+						font-size: 90px; 
+					}
+					@media only screen and (min-width: $media__extra-large) {
+						font-size: 110px; 
+					}
+				}
+
+				.voa__deck {
+					color: #b3b1e4;
+					font-family: Arial, sans-serif;
+					font-weight: normal;
+					letter-spacing: 5px;
+					text-transform: uppercase;
+				}
+
+
+				@media only screen and (min-width: $media__large) {
+					bottom: 60px;
+
+					.voa__title {
+						text-shadow: none;
+					}
+					.voa__deck {
+						font-size: 28px;
+					}
+
+				}
+
+			}
+
+			.voa__nav__down-arrow {
+				display: none;
+			}
+
+			&.fullscreen {
+				.voa__nav__down-arrow {
+					display: block;
+					.arrow {
+						background-image: url(../img/icon__video.png);
+						background-position: center top;
+						background-repeat: no-repeat;
+						background-size: 30px auto;
+						display: block;
+						height: 30px;
+						margin: 0 auto;
+						width: 30px;
+					}
+					background-color: #FFF;
+					border-radius: 4px 4px 0 0;
+					display: block;
+					height: 30px;
+					margin: 0 auto;
+					width: 40px;
+
+					@media only screen and (min-width: $media__medium) {
+						width: 80px;
+					}
+
+					&:hover {
+						animation-name: example;
+					    animation-duration: .2s;
+					    animation-fill-mode: forwards;
+					}
+				}
+
+				@keyframes example {
+					from {height: 30px;}
+					to {height: 45px;}
+				}
+			}
+
+		}
+
+	}
+
+
+	.voa__footer {
+		background-color: $color__voa-gray-lightest;
+		padding: 40px 0;
+
+		&.dark {
+			background-color: $color__voa-gray-dark;
+			color: $color__voa-gray-light;
+			padding: 40px 0 0 0;
+
+			h3 {
+				color: #CCC;
+
+				&.voa__kicker {
+					color: #FFF;
+				}
+			}
+			a {
+				color: #CCC;
+
+				&:hover {
+					color: orange;
+				}
+			}
+		}
+
+		.voa__grid__one-third {
+			margin-bottom: 40px;
+
+			@media only screen and (min-width: 640px) {
+				margin-bottom: 0;
+			}
+
+			&.border-right {
+				@media only screen and (max-width: 640px) {
+					border-bottom: 1px dotted #555;
+					padding-bottom: 20px;
+				}
+			}
+
+			@media only screen and (min-width: $media__medium-large) {
+				p {
+					line-height: 1.5;
+				}
+			}
+
+		}
+
+		.voa__kicker {
+			margin-bottom: 10px;
+		}
+	}
+
+	.voa__graphic__title--large {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+	.voa__graphic__readin {
+		font-family: $font__sans;//$font__serif;
+		font-size: 110%;
+		//font-style: italic;
+		font-weight: normal;
+		line-height: 1.5;
+		margin-top: 0;
+	}
+
+	.voa__graphic__title--section {
+		font-size: 1.5rem;
+		margin: 0;
+	}
+
+	.voa__section__intro {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.voa__mugshot {
+		display: block;
+		float: right;
+		margin: 0 0 15px 20px;
+		max-width: 40%;
+		width: 150px;
+
+		.voa__mugshot__name {
+			display: block;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 1.2;
+		}
+		.voa__cutline {
+			display: block;
+			font-size: 14px;
+			padding: 0 0 10px 0;
+		}
+	}
+
+
+
+	.voa__mugshot--round {
+		border-radius: 50%;
+		border: 1px solid #FFF;
+		margin: 2px 5px 2px 5%;
+		vertical-align: middle;
+		width: 40px;
+	}
+
+	.voa__photo--inset {
+		margin-bottom: 10px;
+		width: 100%;
+	}
+
+
+	@media only screen and (min-width: $media__medium) {
+		.voa__graphic__title--large {
+			font-size: 3rem;
+			margin-bottom: 20px;
+		}
+
+		.voa__graphic__readin {
+			font-size: 120%;
+			line-height: 1.7;
+			margin-bottom: 2rem;
+		}
+
+		.voa__section__intro {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	@media only screen and (min-width: $media__large) {
+		.voa__graphic__title--large {
+			font-size: 4rem;
+		}
+
+		.voa__graphic__title--section {
+			font-size: 3rem;
+		}
+
+		.voa__graphic__readin {
+			font-size: 140%;
+			line-height: 2;
+		}
+
+		.voa__graphic__intro {
+			display: none;
+		}
+
+		.voa__section__intro {
+			font-size: 24px;
+			line-height: 1.4;
+			margin-bottom: 30px;
+		}
+
+		.voa__mugshot--round {
+			border: 3px solid #FFF;
+			width: 60px;
+		}
+
+	}
+
+	.voa__border-bottom {
+		border-bottom: 1px dotted #CCC;
+	}
+
+}
+

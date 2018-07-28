@@ -1,0 +1,11 @@
+// This file adds a separate set of fonts for different languages
+
+/* VOA language CSS */
+@import 'translations/translationFonts';
+@import 'mixins/mixins';
+
+$font__display:      $font__primary--armenian;
+$font__primary:      $font__primary--armenian;
+$font__secondary:    $font__secondary--armenian;
+
+@include language(armenian);

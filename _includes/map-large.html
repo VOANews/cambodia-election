@@ -1,0 +1,20 @@
+{% if include.title %}<h5 style="text-transform: uppercase; padding-top: 40px;">{{ include.title }}</h5>
+<div class="voa__grid__full" style="background-color: #FFF;">
+	<div class="voa__map-buttons__container">
+		<a href="#" class="map_button" data-metric="population density">Population density</a>
+		<a href="#" class="map_button" data-metric="electricity">Electricity</a>
+		<a href="#" class="map_button" data-metric="unemployment">Unemployment</a>
+		<a href="#" class="map_button" data-metric="infant mortality">Infant mortality</a>
+	</div>
+</div>
+{% endif %}
+<div class="voa__photo__container--large">
+	<div class="voa__photo__container__shell">
+		<div {% if include.add_padding %} class="add-padding" {% endif %}>
+			<div id="mapShell" class="map__shell">
+				<div id="map" class="map__container"></div>
+			</div>
+		</div>
+	</div>
+{% if include.add_padding %} <div class="voa__grid__full white" style="height: 30px;"></div> {% endif %}
+</div>

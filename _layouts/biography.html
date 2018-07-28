@@ -1,0 +1,254 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+{% if page.includeTweets %}
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+{% endif %}
+
+{% if page.window_image %}
+<style type="text/css">
+.voa__window-background.show.loaded {
+	background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+}
+</style>
+{% endif %}
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
+<article class="post voa__grid__full voa__content voa__wiki__bio" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+
+
+
+{% if page.youtube %}
+
+					<div class='embed-container' style="background-color: #F1F1F1;"><iframe src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+					<div class="voa__grid white" style="">
+						<p class="voa__credit">{{ page.credit }}</p>
+					</div>
+
+					<div class="voa__grid__full ">
+
+{% elsif page.image %}
+
+	
+						<div style="position: relative;">
+		{% if page.image contains "https://gdb.voanews.com/" %}
+							<picture>
+								<source srcset="{{ page.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w992_h559' }}" media="(min-width: 640px)">
+								<source srcset="{{ page.image | replace: '_w1023', '_w640_h360' }}" media="(min-width: 420px)">
+								<img src="{{ page.image | replace: '_w1023', '_w420_h236' }}" alt="{{ page.alt }}" style="display: block; width: 100%; max-width: none;" />
+							</picture>
+
+		{% else %}
+							<img src="{{ site.url_base }}{{ page.image }}" alt="{{ page.alt }}" style="display: block; max-width: none; width: 100%;"/>
+		{% endif %}
+
+		{% if page.cutline %}
+							<p class="voa__cutline voa__hide-mobile voa__cutline--reversed">{{ page.cutline }} ({{ page.credit }})</p>
+		{% elsif page.credit %}
+							<p class="voa__cutline voa__cutline--reversed" style="background-color: transparent; width: auto;">{{ page.credit}}</p>
+		{% endif %}
+						</div>
+
+
+{% endif %}
+
+					</div>
+
+
+
+
+
+{% include share-buttons.html %}
+
+
+
+					<div class="voa__grid__full" >
+
+							<div class="voa__story__centered voa__wiki__bio">
+
+								<div class="voa__story">
+
+									<div class="voa__grid__full white">
+										<img src="{{ site.url_base }}{{ page.mugshot }}" class="voa__wiki__bio__mugshot">
+
+										<div class="voa__wiki__bio__head-text" style="">
+
+											<h3 class="voa__label" style="width: 100%;">{{ site_info.dictionary.label_biography }}</h3>
+
+											<h1 class="voa__featured__headline {% if current_language == 'english' %}balance-text{% endif %}" style="text-align: left;">{{ page.title }}</h1>
+{% if page.summary %}
+										<h3 class="voa__featured__summary">{{ page.summary }}</h3>
+{% endif %}
+
+
+										</div>
+									</div>
+
+
+
+	{% if page.translation %}
+										<p class="voa__tagline"><a href="{{ site.url_base }}{{ page.translation }}">{% if current_language == "khmer" %}{{ site.site_info__object.english.dictionary.label_read_the_translation }}{% else %}{{ site.site_info__object.khmer.dictionary.label_read_the_translation }}{% endif %}</a></p>
+	{% endif %}
+
+
+
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+										| replace_first: 'Hun Sen', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">Hun Sen</a>'
+										| replace_first: 'Sam Rainsy', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">Sam Rainsy</a>'
+										| replace_first: 'Norodom Sihanouk', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">Norodom Sihanouk</a>'
+										| replace_first: 'Kem Sokha', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">Kem Sokha</a>'
+										| replace_first: 'Norodom Ranariddh', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">Norodom Ranariddh</a>'
+										| replace_first: 'Pol Pot', '<a href=".../LANGUAGEREPLACE/biography/pol-pot.html" class="voa__wiki__bio-link" title="Bio of Pol Pot">Pol Pot</a>'
+										| replace_first: 'Lon Nol', '<a href=".../LANGUAGEREPLACE/biography/lon-nol.html" class="voa__wiki__bio-link" title="Bio of Lon Nol">Lon Nol</a>'
+
+										| replace_first: 'ហ៊ុន សែន', '<a href=".../LANGUAGEREPLACE/biography/hun-sen.html" class="voa__wiki__bio-link" title="Bio of Hun Sen">ហ៊ុន សែន</a>'
+										| replace_first: 'សម រង្ស៊ី', '<a href=".../LANGUAGEREPLACE/biography/sam-rainsy.html" class="voa__wiki__bio-link" title="Bio of Sam Rainsy">សម រង្ស៊ី</a>'
+										| replace_first: 'នរោត្តម សីហនុ', '<a href=".../LANGUAGEREPLACE/biography/norodom-sihanouk.html" class="voa__wiki__bio-link" title="Bio of Norodom Sihanouk">នរោត្តម សីហនុ</a>'
+										| replace_first: 'កឹម សុខា', '<a href=".../LANGUAGEREPLACE/biography/kem-sokha.html" class="voa__wiki__bio-link" title="Bio of Kem Sokha">កឹម សុខា</a>'
+										| replace_first: 'នរោត្តម រណឫទ្ធិ', '<a href=".../LANGUAGEREPLACE/biography/norodom-ranariddh.html" class="voa__wiki__bio-link" title="Bio of Norodom Ranariddh">នរោត្តម រណឫទ្ធិ</a>'
+
+										| replace_first: 'CPP', '<a href="CPP" class="trigger__party" title="Profile of CPP">CPP</a>'
+										| replace_first: 'HRP', '<a href="HRP" class="trigger__party" title="Profile of HRP">HRP</a>'
+										| replace_first: 'SRP', '<a href="SRP" class="trigger__party" title="Profile of SRP">SRP</a>'
+										| replace_first: 'CNRP', '<a href="CNRP" class="trigger__party" title="Profile of CNRP">CNRP</a>'
+										| replace_first: 'FUNCINPEC', '<a href="FUNCINPEC" class="trigger__party" title="Profile of FUNCINPEC">FUNCINPEC</a>'
+										| replace_first: 'Khmer Rouge', '<a href="KhmerRouge" class="trigger__party" title="Profile of Khmer Rouge">Khmer Rouge</a>'
+										| replace_first: 'national elections', '<a href="nationalelections" class="trigger__party" title="Explanation of national elections">national elections</a>'
+										| replace_first: 'commune elections', '<a href="communeelections" class="trigger__party" title="Explanation of commune elections">commune elections</a>'
+
+										| replace_first: 'គណបក្សប្រជាជនកម្ពុជា', '<a href="CPP" class="trigger__party" title="Profile of CPP">គណបក្ស​ប្រជាជន​កម្ពុជា</a>'
+										| replace_first: 'គណបក្សសិទ្ធិមនុស្ស', '<a href="HRP" class="trigger__party" title="Profile of HRP">គណបក្សសិទ្ធិមនុស្ស</a>'
+										| replace_first: 'គណបក្ស សម រង្', '<a href="SRP" class="trigger__party" title="Profile of SRP">គណបក្ស សម រង្</a>'
+										| replace_first: 'គណបក្សសង្គ្រោះជាតិ', '<a href="CNRP" class="trigger__party" title="Profile of CNRP">គណបក្សសង្គ្រោះជាតិ</a>'
+										| replace_first: 'គណបក្សហ្វ៊ុនស៊ិនពិច', '<a href="FUNCINPEC" class="trigger__party" title="Profile of FUNCINPEC">គណបក្សហ្វ៊ុនស៊ិនពិច</a>'
+										| replace_first: 'ខ្មែរក្រហម', '<a href="KhmerRouge" class="trigger__party" title="Profile of Khmer Rouge">ខ្មែរក្រហម</a>'
+										| replace_first: 'មីក្រូហរិញ្ញវត្ថុ', '<a href="Microfinance" class="trigger__party" title="Explanation of microfinance">មីក្រូហរិញ្ញវត្ថុ</a>'
+
+										| replace: 'LANGUAGEREPLACE', current_language
+										| replace: '...', site.url_base
+									}}
+
+
+
+									<p class="voa__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+
+	{% else %}
+		{% if current_language == "english" %}
+									Researched and written by {{ page.byline }} | VOA News
+		{% else %}
+									{{ page.byline }}
+		{% endif %}
+
+	{% endif %}	
+
+
+
+									</p>
+
+								</div>
+
+							</div>
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+
+
+	<div class="voa__landing-page">
+		<section class="voa__section voa__spotlight" style="">
+			<div class="voa__grid__full">
+			<div class="voa__spotlight__cutout__container">
+				
+				<a href="{{ site.url_base }}/{{ current_language }}/hun-sen/"><img class="voa__spotlight__cutout" src="{{ site.url_base }}/img/hun-sen-cutout.png" style=""></a>
+			</div>
+
+				<div class="voa__grid">
+					<h3 class="voa__kicker" style="margin-bottom: 0;"><a href="{{ site.url_base }}/{{ current_language }}/hun-sen/">{{ site_info.dictionary.label_hun_sen_series }}</a></h3>
+				</div>
+
+				<div class="voa__spotlight__headlines">
+
+					<div class="voa__grid__full">
+
+{% assign counter = 0 %}
+{% assign sorted-posts = site.posts | where: "categories","hun-sen" %}
+{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+{% for post in sorted-posts-language %}
+	{% if counter == 0 %}
+						<div class="voa__grid__two-thirds border-right" style="border-color: #333;">
+							<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+								<h2 style="color: #999;">{{ post.title }}</h2>
+								<img src="{{ site.url_base }}/img/mugshot__hun-sen.jpg" class="voa__show-mobil--small" style="float: left; margin-right: 10px; width: 80px;">
+								<p style="color: #999;">{{ post.summary }}</p>
+							</a>
+						</div><!--
+						--><div class="voa__grid__one-third " style="margin-right: 0;">
+	{% else %}
+
+							<a href="{{ site.url_base }}{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
+								<h3 style="color: #999;">{{ post.title }}</h3>
+							</a>
+
+	{% endif %}
+	{% assign counter = counter | plus: 1 %}
+
+{% endfor %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+
+
+</article>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+
+
+
+
+{% include factboxes.html %}
+
+
+
+{% include footer.html %}

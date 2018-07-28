@@ -1,0 +1,37 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+						<div class="voa__grid__full voa__profile-lineup">
+							{% if include.label %}
+							<div class="voa__grid">
+								<h3 class="voa__kicker"><a href="{{ site.url_base }}/draft/dirty-dozen/">Dirty Dozen</a></h3>
+							</div>
+							{% endif %}
+							<div class="voa__grid">
+
+					{% assign sorted-posts = site.posts | where: "categories", "dirty-dozen" %}
+					{% assign sorted-posts-language = sorted-posts | where: "categories","draft" %}
+					<!--
+					{% for post in sorted-posts-language %}
+								--><div class="voa__grid__element--6">
+									<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+										<img src="{{ post.mugshot }}">
+										<h4>{{ post.name }}</h4>
+										<h5 style="font-weight: normal; font-size: 13px;">{{ post.role }}</h5>
+									</a>
+								</div><!--
+					{% endfor %}
+								-->
+
+							</div>
+						</div>

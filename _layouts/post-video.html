@@ -1,0 +1,152 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+{% if page.includeTweets %}
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+{% endif %}
+
+{% if page.window_image %}
+<style type="text/css">
+.voa__window-background.show.loaded {
+	background-image: url({{ site.url_base }}/img/{{ page.window_image }});
+}
+</style>
+{% endif %}
+
+
+<script type="text/javascript">
+	var projectPrefix = "{{ site.url_base }}";
+	var pinCoordinates = [{{ page.coordinates | default: '11.655629, 104.935' }}];
+	var pinLocation = "{{ page.location | default: 'Cambodia'}}";
+</script>
+
+
+<article class="post voa__grid__full voa__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 40px;">
+
+
+
+
+{% if page.youtube %}
+
+					<div class='embed-container' style="background-color: #F1F1F1;"><iframe src="https://www.youtube.com/embed/{{ page.youtube }}" frameborder="0" allowfullscreen></iframe></div>
+{% endif %}
+
+
+
+
+
+
+{% include share-buttons.html %}
+
+
+
+					<div class="voa__grid__full" >
+
+							<div class="voa__story__centered">
+
+								<div class="voa__story">
+
+									<div class="voa__grid white">
+
+{% if current_language == "english" %}
+	{% assign page_label = "Video" %}
+{% else %}
+	{% assign page_label = "វីដេអូ" %}
+{% endif %}
+
+
+										<h3 class="voa__label" style="width: 100%; text-align: center; margin-top: 25px !important;"><a href="{{ site.url_base }}/{{ current_language }}/video/">{{ page_label }}</a></h3>
+
+										<h1 class="voa__video__headline balance-text" style="">{{ page.title }}</h1>
+									</div>
+
+
+
+
+{% comment %}
+{% if page.summary %}
+									<h3 class="voa__featured__summary">{{ page.summary }}</h3>
+{% endif %}
+
+{% endcomment %}
+
+
+
+
+
+{% if page.dateline %}
+
+									{% assign datelineStart = '<span class="voa__dateline">' %}
+									{% assign datelineEnd = '</span>' %}
+
+									{% assign dateline = datelineStart | append: page.dateline | append: datelineEnd  %}
+{% else %}
+									{% assign dateline = "" %}
+{% endif %}
+
+
+									{{ content 
+										| replace: '$DATELINE$', dateline
+									}}
+
+
+
+{% if page.tagline or page.link-project %}
+									<p class="voa__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+	{% endif %}	
+
+	{% if page.link-project %}
+									This story originally appeared on <a href="page.link-project">VOAcambodia.com</a>. ({{ page.date | date: '%B %-d, %Y' }})
+	{% endif %}
+									</p>
+{% endif %}
+
+								</div>
+
+							</div>
+
+
+{%
+	include promo-video.html
+
+	tag = page.tag 
+%}
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+<script type="text/javascript">
+	var mode = "editing";//"editing"; //"production";
+</script>
+
+{% include footer.html %}

@@ -1,0 +1,198 @@
+---
+layout: default
+---
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+
+<div class="category voa__content" style="position: relative; z-index: 9999;">
+	<div class="voa__grid__full voa__border-sides" style="padding-top: 45px; background-color: #FFF;">
+
+
+{% if page.category %}
+
+
+	{% assign counter = 0 %}
+	{% assign sorted-posts = site.posts | where: "categories",page.category %}
+	{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
+	{% for post in sorted-posts-language %}
+
+		{% if counter == 0 %}
+		<div class="voa__grid" style="margin: 0 auto 10px auto;">
+
+			<div class="voa__featured-post">
+				
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}" style=" text-decoration: none;">
+
+			{% if post.image %}
+
+				{% if post.image contains "https://gdb.voanews.com/" %}
+
+					<picture>
+						<source srcset="{{ post.image | replace: '_w1023', '_w1280_h720' }}" media="(min-width: 992px)">
+						<source srcset="{{ post.image | replace: '_w1023', '_w992_h558' }}" media="(min-width: 640px)">
+						<source srcset="{{ post.image | replace: '_w1023', '_w640' }}" media="(min-width: 420px)">
+						<img src="{{ post.image | replace: '_w1023', '_w420_h420' }}" alt="{{ post.alt }}" style="display: block; width: 100%; max-width: none;" />
+					</picture>
+
+				{% else %}
+
+					<img src="{{ site.url_base }}{{ post.image }}" alt="{{ post.cutline }}" style="max-width: none; width: 100%;">
+
+				{% endif %}
+
+			{% else %}
+
+				{% if page.category == "video" %}
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/maxresdefault.jpg" />
+				{% else %}
+					<img src="https://placehold.it/1280x720">
+				{% endif %}
+					
+			{% endif %}
+
+					<h2 class="voa__featured-post__title">
+					  {{post.title }}
+					</h2>
+				</a>
+				<p>{{post.summary | strip_html }}</p>
+			</div>
+		</div>
+		{% elsif counter == 1 %}
+		<div class="voa__grid voa__portfolio-grid">
+			<div class="voa__grid__element voa__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+			{% elsif page.category == "video"%}
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
+			{% else %}
+				{% if post.image contains "https://gdb.voanews.com/" %}
+					<img src="{{ post.image | replace: '_w1023', '_w640_h360' }}">
+				{% else %}
+					<img src="{{ site.url_base }}{{ post.image }}">
+				{% endif %}
+			{% endif %}
+					<h3>{{ post.title | escape }}</h3>
+				</a>
+			</div><!--
+		{% else %}
+			{% if post.categories.last != "biography" and post.categories.last != "party" and post.categories.last != "quote" %}
+
+			--><div class="voa__grid__element voa__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+				{% if page.category == "video"%}
+					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
+				{% else %}
+					{% if post.thumbnail %}
+							<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+					{% else %}
+						{% if post.image contains "https://gdb.voanews.com/" %}
+							<img src="{{ post.image | replace: '_w1023', '_w640_h360' }}">
+						{% else %}
+							<img src="{{ site.url_base }}{{ post.image }}">
+						{% endif %}
+					{% endif %}
+				{% endif %}
+					<h3>{{ post.title | escape }} </h3>
+				</a>
+			</div><!--
+			{% endif %}
+		{% endif %}
+		
+		{% assign counter = counter | plus: 1 %}
+
+	{% endfor %}
+		--></div>
+
+
+
+
+
+{% else %}
+
+	{% assign featuredLink = 'false' %}
+	{% for post in site.categories[current_language] %}
+
+
+	{% if post.categories.last != "biography" and post.categories.last != "credits" and post.categories.last != "video" %}
+
+		{% if featuredLink == 'false' %}
+
+		<div class="voa__grid" style="margin: 0 auto 10px auto;">
+			<div class="voa__featured-post">
+				
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative }}" style=" text-decoration: none;">
+			{% if post.image %}
+				{% if post.image contains "https://gdb.voanews.com/" %}
+					<img src="{{ post.image | replace: '_w1023', '_w1280_h720' }}" style="max-width: none; width: 100%;" />
+				{% else %}
+					<img src="{{ site.url_base }}{{ post.image }}" style="max-width: none; width: 100%;" />
+				{% endif %}
+
+
+			{% else %}
+					<img src="https://placehold.it/1280x720">
+			{% endif %}
+
+					<h2 class="voa__featured-post__title">
+					  {{ post.title }}
+					</h2>
+				</a>
+				<p>{{ post.summary | strip_html }}</p>
+			</div>
+		</div>
+	<div class="voa__grid" style="margin: 0 auto 10px auto;">
+<!--
+		{% assign featuredLink = 'true' %}
+
+	{% elsif featuredLink == 'true' %}
+
+		{% if post.categories.last != "biography" and post.categories.last != "party" and post.categories.last != "quote" %}
+
+		 --><div class="voa__grid__element voa__portfolio-grid__item">
+				<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+			{% if post.thumbnail %}
+					<img src="{{ site.url_base }}/img/{{ post.thumbnail }}" alt="{%if post.cutline%}{{ post.cutline }} {% endif %}"/>
+			{% else %}
+				{% if post.image contains "https://gdb.voanews.com/" %}
+					<img src="{{ post.image | replace: '_w1023', '_w640_h360' }}">
+				{% else %}
+					<img src="{{ site.url_base }}{{ post.image }}">
+				{% endif %}
+			{% endif %}
+					<h3>{{ post.title | escape }}</h3>
+				</a>
+			</div><!--
+			{% endif %}
+
+		{% endif %}
+
+	{% endif %}
+
+	{% endfor %}
+		  -->
+
+{% endif %}
+
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+{% include footer.html %}

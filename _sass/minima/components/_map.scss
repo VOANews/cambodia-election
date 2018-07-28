@@ -1,0 +1,78 @@
+.map__container {
+	border: 1px solid #CCC;
+	min-height: 300px;
+	width: 100%;
+
+	img {
+		max-width: none;
+	}
+
+	.labelCity{
+		color: #000;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 0;
+		pointer-events: none !important;
+		text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white,0 0 2px white,0 0 2px;
+		white-space: nowrap;
+
+	}
+
+	.labelProvince{
+		color: #000;
+		display: none;
+		font-size: 13px;
+		font-weight: bold;
+		line-height: 0;
+		pointer-events: none !important;
+		text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white,0 0 2px white,0 0 2px;
+		white-space: nowrap;
+
+		&.show {
+			display: block;
+		}
+	}
+
+	.labelCountry{
+		color: #000;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 0;
+		pointer-events: none !important;
+		text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white,0 0 2px white,0 0 2px;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+	.labelWater{
+		color: #FFF;
+		font-size: 14px;
+		font-family: serif;
+		font-style: italic;
+		line-height: 1.2;
+		pointer-events: none !important;
+		text-align: center;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+}
+
+.voa__map__popup-image {
+	display: none;
+	max-width: 100%;
+	width: 100%;
+}
+.voa__map__popup-description {
+	display: none;
+}
+@media only screen and (min-width: 640px) {
+	.map__container {
+		min-height: 500px;
+	}
+	.voa__map__popup-image,
+	.voa__map__popup-description {
+		display: block;
+	}
+}
+
+

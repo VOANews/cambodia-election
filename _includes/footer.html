@@ -1,0 +1,70 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<footer class="voa__section voa__footer dark">
+
+	<div class="voa__grid__full" style="margin-bottom: 0;">
+
+		<div class="voa__grid" style="margin-bottom: 0;">
+
+			<div class="voa__grid__one-third ">
+
+				<h3>{{ site_info.dictionary.label_about_the_project}}</h3>
+				<p>{{ site_info.about_the_project | smartify }} <!--<a href="/about/">{{ site_info.dictionary.label_learn_more}}</a></p>-->
+
+			</div><!--
+
+			--><!--
+
+			--><div class="voa__grid__one-third border-right" >
+
+
+{% for post in site.categories[current_language] %}
+	{% if post.categories.last == "credits" %}
+
+				<h3>{{ post.title }}</h3>
+				{{ post.content }}
+
+	{% endif %}
+{% endfor %}
+
+
+
+			</div><!--
+
+			--><div class="voa__grid__one-third" style="margin-right: 0;">
+{% if page.layout == "home" %}
+	{% if current_language == "khmer" %}
+				<h3>{{ site.site_info__object["english"].dictionary.label_about_the_project}}</h3>
+
+				<p>{{ site.site_info__object["english"].about_the_project | smartify}} <a href="{{ site.url_base }}/">{{ site.site_info__object["english"].dictionary.label_learn_more}}</a></p>
+
+
+	{% else %}
+				<h3>{{ site.site_info__object["khmer"].dictionary.label_about_the_project}}</h3>
+				<p>{{ site.site_info__object["khmer"].about_the_project | smartify}} <a href="{{ site.url_base }}/khmer/">{{ site.site_info__object["khmer"].dictionary.label_learn_more}}</a></p>
+	{% endif %}
+
+{% else %}
+				<h3>{{ site_info.dictionary.label_rss}}</h3>
+				<ul id="rssList" class="voa__rss" style="margin-top: 10px;">
+				</ul>
+
+{% endif %}
+			</div>
+
+		</div>
+
+	</div>
+
+</footer><!-- .voa__footer -->

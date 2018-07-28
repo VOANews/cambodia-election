@@ -1,0 +1,9 @@
+/* VOA language CSS */
+@import 'translations/translationFonts';
+@import 'mixins/mixins';
+
+$font__display:      $font__primary--thai;
+$font__primary:      $font__primary--thai;
+$font__secondary:    $font__secondary--thai;
+
+@include language(thai);

@@ -1,0 +1,224 @@
+---
+layout: default
+---
+
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+
+
+
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
+<article class="post voa__grid__full voa__content" itemscope itemtype="http://schema.org/BlogPosting" style="margin-bottom: 0;">
+
+	<section class="voa__section__full-width">
+
+		<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0; background-color: #FFF;">
+
+				<div class="voa__grid__full" style="margin-bottom: 0; margin-top: 60px;">
+
+							<div class="voa__story__centered">
+
+								<div class="voa__story">
+
+									<div class="voa__grid white">
+
+{% if current_language == 'khmer' %}
+	{% assign page_label = 'ព្រឹត្តិការណ៍' %}
+{% else %}
+	{% assign page_label = 'Timeline' %}
+{% endif %}
+
+										<h3 class="voa__label" style="width: 100%; text-align: center;">{{ page_label }}</h3>
+
+										<h1 class="voa__featured__headline {% if current_language == 'english' %}balance-text{% endif %}" style="text-align: center;">{{ page.title }}</h1>
+{% comment %}
+{% if page.summary %}
+										<h3 class="voa__featured__summary balance-text" style="text-align: center; padding: 10px 0 0 0;">{{ page.summary }}</h3>
+{% endif %}
+{% endcomment %}
+									</div>
+
+
+
+{% if page.byline %}
+
+									<p class="voa__byline" style="font-family: Arial, sans-serif; font-size: 15px; text-align: center; font-weight: normal; padding: 0 0 30px 0;">{% if current_language == 'english' %}By {% endif %}<span style="font-weight: bold;">{{ page.byline }}</span> | VOA Khmer</p>
+{% endif %}
+
+	<div style="text-align: center !important; margin: 0 auto;">
+									{{ content }}		
+	</div>
+
+
+
+{% if page.tagline or page.link-project %}
+									<p class="voa__tagline">
+
+	{% if page.tagline %}
+									{{ page.tagline }}
+	{% endif %}	
+
+	{% if page.link-project %}
+									This story originally appeared on <a href="page.link-project">VOAcambodia.com</a>. ({{ page.date | date: '%B %-d, %Y' }})
+	{% endif %}
+									</p>
+{% endif %}
+
+								</div>
+
+							</div>
+
+					</div><!-- .voa__grid__full -->
+
+
+			</div>
+
+	</section>
+
+</article>
+
+
+<style type="text/css">
+	.voa__timeline-nav__container {
+		display: none;
+	}
+
+	@media only screen and (min-width: 992px) and (min-height: 640px) {
+		.voa__timeline-nav__container {
+			display: block;
+			height: 100%;
+			pointer-events: none;
+			position: fixed;
+				top: 42px;
+			width: 100%;
+			z-index: 9996;
+			//max-width: 1280px;
+		}
+
+		.voa__timeline-nav__shell {
+			height: 100%;
+			margin: 0 auto;
+			max-width: 1280px;
+			width: 100%;
+		}
+
+		.voa__timeline-nav {
+			border-left: 1px solid #F1F1F1;
+			height: 100%;
+			position: relative;
+			margin-right: 0;
+			width: 60px;
+			z-index: 9999999;
+		}
+		.voa__timeline-nav ul {
+			height: 100%;
+			padding-left: 0;
+			position: relative;
+		}
+		.voa__timeline-nav ul li {
+			font-family: Arial, sans-serif;
+			height: 12%;
+			list-style: none;
+		}
+		.voa__timeline-nav ul li a{
+			border-radius: 0 4px 4px 0;
+			color: #888;
+			display: block;
+			font-size: 13px;
+			padding: 5px 10px 5px 0;
+			pointer-events: auto;
+			text-decoration: none;
+		}
+		.voa__timeline-nav ul li a:hover{
+			background-color: #F1F1F1;
+			color: #333;
+			font-weight: bold;
+		}
+
+	}
+</style>
+<div class="voa__timeline-nav__container">
+	<div class="voa__timeline-nav__shell">
+		<div class="voa__timeline-nav">
+			<ul>
+				<li><a href="#july_10_2018" class="voa__timeline__event">— 2018</a></li>
+				<li><a href="#sept_2010" class="voa__timeline__event">— 2010</a></li>
+				<li><a href="#feb_3_2002" class="voa__timeline__event">— 2000</a></li>
+				<li><a href="#oct_23_1991" class="voa__timeline__event">— 1990</a></li>
+				<li><a href="#jan_14_1985" class="voa__timeline__event">— 1980</a></li>
+				<li><a href="#april_17_1975" class="voa__timeline__event">— 1970</a></li>
+				<li><a href="#april_1960" class="voa__timeline__event">— 1960</a></li>
+				<li><a href="#nov_9_1953" class="voa__timeline__event">— 1950</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<section class="voa__section__full-width">
+
+	<div class="voa__grid__full voa__border-sides" style="padding-bottom: 0; background-color: #FFF;">
+
+		<div class="voa__grid__full">
+			<div style="display: block; margin: 0 auto;">
+			
+				<div id="factbox" class="voa__factbox page" style="padding: 0; background-color: #FFF; max-width: 740px;">
+
+					<div class="voa__factbox__header">
+						<div id="closeFactbox" class="voa__factbox__header__text voa__factbox__close">
+							<h3>Cambodia (1953 - 2018)</h3>
+							<h5 class="voa__factbox__close-button">[x]</h5>
+						</div>
+					</div>
+					<div class="voa__grid__full voa__timeline-intro--standalone" style="position: relative; margin-bottom: 0; padding-top: 50px;">
+						<div style="width: 90%; max-width: 720px; margin: 0 auto;">
+							<div class="voa__timeline-intro voa__timeline_standalone" style="border-right: 1px dashed #999;"></div>
+						</div>
+					</div>
+					<div class="voa__grid__full">
+						<div class="voa__grid" style="padding-bottom: 0;">
+							<div style="background-color: #FFF;">
+								<div class="voa__timeline__shell voa__timeline_standalone">
+										<div class="voa__timeline__midline-line" style="width: 50%; position: absolute; left: 50%; border-left: 1px dashed #666; height: 100%;">
+											
+										</div>
+
+										<div class="voa__timeline ltr">
+													{% assign timelineLanguage = 'timeline-' | append: current_language | append: '.html'%}
+													{% include {{timelineLanguage}} %}
+
+										</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<script type="text/javascript">
+	var mode = "production";//"editing"; //"production";
+</script>
+
+
+{% include footer.html %}

@@ -1,0 +1,24 @@
+{% if page.language %}
+
+	{% assign site_info = site.site_info__object[page.language] %}
+	{% assign current_language = page.language %}
+
+{% else %}
+
+	{% assign site_info = site.site_info__object.english %}
+	{% assign current_language = "english" %}
+
+{% endif %}
+
+<div class="voa__half-column">
+	<div id="mapLocator" class="map__container"></div>
+	<div id="provinceProfile" class="voa__province-profile voa__infobox" style="">
+		<table id="provinceProfileStatsx" style="margin-top: 15px;">
+			<thead>
+				<tr><th>{{ site_info.dictionary.label_by_the_numbers }}</th><th id="provinceName"></th><th>{{ site_info.dictionary.label_national }}</th></tr>
+			</thead>
+			<tbody id="provinceProfileStatistics">
+			</tbody>
+		</table>
+	</div>
+</div>
