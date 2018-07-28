@@ -49,7 +49,7 @@ date: 2018-07-04
 				<div class="voa__grid__full" style="padding-top: 40px;">
 					
 					<div class="voa__project__intro">
-						<h3 class="voa__graphic__readin" style="text-align: center; line-height: 1.4;">{{ site_info.project_intro }} | <a href="{{ site.url_base }}{{ post.url | relative_url }}" style="text-decoration: underline; color: #1330bf; white-space: nowrap;">{{ site_info.dictionary.label_learn_more }}</a></h3>
+						<h3 class="voa__graphic__readin" style="text-align: center; line-height: 1.4;">{{ site_info.project_intro }} | <a href="{{ post.url | relative_url }}" style="text-decoration: underline; color: #1330bf; white-space: nowrap;">{{ site_info.dictionary.label_learn_more }}</a></h3>
 					</div><!--
 					--><div class="voa__landing-page__live-blog__promo" style="margin-right: 0;">
 
@@ -74,7 +74,7 @@ date: 2018-07-04
 	{% if ledeSet == 'false' and post.lede %}
 
 				<div class="voa__grid__full">
-					<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+					<a class="post-link" href="{{ post.url | relative_url }}">
 						<div class="voa__grid" style="padding-bottom: 0;">
 		{% if post.image contains "https://gdb.voanews.com/" %}
 							<picture>
@@ -127,7 +127,7 @@ date: 2018-07-04
 				 --><div class="voa__grid__one-half">
 				 		<div class="voa__secondary-feature__link">
 				 			
-						<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+						<a href="{{ post.url | relative_url }}">
 
 			{% if post.image contains "https://gdb.voanews.com/" %}
 							<picture>
@@ -181,7 +181,7 @@ date: 2018-07-04
 {% for post in sorted-posts-language %}
 	{% if counter == 0 %}
 						<div class="voa__grid__two-thirds border-right" style="border-color: #333;">
-							<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+							<a href="{{ post.url | relative_url }}">
 								<h2 {% if current_language == "english" %}class="balance-text" {% endif %} style="color: #999;">{{ post.title }}</h2>
 								<img src="{{ site.url_base }}/img/mugshot__hun-sen.jpg" class="voa__show-mobil--small" style="float: left; margin-right: 10px; width: 80px;">
 								<p style="color: #999;">{{ post.summary }}</p>
@@ -190,7 +190,7 @@ date: 2018-07-04
 						--><div class="voa__grid__one-third " style="margin-right: 0;">
 	{% else %}
 
-							<a href="{{ site.url_base }}{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
+							<a href="{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
 								<h3 style="color: #999;">{{ post.title }}</h3>
 							</a>
 
@@ -225,7 +225,7 @@ date: 2018-07-04
 {% for post in sorted-posts-language limit: 3 %}
 
 								 --><div class="voa__portfolio-grid__profile third">
-										<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+										<a class="post-link" href="{{ post.url | relative_url }}">
 											<img src="{{ site.url_base }}{{ post.mugshot }}">
 											<div class="voa__portfolio-grid__profile__text">
 												<h3 class="voa__label">{{ post.persona }}</h3>
@@ -257,7 +257,7 @@ date: 2018-07-04
 {% for post in sorted-posts-language limit: 3 %}
 
 							 --><div class="voa__portfolio-grid__profile third">
-									<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+									<a class="post-link" href="{{ post.url | relative_url }}">
 										<img src="{{ site.url_base }}{{ post.mugshot }}">
 										<div class="voa__portfolio-grid__profile__text">
 											<h3 class="voa__label">{{ post.persona }}</h3>
@@ -293,7 +293,7 @@ date: 2018-07-04
 {% for post in sorted-posts-language limit: 1 %}
 
 		<section class="voa__section white" style="padding: 40px 0 20px 0;">
-			<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+			<a href="{{ post.url | relative_url }}">
 				<div class="voa__grid__full">
 					<div class="voa__grid">
 						<h2 class="featured">{% if post.title-homepage %}{{ post.title-homepage }}{% else %}{{ post.title }}{% endif %}</h2>
@@ -364,7 +364,7 @@ date: 2018-07-04
 				<div class='embed-container' style="background-color: #F1F1F1; margin-bottom: 20px;"><iframe src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe></div>
 
 				<div class="voa__grid">
-					<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+					<a href="{{ post.url | relative_url }}">
 						<h2>{{ post.title }}</h2>
 					</a>
 					<p>{{ post.summary }}</p>
@@ -393,7 +393,7 @@ date: 2018-07-04
 	{% if post.categories.last == "background" %}
 
 				 --><div class="voa__grid__one-half">
-						<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+						<a class="post-link" href="{{ post.url | relative_url }}">
 							<img src="{{ site.url_base }}{{ post.image }}">
 							<h3>{{ post.title | escape }} </h3>
 						</a>
