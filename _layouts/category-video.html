@@ -84,7 +84,7 @@ layout: default
 
 		<div class="voa__grid__full">
 			<div class="voa__promo voa__grid__one-third">
-				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a href="{{ post.url | relative_url }}">
 					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
 					<h4>{{ post.title }}</h4>
 				</a>
@@ -98,7 +98,7 @@ layout: default
 		{% else %}
 
 --><div class="voa__promo voa__grid__one-third">
-				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a href="{{ post.url | relative_url }}">
 					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
 					<h4>{{ post.title }}</h4>
 				</a>

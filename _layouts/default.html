@@ -123,7 +123,7 @@
 	{% for post in sorted-posts-language limit: 1 %}
 
 		<section class="voa__section__full-width voa__section__title" style="background-image: url('{{ site.url_base }}/img/banner__cambodia-adrift--1920.jpg'); z-index:99999;">
-			<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+			<a href="{{ post.url | relative_url }}">
 				<div style="position: absolute; top: 0; width: 100%;">
 					<div style="display: block; text-align: center; margin: 0 auto;">
 						<h3 class="voa__kicker" style="font-size: 18px; padding: 7px 10px;">{{ site_info.title_tagline }}</h3>

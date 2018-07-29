@@ -210,7 +210,7 @@ layout: default
 {% for post in sorted-posts-language %}
 	{% if counter == 0 %}
 						<div class="voa__grid__two-thirds border-right" style="border-color: #333;">
-							<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+							<a href="{{ post.url | relative_url }}">
 								<h2 style="color: #999;">{{ post.title }}</h2>
 								<img src="{{ site.url_base }}/img/mugshot__hun-sen.jpg" class="voa__show-mobil--small" style="float: left; margin-right: 10px; width: 80px;">
 								<p style="color: #999;">{{ post.summary }}</p>
@@ -219,7 +219,7 @@ layout: default
 						--><div class="voa__grid__one-third " style="margin-right: 0;">
 	{% else %}
 
-							<a href="{{ site.url_base }}{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
+							<a href="{{ post.url | relative_url }}" style="display: block; margin-bottom: 20px;">
 								<h3 style="color: #999;">{{ post.title }}</h3>
 							</a>
 
