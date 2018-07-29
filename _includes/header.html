@@ -40,7 +40,7 @@
 		{% assign sorted-posts = site.posts | where: "categories","feature" %}
 		{% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 		{% for post in sorted-posts-language%}
-											<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+											<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 		{% endfor %}
 
 										</ul>
@@ -54,7 +54,7 @@
 {% assign sorted-posts = site.posts | where: "categories","voter" %}
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language%}
-											<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+											<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 
 {% endfor %}
 										</ul>
@@ -66,7 +66,7 @@
 {% assign sorted-posts = site.posts | where: "categories","politician" %}
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language%}
-									<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+									<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 {% endfor %}
 
 								</ul>
@@ -90,7 +90,7 @@
 {% assign sorted-posts = site.posts | where: "categories","video" %}
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language limit: 6 %}
-									<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+									<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 {% endfor %}
 									<li><a href="{{ site.url_base }}/{{current_language}}/video/">{% if current_language == "english" %}More videos{% elsif current_language=="khmer" %}វីដេអូផ្សេងទៀត {% endif %}</a></li>
 
@@ -105,14 +105,14 @@
 {% assign sorted-posts = site.posts | where: "categories","biography" %}
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language%}
-									<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+									<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 {% endfor %}
 
 
 {% assign sorted-posts = site.posts | where: "categories","timeline" %}
 {% assign sorted-posts-language = sorted-posts | where: "categories",current_language %}
 {% for post in sorted-posts-language%}
-									<li><a href="{{ site.url_base }}{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+									<li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
 {% endfor %}
 
 								</ul>

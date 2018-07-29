@@ -34,7 +34,7 @@
 	{% if post.title != page.title and counter < 2%}
 
 						 --><div class="voa__portfolio-grid__profile half">
-								<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+								<a class="post-link" href="{{ post.url | relative_url }}">
 									<img src="{{ site.url_base }}{{ post.mugshot }}">
 									<div class="voa__portfolio-grid__profile__text">
 										<h3 class="voa__label" style="font-size: 14px;">{{ post.persona }}</h3>
@@ -71,7 +71,7 @@
 	{% if post.title != page.title and counter < 2%}
 
 						 --><div class="voa__portfolio-grid__profile half">
-								<a class="post-link" href="{{ site.url_base }}{{ post.url | relative_url }}">
+								<a class="post-link" href="{{ post.url | relative_url }}">
 									<img src="{{ site.url_base }}{{ post.mugshot }}">
 									<div class="voa__portfolio-grid__profile__text">
 										<h3 class="voa__label" style="font-size: 14px;">{{ post.persona }}</h3>

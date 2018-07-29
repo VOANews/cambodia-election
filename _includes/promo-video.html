@@ -38,7 +38,7 @@
 
 			<div class="voa__promo ">
 				<div class='embed-container' style="background-color: #F1F1F1; margin: 10px 0;"><iframe src="https://www.youtube.com/embed/{{ post.youtube }}" frameborder="0" allowfullscreen></iframe></div>
-				<a href="{{ site.url_base }}{{ post.url | relative_url }}"><h4 style="padding: 0;">{{ post.title }}</h4></a>
+				<a href="{{ post.url | relative_url }}"><h4 style="padding: 0;">{{ post.title }}</h4></a>
 				<p class="voa__cutline" style="padding: 0;">{{ post.summary }}</p>
 			</div>
 	{% endfor %}
@@ -69,7 +69,7 @@
 		{% if counter < 3 %}
 
 			--><div class="voa__promo voa__grid__one-third">
-				<a href="{{ site.url_base }}{{ post.url | relative_url }}">
+				<a href="{{ post.url | relative_url }}">
 					<img src="https://img.youtube.com/vi/{{ post.youtube }}/mqdefault.jpg" />
 					<h4>{{ post.title }}</h4>
 				</a>
