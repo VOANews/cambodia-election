@@ -108,7 +108,7 @@ function showInfo(data) {
 			loadedDataPublished.push(loadedData[i]);
 		} else if (loadedData[i].publish == "FALSE" && loadedData[i].liveblog == "TRUE"){
 			showLiveBlog = true;
-			liveBlogLink = loadedData[i].link;
+			liveBlogLink = projectPrefix + "/" + language + "/live-blog/";//loadedData[i].link;
 			liveBlogPromo = "<a href='" + liveBlogLink + "'>";
 			liveBlogPromo += "<img src='https://gdb.voanews.com/8C7F77ED-72A4-4D69-89AD-818A8F5DC9C5_w650_r1.jpg' />";
 			liveBlogPromo += "<h3>" + loadedData[i].headline + "</h3>";
