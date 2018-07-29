@@ -10,7 +10,6 @@ credit: ខាន់​ សុគុំមនោ | VOA Khmer
 
 dateline: ភ្នំពេញ
 
-lede: true
 translation: /english/feature/government-confirm-blocking-fifteen-independent-news-sites-over-poll-disruption.html
 
 date: 2018-07-28
