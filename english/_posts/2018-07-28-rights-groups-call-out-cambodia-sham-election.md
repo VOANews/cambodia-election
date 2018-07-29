@@ -5,7 +5,7 @@ byline: Hul Reaksmey
 metrics-byline: Reaksmey, Hul
 
 image: https://gdb.voanews.com/C027AFB3-A80A-43D6-8797-916B638AFF1B_cx0_cy10_cw0_w1023_r1_s.jpg
-cutline: Supporters of Cambodian People's Party gather for their last campaign for the July 29 general election, in Phnom Penh, Cambodia, Friday, July 27, 2018. Opposition politicians in exile in the United States, Australia and elsewhere are using social media to urge voters to embrace a "clean finger campaign" and boycott the vote.
+cutline: Supporters of Cambodian People's Party gather for their last campaign for the July 29 general election, in Phnom Penh, Cambodia, Friday, July 27, 2018. Opposition politicians in exile in the United States, Australia and elsewhere are using social media to urge voters to embrace a “clean finger campaign” and boycott the vote.
 credit: Heng Sinith | AP
 
 dateline: Phnom Penh
