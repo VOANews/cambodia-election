@@ -10,7 +10,6 @@ credit: Khan Sokummono | VOA Khmer
 
 dateline: Phnom Penh
 
-lede: true
 translation: /khmer/feature/government-confirm-blocking-fifteen-independent-news-sites-over-poll-disruption.html
 
 date: 2018-07-28
