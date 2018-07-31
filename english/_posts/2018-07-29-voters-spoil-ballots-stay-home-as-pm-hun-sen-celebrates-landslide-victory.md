@@ -1,6 +1,6 @@
 ---
 title: Voters Spoil Ballots, Stay Home as PM Hun Sen Celebrates Landslide Victory
-summaryX: Xxxx
+summary: Election officials have yet to announce number of spoiled ballots but poll observers claim it will be higher than the 130,000 cast in 2017.
 byline: Sun Narin
 metrics-byline: Narin, Sun
 

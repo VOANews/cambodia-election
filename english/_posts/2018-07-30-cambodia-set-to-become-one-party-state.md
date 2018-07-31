@@ -1,6 +1,7 @@
 ---
-title: Cambodia Set to Become One Party State
-summaryX: Xxxx
+title: Ruling Cambodian People’s Party Claims Control of all National Assembly seats
+title-homepage: Cambodia Set to Become One Party State
+summary: Prime Minister Hun Sen to extend his 33 years of rule by another five, after national election free of any real opposition.
 byline: David Boyle
 metrics-byline: Boyle, David
 
