@@ -16,7 +16,7 @@ dateline: សៀមរាប
 
 lede: true
 
-translationX: /english/feature/cambodians-speak-of-threats-intimidation-during-election.html
+translation: /english/feature/cambodians-speak-of-threats-intimidation-during-election.html
 
 link-project: https://khmer.voanews.com/a/in-opposition-strongholds-local-authorities-watched-voters/4507616.html?nocache=1
 
