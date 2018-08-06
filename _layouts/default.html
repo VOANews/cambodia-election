@@ -33,13 +33,13 @@
 		</div>
 
 	<script type="text/javascript">
-		// "https://www.voacambodia.com/api/zk-pqvemvmqt" 
-	{% if page.layout == "home" %}
-		//var rssFeedEncoded = "xxxxx";
-		var rssFeedEncoded =  "xxxxx";;
-	{% else %}
-		var rssFeedEncoded =  "xxxxx";;
-	{% endif %}
+
+		{% if current_language == "khmer" %}
+			var rssFeedEncoded = "https%3A%2F%2Fkhmer.voanews.com%2Fapi%2Fzu-pqyepvmqv";
+		{% else %}
+			var rssFeedEncoded = "https%3A%2F%2Fwww.voacambodia.com%2Fapi%2Fzk-pqvemvmqt";
+		{% endif %} 
+
 		var language = "{{current_language}}";
 		var projectPrefix = "{{ site.url_base }}";
 
@@ -61,12 +61,12 @@
 
 			<script type="text/javascript">
 
-		{% if page.layout == "home" %}
-			//var rssFeedEncoded = "xxxxx";;
-			var rssFeedEncoded = "xxxxx";;
+		{% if current_language == "khmer" %}
+			var rssFeedEncoded = "https%3A%2F%2Fkhmer.voanews.com%2Fapi%2Fzu-pqyepvmqv";
 		{% else %}
-			var rssFeedEncoded =  "xxxxx";;
+			var rssFeedEncoded = "https%3A%2F%2Fwww.voacambodia.com%2Fapi%2Fzk-pqvemvmqt";
 		{% endif %}
+
 			var language = "{{current_language}}";
 			var projectPrefix = "{{ site.url_base }}";
 
@@ -107,7 +107,12 @@
 
 	{% else %}
 	<script type="text/javascript">
-		var rssFeedEncoded =  "xxxxx";
+		{% if current_language == "khmer" %}
+			var rssFeedEncoded = "https%3A%2F%2Fkhmer.voanews.com%2Fapi%2Fzu-pqyepvmqv";
+		{% else %}
+			var rssFeedEncoded = "https%3A%2F%2Fwww.voacambodia.com%2Fapi%2Fzk-pqvemvmqt";
+		{% endif %}
+
 		var language = "{{current_language}}";
 		var projectPrefix = "{{ site.url_base }}";
 	</script>
