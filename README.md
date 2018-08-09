@@ -16,7 +16,7 @@ This site continued to be updated, promoted and available in Cambodia throughout
 
 A VOA Khmer Service team spent six months talking with Cambodians during the run-up to the nation’s sixth national vote for 125 members of the National Assembly. The team traveled to six provinces and Phnom Penh, the capital city, and focused on rural residents because they are the majority of Cambodia’s voters. Many spoke of how they feel left behind by their nation’s economic expansion, which is upending their traditional way of life as they are buffeted by national and global forces. 
 
-The project is available in English and [Khmer](https://projects.voanews.com/cambodia-election-2018/khmer/).
+The project is available in [English](https://voanews.github.io/cambodia-election/) and [Khmer](https://voanews.github.io/cambodia-election/khmer/).
 
 
 
