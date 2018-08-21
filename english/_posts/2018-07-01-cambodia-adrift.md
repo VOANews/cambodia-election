@@ -41,7 +41,7 @@ The government dissolved the primary engine of opposition, the Cambodia National
 
 
 {:.annotation.right#footnote3}
-The election results set Cambodia on course to become a [one-party state](https://www.voacambodia.com/a/cambodia-set-to-become-one-party-state/4505605.html). 
+The election results set Cambodia on course to become a [one-party state](https://voanews.github.io/cambodia-election/english/feature/cambodia-set-to-become-one-party-state.html). 
 
 
 
@@ -65,7 +65,7 @@ The threat of a boycott rattles the government. “It’s your personal rights t
 Opposition supporters have reported intimidation from local <a href="#footnote5" class="footnote">authorities</a> who are threatening to cut off basic public services if they boycott the vote.
 
 {:.annotation.right#footnote5}
-The [intimidation](https://www.voacambodia.com/a/cambodians-speak-of-threats-intimidation-during-election/4515626.html) continued right up to the vote, according to some Cambodians. 
+The [intimidation](https://voanews.github.io/cambodia-election/english/feature/cambodians-speak-of-threats-intimidation-during-election.html) continued right up to the vote, according to some Cambodians. 
 
 
  
