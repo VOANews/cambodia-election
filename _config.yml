@@ -73,7 +73,7 @@ site_info__object:
     twitter_handle: VOAkhmer
     hashtags: CambodiaAdrift
     rss_feed: https://www.voacambodia.com/api/zk-pqvemvmqt
-    project_intro: On July 29, the Cambodian government will hold the nation’s sixth general election to choose representatives for the National Assembly. International groups have spent billions of dollars funding pro-democracy civil society efforts over the past 25 years yet the vote has been deemed the most unfair and unfree since the United Nations organized the first post-genocide election in 1993. The government, headed by Prime Minister Hun Sen who has been in power since 1985, believes otherwise.
+    project_intro: On July 29, Cambodians voted in the nation’s sixth general election to choose representatives for the National Assembly. The ruling Cambodian People’s Party won by landslide, surprising no one but disappointing many. International groups have spent billions of dollars funding pro-democracy civil society efforts over the past 25 years yet the election results have been condemned as the most unfair and unfree since the United Nations organized the first post-genocide election in 1993. China, Cambodia’s largest foreign investor, is the only major nation to voice approval of the results, and it has pledged to protect Cambodia’s sovereignty from “foreign forces.” The government, headed by Prime Minister Hun Sen who has been in power since 1985, is now empowered for five more years. Hun Sen has said he will rule for another decade.
     about_the_project: A VOA Khmer Service team spent six months talking with Cambodians during the run-up to the nation’s sixth national vote for 125 members of the National Assembly on July 29, 2018. The team traveled to six provinces and Phnom Penh, the capital city, and focused on rural residents because they are the majority of Cambodia’s voters. Many spoke of how they feel left behind by their nation’s economic expansion, which is upending their traditional way of life as they are buffeted by national and global forces.
     dictionary:
       label_voices: Voices 
@@ -156,7 +156,7 @@ site_info__object:
       Svay_Rieng: Svay Rieng  
       Takeo: Takeo 
       Tboung_Khmum: Tboung Khmum 
-    note_Tboung Khmum_primary_education-completed: "Note: In 2014, Kampong Cham province was officially split into two provinces. The new province Tboung Khmum has 85.12% primary education completed in 2016."
+      note_Tboung_Khmum_primary_education_completed: "Note: In 2014, Kampong Cham province was officially split into two provinces. The new province Tboung Khmum has 85.12% primary education completed in 2016."
     analytics:
       language: English
       language_service: VOA Khmer
@@ -239,7 +239,7 @@ site_info__object:
       label_the number_of_seats_won: ចំនួនអាសនៈឈ្នះដោយគណបក្សនីមួយៗ
       label_more_from_voanews: ព័ត៌មានដទៃទៀតពី VOA ខ្មែរ
       label_see_also: អានបន្ថែម
-      label_note_Tboung_Khmum_primary_education-completed: បញ្ជាក់៖ កាល​ពី​ឆ្នាំ ២០១៤ ខេត្ត ​កំពង់ចាម ត្រូវ​បាន​បែងចែក​ជា​ពីរ​ខេត្ត។ ត្បូងឃ្មុំ ដែល​ជា​ខេត្ត​​បង្កើត​ថ្មី មាន​អត្រា​រៀន​ចប់​ថ្នាក់​បឋម​សិក្សា​ចំនួន ៨៥.១២% ក្នុង​ឆ្នាំ​២០១៦។ 
+      label_note_Tboung_Khmum_primary_education_completed: បញ្ជាក់៖ កាល​ពី​ឆ្នាំ ២០១៤ ខេត្ត ​កំពង់ចាម ត្រូវ​បាន​បែងចែក​ជា​ពីរ​ខេត្ត។ ត្បូងឃ្មុំ ដែល​ជា​ខេត្ត​​បង្កើត​ថ្មី មាន​អត្រា​រៀន​ចប់​ថ្នាក់​បឋម​សិក្សា​ចំនួន ៨៥.១២% ក្នុង​ឆ្នាំ​២០១៦។ 
     map:
       Cambodia: កម្ពុជា 
       Vietnam: វៀតណាម
@@ -282,5 +282,3 @@ site_info__object:
       direction: ltr
       website: https://khmer.voanews.com/
       language_label: ខ្មែរ
-
-

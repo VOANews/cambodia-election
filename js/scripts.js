@@ -540,7 +540,24 @@ $(document).ready(function(){
 
 	}
 
+	$(".footnote").click(function(){
+		event.preventDefault();
 
+		var target = $(this).attr("href");
+		console.log("target: " + target);
+		if ( $(target).hasClass("show") ){
+			$(target).removeClass("show");
+		} else {
+			$(".annotation").removeClass("show");
+			$(target).addClass("show");
+		}
+	})
+
+	$(".annotation").click(function(){
+		//$(".annotation").removeClass("show");
+		$(this).toggleClass("show");
+		console.log("clicked");
+	})
 
 
 	var previousScroll
@@ -609,6 +626,8 @@ $(document).ready(function(){
 		$("#parties").removeClass("show");
 		$("#partiesHeader").removeClass("show");
 		//$(".voa__wiki__entry").removeClass("show");
+
+		$(".annotation.show").removeClass("show");
 	}
 
 

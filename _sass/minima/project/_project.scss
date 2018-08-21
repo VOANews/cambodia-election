@@ -884,7 +884,38 @@
 		}
 
 
+		&.voa__wiki__bio .voa__story {
+			overflow: visible
+		}
+
 		.voa__story{
+
+			overflow-x: hidden;
+			position: relative;
+
+			.voa__editors-note {
+				background-color: #FFF;
+				padding: 0 5% 20px 5%;
+
+				@media only screen and (min-width: 680px) {
+					padding: 0 20% 40px 20%;
+				}
+
+				p {
+					//background-color: #F1F1F1; 
+					//border-radius: 4px; 
+					border-bottom: 1px dotted #CCC;
+					color: #888;
+					font-family: Arial, sans-serif; 
+					font-size: 14px; 
+					font-weight: normal; 
+					font-style: italic;
+					line-height: 1.4;
+					padding: 0 0 20px 0;//20px; 
+					margin: 0 auto; 
+				}
+			}
+
 			p.pullquote {
 				font-family: Arial, sans-serif;
 				font-weight: bold;
@@ -922,6 +953,100 @@
 					width: 40%;
 				}
 			}
+
+			a.footnote {
+				color: #000;
+				text-decoration: none;
+
+				@media only screen and (max-width: $media__small--) {
+					background-color: yellow;
+					color: #000;
+					font-family: Arial, sans-serif;
+					font-weight: bold;
+					padding: 2px 4px;
+				}
+			}
+
+			p.annotation {
+				background-color: #fffF8d;//#333;
+				color: #333;//#F1F1F1;
+				font-family: Arial, sans-serif;
+				font-weight: normal;//bold;
+				font-size: 14px;
+				line-height: 1.4;
+				padding: 20px;
+
+				a {
+					color: #000;//#FFF;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+
+				@media only screen and (max-width: $media__small--) {
+					border-radius: 0 4px 4px 0;
+					margin: 0 30px 40px 0;
+					padding: 20px;
+					position: absolute;
+						left: -190px;
+					width: 200px;
+
+					&.show {
+						left: 0;
+					}
+				}
+
+
+				@media only screen and (min-width: $media__small) {
+					border-radius: 0 4px 4px 0;
+					float: left;
+					margin: 0px 30px 40px 0;
+					padding: 20px;
+					width: 40%;
+				}
+
+				@media only screen and (min-width: $media__large) {
+					width: 20%;
+				}
+				@media only screen and (min-width: $media__extra-large) {
+					float: left;
+					padding-left: 40px;
+					width: 220px;
+				}
+
+				&.right {
+
+					@media only screen and (max-width: $media__small--) {
+						border-radius: 4px 0 0 4px;
+						margin: 0 0 40px 30px;
+						position: absolute;
+							right: -190px;
+							left: auto;
+						width: 200px;
+
+						&.show {
+							right: 0;
+						}
+					}
+
+
+					@media only screen and (min-width: $media__small) {
+						border-radius: 4px 0 0 4px;
+						float: right;
+						margin: 0 0 40px 30px;
+					}
+
+					@media only screen and (min-width: $media__large) {
+						margin: 0px 0 40px 30px !important;
+					}
+					@media only screen and (min-width: $media__extra-large) {
+						float: right;
+						padding-right: 40px;
+						padding-left: 20px;
+					}
+				}
+			}
+
+
 
 			p.voa__byline {
 				font-family: Arial, sans-serif;
@@ -3413,7 +3538,7 @@
 
 
 	.voa__navbar.white .sm-clean #liveblogNavLink {
-		//display: none;
+		display: none;
 		@media only screen and (max-width: $media__medium-large--) {
 			width: 100%;
 		}
