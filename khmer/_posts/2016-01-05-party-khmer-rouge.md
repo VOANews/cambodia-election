@@ -6,6 +6,8 @@ image: flag__democratic-kampuchea.gif
 date:   2016-01-03
 categories: party
 language: Khmer
+
+layout: party
 ---
 
 

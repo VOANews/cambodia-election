@@ -6,6 +6,8 @@ image: logo__cnrp.jpg
 date:   2016-01-02
 categories: party
 language: khmer
+
+layout: party
 ---
 
 

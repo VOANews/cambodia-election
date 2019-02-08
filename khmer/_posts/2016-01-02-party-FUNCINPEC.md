@@ -6,6 +6,8 @@ image: logo__funcinpec.jpg
 date: 2016-01-02
 categories: party
 language: Khmer 
+
+layout: party
 ---
  
  

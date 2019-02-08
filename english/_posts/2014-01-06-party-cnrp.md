@@ -6,6 +6,8 @@ image: logo__cnrp.jpg
 date: 2014-01-06
 categories: party
 language: english
+
+layout: party
 ---
 
 

@@ -6,6 +6,8 @@ image: logo__funcinpec.jpg
 date: 2014-01-05
 categories: party
 language: english
+
+layout: party
 ---
  
  
